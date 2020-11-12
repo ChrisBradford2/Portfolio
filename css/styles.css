@@ -166,7 +166,7 @@ sup {
 }
 
 a {
-  color: #c0392b;
+  color: none;
   text-decoration: none;
   background-color: transparent;
 }
@@ -10200,7 +10200,7 @@ h3 {
   left: 0;
   transition: all 0.2s ease-in-out;
   opacity: 0;
-  background-color: rgba(26, 188, 156, 0.9);
+  background-color: rgba(192,57,43,0.85);
 }
 .portfolio .portfolio-item .portfolio-item-caption:hover {
   opacity: 1;
