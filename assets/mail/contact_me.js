@@ -21,7 +21,7 @@ $(function () {
             $this = $("#sendMessageButton");
             $this.prop("disabled", true); // Disable submit button until AJAX call is complete to prevent duplicate messages
             $.ajax({
-                url: "/assets/mail/contact_me.php",
+                url: "localhost:80/www.nicolasbarbarisi.fr/assets/mail/contact_me.php",
                 type: "POST",
                 data: {
                     name: name,
@@ -55,9 +55,9 @@ $(function () {
                         .append("</button>");
                     $("#success > .alert-danger").append(
                         $("<strong>").text(
-                            "Sorry " +
+                            "Désolé " +
                                 firstName +
-                                ", it seems that my mail server is not responding. Please try again later!"
+                                ", il y a eu un problème avec l'envoi du mail. Je vous invite à me contacter à l'adresse mail suivante : nicolas.barbarisi@ynov.com."
                         )
                     );
                     $("#success > .alert-danger").append("</div>");
