@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="375pt" height="374.999991pt" viewBox="0 0 375 374.999991" version="1.2">
+<defs>
+<g>
+<symbol overflow="visible" id="glyph0-0">
+<path style="stroke:none;" d=""/>
+</symbol>
+<symbol overflow="visible" id="glyph0-1">
+<path style="stroke:none;" d="M 9.5 0 L 9.5 -214.75 L 53.75 -214.75 L 73.5 -112 L 73.5 -214.75 L 115 -214.75 L 115 0 L 73 0 L 51.5 -107.5 L 51.5 0 Z M 9.5 0 "/>
+</symbol>
+<symbol overflow="visible" id="glyph0-2">
+<path style="stroke:none;" d="M 9.5 -214.75 L 67.75 -214.75 C 83.414062 -214.75 94.789062 -210.914062 101.875 -203.25 C 108.957031 -195.582031 112.5 -183.082031 112.5 -165.75 L 112.5 -156.25 C 112.5 -135.75 105.164062 -123.5 90.5 -119.5 C 99.5 -117.164062 105.832031 -111.75 109.5 -103.25 C 113.164062 -94.75 115 -83.5 115 -69.5 C 115 -46.664062 111.582031 -29.375 104.75 -17.625 C 97.914062 -5.875 85.582031 0 67.75 0 L 9.5 0 Z M 60.25 -134 C 63.914062 -134 66.414062 -135.375 67.75 -138.125 C 69.082031 -140.875 69.75 -144.75 69.75 -149.75 L 69.75 -171.25 C 69.75 -178.25 66.664062 -181.75 60.5 -181.75 L 51.5 -181.75 L 51.5 -134 Z M 55.75 -37.75 C 66.914062 -37.75 72.5 -43.082031 72.5 -53.75 L 72.5 -80.5 C 72.5 -87 71.539062 -91.914062 69.625 -95.25 C 67.707031 -98.582031 64.332031 -100.25 59.5 -100.25 L 51.5 -100.25 L 51.5 -38 Z M 55.75 -37.75 "/>
+</symbol>
+</g>
+</defs>
+<g id="surface1">
+<rect x="0" y="0" width="375" height="374.999991" style="fill:rgb(100%,100%,100%);fill-opacity:1;stroke:none;"/>
+<rect x="0" y="0" width="375" height="374.999991" style="fill:rgb(100%,100%,100%);fill-opacity:1;stroke:none;"/>
+<rect x="0" y="0" width="375" height="374.999991" style="fill:rgb(0%,0%,0%);fill-opacity:1;stroke:none;"/>
+<path style=" stroke:none;fill-rule:nonzero;fill:rgb(100%,100%,100%);fill-opacity:1;" d="M 346.238281 18.75 L 18.75 18.75 L 18.75 356.25 L 356.25 356.25 L 356.25 18.75 Z M 346.238281 346.238281 L 28.875 346.238281 L 28.875 28.875 L 346.238281 28.875 Z M 346.238281 346.238281 "/>
+<g style="fill:rgb(100%,100%,100%);fill-opacity:1;">
+  <use xlink:href="#glyph0-1" x="70.366207" y="287.499981"/>
+</g>
+<g style="fill:rgb(100%,100%,100%);fill-opacity:1;">
+  <use xlink:href="#glyph0-2" x="184.866255" y="287.499981"/>
+</g>
+</g>
+</svg>
