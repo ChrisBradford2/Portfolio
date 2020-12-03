@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="fr">
     <head>
         <meta charset="utf-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
@@ -7,7 +7,7 @@
         <meta name="author" content="" />
         <title>Nicolas Barbarisi</title>
         <!-- Favicon-->
-        <link rel="icon" type="image/x-icon" href="assets/img/favicon.svg" />
+        <link rel="icon" type="image/x-icon" href="assets/img/favicon.ico" />
         <!-- Font Awesome icons (free version)-->
         <script src="https://use.fontawesome.com/releases/v5.15.1/js/all.js" crossorigin="anonymous"></script>
         <!-- Google fonts-->
@@ -73,7 +73,7 @@
                 </div>
                 <!-- About Section Button-->
                 <div class="text-center mt-4">
-                    <a class="btn btn-xl btn-outline-light" target="_blank" href="assets/download/cv.pdf" download="cv.pdf">
+                    <a class="btn btn-xl btn-outline-light swing" title="cv.pdf" target="_blank" href="assets/download/cv.pdf">
                         <i class="fas fa-download mr-2"></i>
                         Téléchergez mon CV ici !
                     </a>
@@ -167,7 +167,7 @@
                 <div class="row">
                     <div class="col-lg-8 mx-auto">
                         <!-- To configure the contact form email address, go to mail/contact_me.php and update the email address in the PHP file on line 19.-->
-                        <form id="contactForm" name="sentMessage" novalidate="novalidate">
+                        <form id="contactForm" name="sentMessage" novalidate="novalidate" action="assets/mail/contact_me.php" method="POST">
                             <div class="control-group">
                                 <div class="form-group floating-label-form-group controls mb-0 pb-2">
                                     <label>Name</label>
@@ -185,7 +185,7 @@
                             <div class="control-group">
                                 <div class="form-group floating-label-form-group controls mb-0 pb-2">
                                     <label>Phone Number</label>
-                                    <input class="form-control" id="phone" type="tel" placeholder="Phone Number" required="required" data-validation-required-message="Please enter your phone number." />
+                                    <input class="form-control" id="phone" type="tel" placeholder="Phone Number" />
                                     <p class="help-block text-danger"></p>
                                 </div>
                             </div>
@@ -210,20 +210,22 @@
                 <div class="row">
                     <!-- Footer Location-->
                     <div class="col-lg-4 mb-5 mb-lg-0">
-                        <h4 class="text-uppercase mb-4">Localisation</h4>
+                        <h4 class="text-uppercase mb-4">Contacts</h4>
                         <p class="lead mb-0">
-                            48 rue de Gency
-                            <br />
-                            95520, Osny
+                            <i class="fas fa-phone-alt"></i>&emsp;<a class="contact-link" href="tel:0614225784">(+33) 6 51 66 52 60</a>
+                        <br>
+                            <i class="fas fa-envelope"></i>&emsp;<a class="contact-link" href="mailto:nicolas.barbarisi@ynov.com">nicolas.barbarisi@ynov.com</a>
+                        <br>
+                            <i class="fas fa-map-marked-alt"></i>&emsp;<a class="contact-link" href="https://www.google.fr/maps/place/48+Rue+de+Gency,+95520+Osny/@49.0554375,2.0569153,17z/data=!3m1!4b1!4m5!3m4!1s0x47e6f4fafc002883:0x6d9b305d0eaf6164!8m2!3d49.055434!4d2.059104" target="_blank"> 48 rue de Gency, 95520, Osny</a>
                         </p>
                     </div>
                     <!-- Footer Social Icons-->
                     <div class="col-lg-4 mb-5 mb-lg-0">
                         <h4 class="text-uppercase mb-4">Suivez moi sur Web</h4>
-                        <a class="btn btn-outline-light btn-social mx-1" href="https://github.com/ChrisBradford2" target="_blank"><i class="fab fa-github"></i></a>
-                        <a class="btn btn-outline-light btn-social mx-1" href="https://gitlab.com/Chris_Bradford" target="_blank"><i class="fab fa-gitlab"></i></a>
-                        <a class="btn btn-outline-light btn-social mx-1" href="https://www.linkedin.com/in/nicolas-barbarisi-a4a97a193/" target="_blank"><i class="fab fa-fw fa-linkedin-in"></i></a>
-                        <a class="btn btn-outline-light btn-social mx-1" href="https://snake404.vivaldi.net/" target="_blank"><i class="fab fa-wordpress-simple"></i></a>
+                        <a class="btn btn-outline-links btn-social mx-1" href="https://github.com/ChrisBradford2" target="_blank"><i class="fab fa-github"></i></a>
+                        <a class="btn btn-outline-links btn-social mx-1" href="https://gitlab.com/Chris_Bradford" target="_blank"><i class="fab fa-gitlab"></i></a>
+                        <a class="btn btn-outline-links btn-social mx-1" href="https://www.linkedin.com/in/nicolas-barbarisi-a4a97a193/" target="_blank"><i class="fab fa-fw fa-linkedin-in"></i></a>
+                        <a class="btn btn-outline-links btn-social mx-1" href="https://snake404.vivaldi.net/" target="_blank"><i class="fab fa-wordpress-simple"></i></a>
                     </div>
                     <!-- Footer About Text-->
                     <div class="col-lg-4">
