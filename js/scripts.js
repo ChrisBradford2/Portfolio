@@ -90,17 +90,18 @@
       this.el.innerHTML = '<span class="wrap">'+this.txt+'</span>';
     
       var that = this;
-      var delta = 300 - Math.random() * 100;
+      //Delta : Vitesse ; Random : temps d'arrêt
+      var delta = 150 - Math.random() * 200;
     
       if (this.isDeleting) { delta /= 2; }
     
       if (!this.isDeleting && this.txt === fullTxt) {
         delta = this.period;
         this.isDeleting = true;
-      } else if (this.isDeleting && this.txt === '') {
+      } else if (this.isDeleting && this.txt === '{') {
         this.isDeleting = false;
         this.loopNum++;
-        delta = 500;
+        delta = 200;
       }
     
       setTimeout(function() {

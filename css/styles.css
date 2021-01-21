@@ -25,7 +25,7 @@
   --gray: #6c757d;
   --gray-dark: #343a40;
   --primary: #e58e26;
-  --secondary: #2c3e50;
+  --secondary: #2980b9;
   --success: #28a745;
   --info: #17a2b8;
   --warning: #ffc107;
@@ -70,7 +70,7 @@ body {
 }
 
 .header-cover {
-  background-image: url(../assets/img/IMG_20201102_105534.jpg);
+  background-image: url(../assets/img/bg.png);
   background-repeat: no-repeat;
   background-attachment: fixed ;  
   background-size: cover;
@@ -400,6 +400,12 @@ h6, .h6 {
 .lead {
   font-size: 1.25rem;
   font-weight: 300;
+}
+
+.lead-bold {
+  font-size: 1.25rem;
+  font-weight: bold;
+  color:  #e58e26;
 }
 
 .display-1 {
@@ -10207,7 +10213,6 @@ h3 {
 }
 .masthead .masthead-subheading {
   font-size: 1.25rem;
-  padding-bottom: 25%;
 }
 .masthead .masthead-avatar {
   width: 15rem;
@@ -10233,6 +10238,7 @@ h3 {
   max-width: 25rem;
   border-radius: 0.5rem;
   overflow: hidden;
+  
 }
 .portfolio .portfolio-item .portfolio-item-caption {
   position: absolute;
