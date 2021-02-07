@@ -21,7 +21,7 @@ $(function () {
             $this = $("#sendMessageButton");
             $this.prop("disabled", true); // Disable submit button until AJAX call is complete to prevent duplicate messages
             $.ajax({
-                url: "contact_me.php",
+                url: "/assets/mail/contact_me.php",
                 type: "POST",
                 data: {
                     name: name,
@@ -39,7 +39,7 @@ $(function () {
                         )
                         .append("</button>");
                     $("#success > .alert-success").append(
-                        "<strong>Le serveur SMTP est en cours d'initialisation et sera opérationnel d'ici 48 heures. Si votre message est important, je vous invite à me contacter à l'adresse mail suivante : nicolas.barbarisi@ynov.com. </strong>"
+                        "<strong>Votre message à été envoyé avec succès !</strong>"
                     );
                     $("#success > .alert-success").append("</div>");
                     //clear all fields
@@ -57,7 +57,7 @@ $(function () {
                         $("<strong>").text(
                             "Désolé " +
                                 firstName +
-                                ", le serveur SMTP est en cours d'initialisation et sera opérationnel d'ici 48 heures. Si votre message est important, je vous invite à me contacter à l'adresse mail suivante : nicolas.barbarisi@ynov.com."
+                                ", il semble que mon serveur mail ne répond pas. Je vous invite à me contacter à l'adresse mail suivante : nicolas.barbarisi@ynov.com."
                         )
                     );
                     $("#success > .alert-danger").append("</div>");

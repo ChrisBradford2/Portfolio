@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="fr">
+    <head>
+        <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+        <meta name="description" content="Plateforme personelle de support & maintenance informatique." />
+        <meta name="author" content="Nicolas Barbarisi" />
+        <title>Support Barbarisi</title>
+        <!-- Favicon-->
+        <link rel="icon" type="image/svg" href="../assets/img/favicon.svg" />
+        <!-- Font Awesome icons (free version)-->
+        <script src="https://use.fontawesome.com/releases/v5.15.1/js/all.js" crossorigin="anonymous"></script>
+        <!-- Google fonts-->
+		<link rel="preconnect" href="https://fonts.gstatic.com">
+		<link href="https://fonts.googleapis.com/css2?family=Nova+Flat&display=swap" rel="stylesheet" type="text/css">
+        <link href="https://fonts.googleapis.com/css?family=Montserrat:400,700" rel="stylesheet" type="text/css" />
+        <link href="https://fonts.googleapis.com/css?family=Lato:400,700,400italic,700italic" rel="stylesheet" type="text/css" />
+        <!-- Core theme CSS (includes Bootstrap)-->
+        <link href="css/styles.css" rel="stylesheet" />
+    </head>
+    <body id="page-top">
+        <!-- Navigation-->
+        <nav class="navbar navbar-expand-lg bg-secondary text-uppercase fixed-top" id="mainNav">
+            <!--<h1 class="accessibility">Barre de navigation</h1>
+            <p class="accessibility"><a href="#pageContent" title="Accéder directement au contenu principal de cette page">Passer le menu</a></p>-->
+            <div class="container">
+                <a class="navbar-brand js-scroll-trigger" href="#page-top">Retour au Portfolio</a>
+                <button class="navbar-toggler navbar-toggler-right text-uppercase font-weight-bold bg-primary text-white rounded" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+                    <i class="fas fa-bars"></i>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarResponsive">
+                    <ul class="navbar-nav ml-auto">
+						<li class="nav-item mx-0 mx-lg-1"><a class="nav-link py-3 px-0 px-lg-3 rounded js-scroll-trigger" href="#support">Support</a></li>
+                        <li class="nav-item mx-0 mx-lg-1"><a class="nav-link py-3 px-0 px-lg-3 rounded js-scroll-trigger" href="../index.html">Retour au Portfolio</a></li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+        
+        <!-- Contact Section-->
+        <section class="page-section" id="support">
+            <div class="container">
+                <!-- Contact Section Heading-->
+                <h2 class="page-section-heading text-center text-uppercase text-secondary mb-0">Ouvrir un ticket</h2>
+                <!-- Icon Divider-->
+                <div class="divider-custom">
+                    <div class="divider-custom-line"></div>
+                    <div class="divider-custom-icon"><i class="fas fa-headset"></i></div>
+                    <div class="divider-custom-line"></div>
+                </div>
+                <!-- Contact Section Form-->
+                <div class="row">
+                    <div class="col-lg-8 mx-auto">
+                        <!-- To configure the contact form email address, go to mail/contact_me.php and update the email address in the PHP file on line 19.-->
+                        <form id="contactForm" name="sentMessage" novalidate="novalidate" action="mail/contact_me.php" method="POST">
+                            <div class="control-group">
+                                <div class="form-group floating-label-form-group controls mb-0 pb-2">
+                                    <label>Prénom & Nom</label>
+                                    <input class="form-control" id="name" type="text" placeholder="Prénom & Nom" required="required" title="Merci de rentrer votre nom" data-validation-required-message="Merci de rentrer votre prénom ainsi que votre nom." />
+                                    <p class="help-block text-danger"></p>
+                                </div>
+                            </div>
+                            <div class="control-group">
+                                <div class="form-group floating-label-form-group controls mb-0 pb-2">
+                                    <label>Adresse mail</label>
+                                    <input class="form-control" id="email" type="email" placeholder="Adresse mail" required="required" title="Merci de rentrer votre adresse mail"  data-validation-required-message="Merci de rentrer votre adresse mail." />
+                                    <p class="help-block text-danger"></p>
+                                </div>
+                            </div>
+                            <div class="control-group">
+                                <div class="form-group floating-label-form-group controls mb-0 pb-2">
+                                    <label>Numéro de téléphone</label>
+                                    <input class="form-control" id="phone" type="tel" required="required" title="Merci de rentrer votre numéro de téléphone" placeholder="Numéro de téléphone" />
+                                    <p class="help-block text-danger"></p>
+                                </div>
+                            </div>
+                            <div class="control-group">
+                                <div class="form-group floating-label-form-group controls mb-0 pb-2">
+                                    <label>Service approprié</label>
+                                    <select class="form-control" id="object" required="required" title="Merci de renseigner le service approprié">
+                                        <option selected disabled>Veuillez choisir une catégorie :</option>
+                                        <option value="1">Défaut matériel</option>
+                                        <option value="2">Lenteur du pc</option>
+                                        <option value="3">Problème de connection internet</option>
+                                        <option value="4">Autre</option>
+                                    </select>
+                                    <p class="help-block text-danger"></p>
+                                </div>
+                            </div>
+                            <div class="control-group">
+                                <div class="form-group floating-label-form-group controls mb-0 pb-2">
+                                    <label>Message</label>
+                                    <textarea class="form-control" id="message" rows="5" placeholder="Message" required="required" title="Merci d'écrire d'ajouter un message" data-validation-required-message="Merci d'écrire un message."></textarea>
+                                    <p class="help-block text-danger"></p>
+                                </div>
+                            </div>
+                            <div class="control-group">
+                                <div class="form-group floating-label-form-group controls mb-0 pb-2">
+                                    <div class="g-recaptcha" data-sitekey="6LeoJz0aAAAAANxXPb3HirZ7bcddEa0lAt2QQ8FK" required="required"></div>
+                                    <p class="help-block text-danger"></p>
+                                </div>
+                            </div>
+                            <br />
+                            <div id="success"></div>
+                            <div class="form-group"><button class="btn btn-primary btn-xl" id="sendMessageButton" type="submit">Send</button></div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Footer-->
+        <footer class="footer text-center">
+            <div class="container">
+                <div class="row">
+                    <!-- Footer Location-->
+                    <div class="col-lg-4 mb-5 mb-lg-0">
+                        <h4 class="text-uppercase mb-4">Contacts</h4>
+                        <p class="lead mb-0">
+                            <i class="fas fa-phone-alt"></i>&emsp;<a class="contact-link" title="Appeler" href="tel:0614225784">(+33) 6 51 66 52 60</a>
+                        <br>
+                            <i class="fas fa-envelope"></i>&emsp;<a class="contact-link" title="Envoyer un mail" href="mailto:nicolas.barbarisi@ynov.com">nicolas.barbarisi@ynov.com</a>
+                        <br>
+                            <i class="fas fa-map-marked-alt"></i>&emsp;<a class="contact-link" title="Voir la localisation" href="https://www.google.fr/maps/place/48+Rue+de+Gency,+95520+Osny/@49.0554375,2.0569153,17z/data=!3m1!4b1!4m5!3m4!1s0x47e6f4fafc002883:0x6d9b305d0eaf6164!8m2!3d49.055434!4d2.059104" target="_blank"> 48 rue de Gency, 95520, Osny</a>
+                        </p>
+                    </div>
+                    <!-- Footer Social Icons-->
+                    <div class="col-lg-4 mb-5 mb-lg-0">
+                        <h4 class="text-uppercase mb-4">Suivez moi sur le Web</h4>
+                        <a class="btn btn-outline-links btn-social mx-1" href="https://github.com/ChrisBradford2" title="Github" target="_blank"><i class="fab fa-github"></i></a>
+                        <a class="btn btn-outline-links btn-social mx-1" href="https://gitlab.com/Chris_Bradford" title="Gitlab" target="_blank"><i class="fab fa-gitlab"></i></a>
+                        <a class="btn btn-outline-links btn-social mx-1" href="https://www.linkedin.com/in/nicolas-barbarisi-a4a97a193/" title="Linkedin" target="_blank"><i class="fab fa-fw fa-linkedin-in"></i></a>
+                        <a class="btn btn-outline-links btn-social mx-1" href="https://www.instagram.com/nicolas_barbarisi/" title="Instagram" target="_blank"><i class="fab fa-instagram"></i></a>
+                    </div>
+                    <!-- Footer About Text-->
+                    <div class="col-lg-4">
+                        <h4 class="text-uppercase mb-4">Qu'avez vous pensé de mon site ?</h4>
+                        <p class="lead">
+                            Donner votre avis me permettra d'améliorer mon site et d'y apporter du contenu plus pertinant.<br>
+                            <a class="lead-bold" title="Donner votre avis me permettra d'améliorer mon site et d'y apporter du contenu plus pertinant." target="_blank" href="https://ynov.qualtrics.com/jfe/form/SV_0oIIkrAKli2n0DI">Je souhaite aider le site en donnant mon avis !</a>
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </footer>
+        <!-- Copyright Section-->
+        <div class="copyright py-4 text-center text-white header-cover">
+            <div class="container">
+                <small>Copyright © Nicolas Barbarisi 2021 - <a title="Politique de confidentialité.pdf" style="color: #e58e26;" target="_blank" href="assets/download/politique_de_confidentialite.pdf">Politique de confidentialité </a>- <a title="Conditions générales d'utilisation.pdf" style="color: #e58e26" target="_blank" href="assets/download/conditions_generales_d'utilisation.pdf">Conditions générales d'utilisation</a></small>
+            </div>
+        </div>
+        <!-- Scroll to Top Button (Only visible on small and extra-small screen sizes)-->
+        <div class="scroll-to-top d-lg-none position-fixed">
+            <a class="js-scroll-trigger d-block text-center text-white rounded" href="#page-top"><i class="fa fa-chevron-up"></i></a>
+        </div>
+        
+        <!-- Bootstrap core JS-->
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/js/bootstrap.bundle.min.js"></script>
+        <!-- Third party plugin JS-->
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-easing/1.4.1/jquery.easing.min.js"></script>
+        <!-- Contact form JS-->
+        <script src="mail/jqBootstrapValidation.js"></script>
+        <script src="mail/contact_me.js"></script>
+        <!-- Core theme JS-->
+        <script src="js/scripts.js"></script>
+        <!-- reCAPTCHA Validation-->
+        <script src="https://www.google.com/recaptcha/api.js" async defer></script>
+    </body>
+</html>

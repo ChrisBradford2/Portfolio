@@ -21,6 +21,8 @@
     <body id="page-top">
         <!-- Navigation-->
         <nav class="navbar navbar-expand-lg bg-secondary text-uppercase fixed-top" id="mainNav">
+            <!--<h1 class="accessibility">Barre de navigation</h1>
+            <p class="accessibility"><a href="#pageContent" title="Accéder directement au contenu principal de cette page">Passer le menu</a></p>-->
             <div class="container">
                 <a class="navbar-brand js-scroll-trigger" href="#page-top">Nicolas Barbarisi</a>
                 <button class="navbar-toggler navbar-toggler-right text-uppercase font-weight-bold bg-primary text-white rounded" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
@@ -175,28 +177,34 @@
                             <div class="control-group">
                                 <div class="form-group floating-label-form-group controls mb-0 pb-2">
                                     <label>Nom</label>
-                                    <input class="form-control" id="name" type="text" placeholder="Nom" required="required" data-validation-required-message="Merci de rentrer votre nom." />
+                                    <input class="form-control" id="name" type="text" placeholder="Nom" required="required" title="Merci de rentrer votre nom" data-validation-required-message="Merci de rentrer votre nom." />
                                     <p class="help-block text-danger"></p>
                                 </div>
                             </div>
                             <div class="control-group">
                                 <div class="form-group floating-label-form-group controls mb-0 pb-2">
                                     <label>Adresse mail</label>
-                                    <input class="form-control" id="email" type="email" placeholder="Adresse mail" required="required" data-validation-required-message="Merci de rentrer votre adresse mail." />
+                                    <input class="form-control" id="email" type="email" placeholder="Adresse mail" required="required" title="Merci de rentrer votre adresse mail"  data-validation-required-message="Merci de rentrer votre adresse mail." />
                                     <p class="help-block text-danger"></p>
                                 </div>
                             </div>
                             <div class="control-group">
                                 <div class="form-group floating-label-form-group controls mb-0 pb-2">
                                     <label>Numéro de téléphone</label>
-                                    <input class="form-control" id="phone" type="tel" placeholder="Numéro de téléphone (optionel)" />
+                                    <input class="form-control" id="phone" type="tel" title="Merci de rentrer votre numéro de téléphone (optionel)" placeholder="Numéro de téléphone (optionel)" />
                                     <p class="help-block text-danger"></p>
                                 </div>
                             </div>
                             <div class="control-group">
                                 <div class="form-group floating-label-form-group controls mb-0 pb-2">
                                     <label>Message</label>
-                                    <textarea class="form-control" id="message" rows="5" placeholder="Message" required="required" data-validation-required-message="Merci d'écrire un message."></textarea>
+                                    <textarea class="form-control" id="message" rows="5" placeholder="Message" required="required" title="Merci d'écrire un message" data-validation-required-message="Merci d'écrire un message."></textarea>
+                                    <p class="help-block text-danger"></p>
+                                </div>
+                            </div>
+                            <div class="control-group">
+                                <div class="form-group floating-label-form-group controls mb-0 pb-2">
+                                    <div class="g-recaptcha" data-sitekey="6LeoJz0aAAAAANxXPb3HirZ7bcddEa0lAt2QQ8FK" required="required"></div>
                                     <p class="help-block text-danger"></p>
                                 </div>
                             </div>
@@ -311,7 +319,7 @@
                                     <!-- Portfolio Modal - Image-->
                                     <img class="img-fluid rounded mb-5" src="assets/img/portfolio/dreamweaver.png" alt="portfolio_html"/>
                                     <!-- Portfolio Modal - Text-->
-									<p class="mb-5"><b>Vous le consultez en ce moment même :)</b><br><br>L'idée de ce site m'est venu lorsqu'en faisant mon CV, j'inscrivait mes compétences, sans pour autant les démontrer. J'ai cherché des sites spécialisé pour faire son propre Portfolio comme <a href="https://portfolio.adobe.com/" style="color: #212529" target="_blank"><b>Adoble Portfolio</b></a>, <a href="https://mahara.org" style="color: #212529" target="_blank"><b>Mahara</b></a> ou encore <a href="https://wordpress.com/create/" style="color: #212529" target="_blank"><b>Wordpress</b></a>, mais aucun ne m'as véritablement convaicu. J'ai donc pris l'initiative de créer mon propre site web qui fera office de Portfolio.<br><br>Pour gagner en rapidité et partir sur une base, j'ai choisi le framework <b style="color: #7952b3"><a href="https://getbootstrap.com/" target="_blank">Bootstrap</a></b> avec sa template <a href="https://startbootstrap.com/theme/freelancer" style="color: #212529" title="Freelancer" target="_blank"><b>Freelancer</b></a>. J'ai modifié le code avec Adobe Dreamweaver afin de démontrer mes compétences de Dev Web.<br><br>Il est écrit en HTML, CSS et Javascript, avec une partie PHP pour le formulaire d'envoi du mail (que vous trouverez une section plus bas).<br><br>Toutes les images des projets que vous voyez dans la section Portfolio sont entièrement faites par moi. J'ai créé les visuels avec <a href="https://www.canva.com//" style="color: #212529" target="_blank"><b>Canva</b></a>, je m'en sert régulièrement pour créer des logos et des visuels dans mes projets.<br><br>Lien du répo Github : <a target="_blank" title="Répo git du site" href="https://github.com/ChrisBradford2/Portfolio">https://github.com/ChrisBradford2/Portfolio</a></p>
+									<p class="mb-5"><b>Vous le consultez en ce moment même :)</b><br><br>L'idée de ce site m'est venu lorsqu'en faisant mon CV, j'inscrivait mes compétences, sans pour autant les démontrer. J'ai cherché des sites spécialisé pour faire son propre Portfolio comme <a href="https://portfolio.adobe.com/" style="color: #212529" target="_blank"><b>Adoble Portfolio</b></a>, <a href="https://mahara.org" style="color: #212529" target="_blank"><b>Mahara</b></a> ou encore <a href="https://wordpress.com/create/" style="color: #212529" target="_blank"><b>Wordpress</b></a>, mais aucun ne m'as véritablement convaicu. J'ai donc pris l'initiative de créer mon propre site web qui fera office de Portfolio.<br><br>Pour gagner en rapidité et partir sur une base, j'ai choisi le framework <b style="color: #7952b3"><a href="https://getbootstrap.com/" target="_blank">Bootstrap</a></b> avec sa template <a href="https://startbootstrap.com/theme/freelancer" style="color: #212529" title="Freelancer" target="_blank"><b>Freelancer</b></a>. J'ai modifié le code avec Adobe Dreamweaver afin de démontrer mes compétences de Dev Web.<br><br>Il est écrit en HTML, CSS et Javascript, avec une partie PHP pour le formulaire d'envoi du mail (que vous trouverez une section plus bas).<br><br>Toutes les images des projets que vous voyez dans la section Portfolio sont entièrement faites par moi. J'ai créé les visuels avec <a href="https://www.canva.com//" style="color: #212529" target="_blank"><b>Canva</b></a>, je m'en sert régulièrement pour créer des logos et des visuels dans mes projets.<!--<br><br>Lien du répo Github : <a target="_blank" title="Répo git du site" href="https://github.com/ChrisBradford2/Portfolio">https://github.com/ChrisBradford2/Portfolio</a>--></p>
                                     <button class="btn btn-primary" data-dismiss="modal">
                                         <i class="fas fa-times fa-fw"></i>
                                         Retour
@@ -476,5 +484,7 @@
         <script src="assets/mail/contact_me.js"></script>
         <!-- Core theme JS-->
         <script src="js/scripts.js"></script>
+        <!-- reCAPTCHA Validation-->
+        <script src="https://www.google.com/recaptcha/api.js" async defer></script>
     </body>
 </html>
