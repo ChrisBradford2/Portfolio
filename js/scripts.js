@@ -125,4 +125,17 @@
     };
   
   })(jQuery); // End of use strict
-  
+
+  /*function redirection() {
+    var redirect;
+    var r = confirm("Press a button!");
+    if (r == true) {
+      window.open("https://www.blog.nicolas-barbarisi.com")
+    } else {
+      console.log("Window closed successfully")
+    }
+  }*/
+
+  function redirection() {
+    alert("Compétition organisée par mon école dans lequel une problématique est donnée et les étudiants ont 48h pour coder une solution.");
+  }

@@ -6,9 +6,10 @@ var snakeGame;
 window.onload = function()
 {
 
-    snakeGame = new SnakeGame(900,600,30,100);
+    snakeGame = new SnakeGame(750,580,30,100);
     snake = new Snake([[6,4], [5,4], [4,4], [3,4], [2,4]], "right");
     apple = new Apple([10,10]);
+    snakeGame.begin;
     snakeGame.init(snake,apple);
 }
 
@@ -18,16 +19,16 @@ document.onkeydown = function handleKeyDown(e)
     var newDirection;
     switch(key)
     {
-        case 37:
+        case 81:
             newDirection = "left";
             break;
-        case 38:
+        case 90:
              newDirection = "up";
             break;
-        case 39:
+        case 68:
             newDirection = "right";
             break;
-        case 40:
+        case 83:
             newDirection = "down";
             break;
         case 32:
@@ -48,7 +49,7 @@ function SnakeGame(canvasWidth, canvasHeight, blockSize, delay)
     this.canvas.width = canvasWidth;
     this.canvas.height = canvasHeight;
     this.canvas.style.border = "1px solid";
-    this.canvas.style.margin = "50px auto";
+    this.canvas.style.margin = "0px auto";
     this.canvas.style.display = "block";
     document.body.appendChild(this.canvas);
     this.ctx = this.canvas.getContext('2d');
@@ -61,6 +62,14 @@ function SnakeGame(canvasWidth, canvasHeight, blockSize, delay)
     this.score;
     var instance = this;
     var timeout;
+
+    this.begin = function()
+    {
+        this.ctx.save();
+        this.ctx.fillText("Appuyez sur les touches de direction pour diriger le serpent", 5, 15);
+        this.ctx.fillText("Appuyer sur la touche Espace pour jouer", 5, 30);
+        refreshCanvas();
+    };
     
     this.init = function(snake, apple)
     {
@@ -136,7 +145,8 @@ function SnakeGame(canvasWidth, canvasHeight, blockSize, delay)
     {
         this.ctx.save();
         this.ctx.fillText("Game Over", 5, 15);
-        this.ctx.fillText("Appuyer sur la touche Espace pour rejouer", 5, 30);
+        this.ctx.fillText("Appuyer sur z, q, s et d pour déplacer le serpent", 5, 30);
+        this.ctx.fillText("Appuyer sur la touche Espace pour rejouer", 5, 45);
         this.ctx.restore();
     };
     
