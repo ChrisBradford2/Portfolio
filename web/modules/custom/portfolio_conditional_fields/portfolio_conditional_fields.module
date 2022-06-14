@@ -1,0 +1,58 @@
+<?php
+
+/**
+ * @file
+ * Primary module hooks for Portfolio conditional fields module.
+ */
+
+/**
+ * Implements hook_form_alter().
+ */
+function portfolio_conditional_fields_form_alter(&$form, \Drupal\Core\Form\FormStateInterface $form_state, $form_id) {
+  if (in_array($form_id, ['node_landing_page_form'])) {
+    $form['field_school']['widget']['0']['subform']['field_end_date']['#access'] = [
+      'visible' => [
+        ':input[name="field_boolean[value]]"' => ['checked' => FALSE]
+      ]
+    ];
+    //kint($form); die();
+  }
+}
+
+function portfolio_conditional_fields_help($path, $arg) {
+  $output = '';
+  switch ($path) {
+    case "admin/help/portfolio_conditional_fields":
+      $output = '';
+      $output .= '<h3>' . t('About') . '</h3>';
+      $output .= '<p>' . t('The module <em>A Wusel Migration</em> allows the admin (with proper permissions) to import a special CSV-file with new users and their "memberlist"-fields to create the new users') . '.</p>';
+      $output .= '<h3>' . t('The steps to use this module') . '</h3>';
+      $output .= '<dl>';
+      $output .= '<dt>' . t('Get the CSV-file') . '</dt>';
+      $output .= '<dd>' . t('Get the CSV-file and prepare it like <a target="_blank" title="Look at this note!!!" href="@wusel-migration-source-note2">@wusel-migration-source-note2</a> (comma separated, UTF8 with BOM, proper line-end)', array('@wusel-migration-source-note2' => url('http://drupal.org/node/1285276#note2'))) 
+      . ', ' . t('if necessary look at <a target="_blank" title="Look at this note!!!" href="@migratesourcecsvpath">@migratesourcecsvtitle</a> on drupal.org for details to change some of these settings in the code of the module <em>A Wusel Migration</em>', array('@migratesourcecsvpath' => url('https://drupal.org/node/1152158'), '@migratesourcecsvtitle' => 'MigrateSourceCSV'))
+      . '.<br>' . t('You can use a good editor like "<strong>notepad++</strong>" on windows or "<strong>LibreOffice Calc</strong>" (both when indicated: "<strong>... Portable</strong>") or "<strong>MS Excel</strong>" to change this (Tip: use "Save as" and change the needed properties before/during saving)') . '.</dd>';
+      $output .= '<dt>' . t('Store the CSV-file') . '</dt>';
+      $output .= '<dd>' . t('Put the correct named CSV-file in the path as specified (Look at "Query" on tab "Source" of the page <a href="@wusel-migration-csv-file-location"><em>@wusel-migration-csv-file-location</em></a>)', array('@wusel-migration-csv-file-location' => url('admin/content/migrate/groups/WuselMigrate/Wusel_Step1_User'))) . '.</dd>';
+      $output .= '<dt>' . t('Prepare your site') . '</dt>';
+      $output .= '<dd><strong>' . t('Clear the cache') . '!</strong></dd>';
+      $output .= '<dt>' . t('Start the <em>A Wusel Migration</em>') . '</dt>';
+      $output .= '<dd>' . t('Visit the <a href="@wusel-migration-start"><em>@wusel-migration-start</em></a> page to import the data', array('@wusel-migration-start' => url('admin/content/migrate/groups/WuselMigrate'))) 
+      . '.<br>' 
+      . t('Check the box for the first migration <strong>Wusel_Step1_User</strong> and click import (or use drush).<br>Check the box for the second migration <strong>Wusel_Step2_Memberlist</strong> and click import (or use drush)') . '.</dd>';
+      $output .= '</dl>';
+      $output .= '<h3>' . t('Hints') . '</h3>';
+      $output .= '<dl>';
+      $output .= '<dt>' . t('Basic concept of <em>A Wusel Migration</em>') . '</dt>';
+      $output .= '<dd>' . t('Visit the <a target="_blank" href="@wusel-migration-source">Cookbook</a> page on drupal.org to view the basic concept of this migration', array('@wusel-migration-source' => url('http://drupal.org/node/1285276'))) . '.</dd>';
+      $output .= '<dt>' . t('Documentation of the module <em>Migrate</em>') . '</dt>';
+      $output .= '<dd>';
+      if (module_exists('advanced_help')) {
+         $output .= t('The module <em>Migrate</em> has a <a target="_blank" href="@migrate-readme-txt">README.txt</a> (local)', array('@migrate-readme-txt' => url('help/migrate/README.txt'))) . '.<br>';
+      };
+      $output .= t('The documentation is in the source of this module (Path = "<tt>@migrate</tt>") and its examples', array('@migrate' => DRUPAL_ROOT . '/' . drupal_get_path('module', 'migrate') . '/')) . '.<br>' . t('Visit the <a target="_blank" href="@migration-doc">Documentation</a> page on drupal.org', array('@migration-doc' => url('http://drupal.org/node/415260'))) . '.</dd>';
+      $output .= '</dl>';
+      break;
+  }
+  return $output;
+}

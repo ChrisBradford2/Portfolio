@@ -1,0 +1,6 @@
+name: Portfolio conditional fields
+type: module
+description: Primary module hooks for Portfolio conditional fields module
+package: Portfolio
+core: 8.x
+core_version_requirement: ^8 || ^9
