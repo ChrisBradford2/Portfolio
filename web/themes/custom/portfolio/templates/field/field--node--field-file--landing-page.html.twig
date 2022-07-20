@@ -37,8 +37,8 @@
  * @see template_preprocess_field()
  */
 #}
-
 {{ attach_library('portfolio/download-button') }}
+{{ attach_library('portfolio/bootstrap_cdn') }}
 
 {%
   set classes = [
@@ -58,10 +58,9 @@
 {% if label_hidden %}
     {% for item in items %}
       <div{{ attributes.addClass(classes, 'field__item') }}>
-        <a title="{{ item.content["#media"].name.value }}" href="#">Mimimi</a>
-        {{ item.content }}
+        <a class="btn" title="Téléchargez mon CV en format PDF" href="{{ item.content }}" target="_blank" type="application/pdf">
+          <i class="fa-solid fa-download"></i>Téléchargez mon CV
+        </a>
       </div>
-      file_url(paragraph.field_media_image.entity.field_media_image.entity.fileuri)
-      {{ dd() }}
     {% endfor %}
 {% endif %}

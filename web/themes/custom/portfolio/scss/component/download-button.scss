@@ -1,5 +1,22 @@
-.field--name-field-media {
-  .field__item {
-    background-color: #0a7bc1;
+.field--name-field-file {
+  margin-bottom: 2.5rem;
+  text-align: center;
+  a {
+    padding: 1rem 1.75rem;
+    font-size: 1.25rem;
+    background: #2980b9;
+    color: #f8f9fa;
+    border-color: #2980b9;
+    border-radius: .5rem;
+    transition: all .2s linear;
+    &:hover {
+      background-color: #e58e26;
+      border-color: #e58e26;
+      color: #f8f9fa;
+      box-shadow: 10px 5px 5px gray;
+    }
+  }
+  svg {
+    margin-right: .5rem;
   }
 }

@@ -25,6 +25,7 @@
         "drupal/core-recommended": "^9.3",
         "drupal/devel": "^4.1",
         "drupal/field_group": "^3.2",
+        "drupal/fontawesome": "^2.23",
         "drupal/gin": "^3.0@beta",
         "drupal/gin_toolbar": "^1.0@beta",
         "drupal/paragraphs": "^1.14",
