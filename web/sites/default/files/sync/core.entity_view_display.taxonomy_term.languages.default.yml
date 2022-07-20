@@ -1,0 +1,33 @@
+uuid: 05751726-f08c-40a0-b360-9905c773db16
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.taxonomy_term.languages.field_list_text
+    - field.field.taxonomy_term.languages.field_text_formatted_long
+    - taxonomy.vocabulary.languages
+  module:
+    - options
+    - text
+id: taxonomy_term.languages.default
+targetEntityType: taxonomy_term
+bundle: languages
+mode: default
+content:
+  field_list_text:
+    type: list_default
+    label: hidden
+    settings: {  }
+    third_party_settings: {  }
+    weight: 1
+    region: content
+  field_text_formatted_long:
+    type: text_default
+    label: hidden
+    settings: {  }
+    third_party_settings: {  }
+    weight: 0
+    region: content
+hidden:
+  description: true
+  langcode: true

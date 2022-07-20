@@ -1,0 +1,19 @@
+uuid: a8519820-33e8-4c86-8ce5-15f61a77893a
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_text_plain
+    - paragraphs.paragraphs_type.experience_pro
+id: paragraph.experience_pro.field_text_plain
+field_name: field_text_plain
+entity_type: paragraph
+bundle: experience_pro
+label: 'Nom de l''entreprise'
+description: ''
+required: true
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

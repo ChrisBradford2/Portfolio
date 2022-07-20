@@ -1,0 +1,31 @@
+uuid: 8c4c387e-3192-4ad6-b9bc-c270113dae9c
+langcode: fr
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_entity_reference
+    - paragraphs.paragraphs_type.competences
+    - taxonomy.vocabulary.skills
+  module:
+    - entity_reference_revisions
+id: paragraph.competences.field_entity_reference
+field_name: field_entity_reference
+entity_type: paragraph
+bundle: competences
+label: Compétence
+description: ''
+required: true
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:taxonomy_term'
+  handler_settings:
+    target_bundles:
+      skills: skills
+    sort:
+      field: name
+      direction: asc
+    auto_create: false
+    auto_create_bundle: ''
+field_type: entity_reference_revisions

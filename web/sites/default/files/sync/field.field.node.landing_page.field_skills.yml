@@ -1,0 +1,31 @@
+uuid: fd4965f2-055b-4dac-9f1e-048b11623262
+langcode: fr
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_skills
+    - node.type.landing_page
+    - paragraphs.paragraphs_type.competences
+  module:
+    - entity_reference_revisions
+id: node.landing_page.field_skills
+field_name: field_skills
+entity_type: node
+bundle: landing_page
+label: 'Mes compétences'
+description: ''
+required: true
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:paragraph'
+  handler_settings:
+    target_bundles:
+      competences: competences
+    negate: 0
+    target_bundles_drag_drop:
+      competences:
+        weight: 2
+        enabled: true
+field_type: entity_reference_revisions

@@ -1,0 +1,10 @@
+uuid: 4c88c2f3-83bf-458a-a856-b69b2d493978
+langcode: en
+status: true
+dependencies: {  }
+id: schools
+label: Écoles
+icon_uuid: null
+icon_default: null
+description: ''
+behavior_plugins: {  }

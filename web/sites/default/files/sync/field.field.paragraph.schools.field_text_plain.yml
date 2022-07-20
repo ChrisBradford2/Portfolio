@@ -1,0 +1,19 @@
+uuid: 30285bff-a315-4d04-b3fb-f49a0e0e5ed8
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_text_plain
+    - paragraphs.paragraphs_type.schools
+id: paragraph.schools.field_text_plain
+field_name: field_text_plain
+entity_type: paragraph
+bundle: schools
+label: 'Nom de l''école'
+description: ''
+required: true
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

@@ -1,0 +1,21 @@
+uuid: fece7eb9-a538-41b8-8393-5bcfa7adc8c0
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.taxonomy_term.field_list_text
+    - taxonomy.vocabulary.languages
+  module:
+    - options
+id: taxonomy_term.languages.field_list_text
+field_name: field_list_text
+entity_type: taxonomy_term
+bundle: languages
+label: Niveau
+description: ''
+required: true
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: list_string

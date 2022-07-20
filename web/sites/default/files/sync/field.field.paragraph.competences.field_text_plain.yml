@@ -1,0 +1,19 @@
+uuid: 4bb50778-4fdb-42f2-9625-7c214c275325
+langcode: fr
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_text_plain
+    - paragraphs.paragraphs_type.competences
+id: paragraph.competences.field_text_plain
+field_name: field_text_plain
+entity_type: paragraph
+bundle: competences
+label: 'Nom du bloc de compétences'
+description: ''
+required: true
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

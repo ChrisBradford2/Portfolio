@@ -1,0 +1,21 @@
+uuid: e98e2cb6-674a-4102-ad60-ef18ae45faf9
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_list_text
+    - paragraphs.paragraphs_type.poste
+  module:
+    - options
+id: paragraph.poste.field_list_text
+field_name: field_list_text
+entity_type: paragraph
+bundle: poste
+label: 'Type de contrat'
+description: ''
+required: true
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: list_string

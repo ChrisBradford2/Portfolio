@@ -1,0 +1,37 @@
+uuid: 14f4a7b7-6fa5-497d-8dc1-3a065cebb053
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_paragraph
+    - paragraphs.paragraphs_type.experience_pro
+    - paragraphs.paragraphs_type.poste
+  module:
+    - entity_reference_revisions
+id: paragraph.experience_pro.field_paragraph
+field_name: field_paragraph
+entity_type: paragraph
+bundle: experience_pro
+label: Poste
+description: ''
+required: true
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:paragraph'
+  handler_settings:
+    target_bundles:
+      poste: poste
+    negate: 0
+    target_bundles_drag_drop:
+      competences:
+        weight: 4
+        enabled: false
+      experience_pro:
+        weight: 5
+        enabled: false
+      poste:
+        weight: 6
+        enabled: true
+field_type: entity_reference_revisions

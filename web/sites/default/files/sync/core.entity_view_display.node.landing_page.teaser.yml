@@ -1,0 +1,43 @@
+uuid: 26486b33-22fc-4537-b8b7-e5bd59864933
+langcode: fr
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.node.teaser
+    - field.field.node.landing_page.body
+    - field.field.node.landing_page.field_file
+    - field.field.node.landing_page.field_media
+    - field.field.node.landing_page.field_professionnal_experiences
+    - field.field.node.landing_page.field_schools
+    - field.field.node.landing_page.field_skills
+    - field.field.node.landing_page.field_sub_title
+    - node.type.landing_page
+  module:
+    - text
+    - user
+id: node.landing_page.teaser
+targetEntityType: node
+bundle: landing_page
+mode: teaser
+content:
+  body:
+    type: text_summary_or_trimmed
+    label: hidden
+    settings:
+      trim_length: 600
+    third_party_settings: {  }
+    weight: 101
+    region: content
+  links:
+    settings: {  }
+    third_party_settings: {  }
+    weight: 100
+    region: content
+hidden:
+  field_file: true
+  field_media: true
+  field_professionnal_experiences: true
+  field_schools: true
+  field_skills: true
+  field_sub_title: true
+  langcode: true

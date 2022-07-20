@@ -1,0 +1,10 @@
+uuid: b268112d-14c7-4c7d-86fd-5575194a575d
+langcode: en
+status: true
+dependencies: {  }
+id: experience_pro
+label: 'Expérience pro'
+icon_uuid: null
+icon_default: null
+description: ''
+behavior_plugins: {  }

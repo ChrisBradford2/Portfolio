@@ -1,0 +1,21 @@
+uuid: 257c6d90-5a49-4ebb-b6fe-17e0827a29ba
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.taxonomy_term.field_text_formatted_long
+    - taxonomy.vocabulary.languages
+  module:
+    - text
+id: taxonomy_term.languages.field_text_formatted_long
+field_name: field_text_formatted_long
+entity_type: taxonomy_term
+bundle: languages
+label: Drapeau
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: text_long

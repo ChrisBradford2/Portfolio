@@ -1,0 +1,22 @@
+uuid: 88889a2e-7830-472a-88f8-79214a0a571f
+langcode: en
+status: true
+dependencies:
+  module:
+    - help
+  theme:
+    - portfolio
+_core:
+  default_config_hash: '-laWx8WA-ikiIEH3NJQ0hVbjqk3iEuBms91LB0B4IQU'
+id: portfolio_help
+theme: portfolio
+region: content
+weight: -30
+provider: null
+plugin: help_block
+settings:
+  id: help_block
+  label: Aide
+  label_display: '0'
+  provider: help
+visibility: {  }

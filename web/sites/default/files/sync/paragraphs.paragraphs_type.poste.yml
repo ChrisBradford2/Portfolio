@@ -1,0 +1,10 @@
+uuid: 4e0aa45f-89db-42d2-90fe-9095fa37de67
+langcode: en
+status: true
+dependencies: {  }
+id: poste
+label: Poste
+icon_uuid: null
+icon_default: null
+description: ''
+behavior_plugins: {  }

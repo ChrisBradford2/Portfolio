@@ -1,0 +1,16 @@
+uuid: 82afca82-f23b-4520-9f0d-014ce41f0c66
+langcode: en
+status: true
+dependencies:
+  config:
+    - taxonomy.vocabulary.certification
+  module:
+    - content_translation
+third_party_settings:
+  content_translation:
+    enabled: true
+id: taxonomy_term.certification
+target_entity_type_id: taxonomy_term
+target_bundle: certification
+default_langcode: fr
+language_alterable: false

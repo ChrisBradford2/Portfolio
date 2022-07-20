@@ -1,0 +1,21 @@
+uuid: a76b544f-3706-47d9-8cd4-ff870cafa15c
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_date
+    - paragraphs.paragraphs_type.poste
+  module:
+    - datetime
+id: paragraph.poste.field_date
+field_name: field_date
+entity_type: paragraph
+bundle: poste
+label: 'Date de début'
+description: ''
+required: true
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: datetime

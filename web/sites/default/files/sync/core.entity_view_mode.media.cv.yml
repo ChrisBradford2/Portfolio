@@ -1,0 +1,10 @@
+uuid: 9905d58d-ad50-4441-8f74-826da7940d92
+langcode: en
+status: true
+dependencies:
+  module:
+    - media
+id: media.cv
+label: CV
+targetEntityType: media
+cache: true

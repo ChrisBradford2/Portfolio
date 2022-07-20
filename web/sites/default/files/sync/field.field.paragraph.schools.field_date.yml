@@ -1,0 +1,21 @@
+uuid: fd99957b-adc6-4057-a9ea-90a44119af97
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_date
+    - paragraphs.paragraphs_type.schools
+  module:
+    - datetime
+id: paragraph.schools.field_date
+field_name: field_date
+entity_type: paragraph
+bundle: schools
+label: 'Date de début'
+description: ''
+required: true
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: datetime

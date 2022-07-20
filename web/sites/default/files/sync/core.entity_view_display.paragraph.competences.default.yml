@@ -1,0 +1,33 @@
+uuid: ed31ce59-5c8f-430e-84f4-8ef6acb233cf
+langcode: fr
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.competences.field_entity_reference
+    - field.field.paragraph.competences.field_text_plain
+    - paragraphs.paragraphs_type.competences
+  module:
+    - entity_reference_revisions
+id: paragraph.competences.default
+targetEntityType: paragraph
+bundle: competences
+mode: default
+content:
+  field_entity_reference:
+    type: entity_reference_revisions_entity_view
+    label: hidden
+    settings:
+      view_mode: default
+      link: ''
+    third_party_settings: {  }
+    weight: 1
+    region: content
+  field_text_plain:
+    type: string
+    label: hidden
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    weight: 0
+    region: content
+hidden: {  }

@@ -1,0 +1,19 @@
+uuid: fd6ae569-e110-4ff4-af3c-2b31e9aabfdb
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_comments
+    - paragraphs.paragraphs_type.schools
+id: paragraph.schools.field_comments
+field_name: field_comments
+entity_type: paragraph
+bundle: schools
+label: Commentaires
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

@@ -1,0 +1,8 @@
+uuid: cd41d1df-6035-4955-9c33-aff38bfab8c7
+langcode: fr
+status: true
+dependencies: {  }
+name: Compétences
+vid: skills
+description: 'Liste des compétences'
+weight: 0

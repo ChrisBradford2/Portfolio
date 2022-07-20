@@ -1,0 +1,61 @@
+uuid: 06477aa4-f708-419e-9288-0543b8700f9c
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.schools.field_comments
+    - field.field.paragraph.schools.field_date
+    - field.field.paragraph.schools.field_degree
+    - field.field.paragraph.schools.field_end_date
+    - field.field.paragraph.schools.field_text_plain
+    - paragraphs.paragraphs_type.schools
+  module:
+    - datetime
+id: paragraph.schools.default
+targetEntityType: paragraph
+bundle: schools
+mode: default
+content:
+  field_comments:
+    type: string
+    label: hidden
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    weight: 4
+    region: content
+  field_date:
+    type: datetime_default
+    label: hidden
+    settings:
+      timezone_override: Europe/Paris
+      format_type: html_month
+    third_party_settings: {  }
+    weight: 1
+    region: content
+  field_degree:
+    type: string
+    label: hidden
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    weight: 3
+    region: content
+  field_end_date:
+    type: datetime_default
+    label: hidden
+    settings:
+      timezone_override: Europe/Paris
+      format_type: html_month
+    third_party_settings: {  }
+    weight: 2
+    region: content
+  field_text_plain:
+    type: string
+    label: hidden
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    weight: 0
+    region: content
+hidden: {  }
