@@ -34,3 +34,7 @@ download-button:
   css:
     component:
       css/component/download-button.css: {}
+paragraph-header:
+  css:
+    component:
+      css/component/paragraph-header.css: {}
