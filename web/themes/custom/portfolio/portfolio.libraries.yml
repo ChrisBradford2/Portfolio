@@ -28,3 +28,9 @@ color.preview:
     color/preview.js: {}
   dependencies:
     - color/drupal.color
+
+# Components
+download-button:
+  css:
+    component:
+      css/component/download-button.css: {}
