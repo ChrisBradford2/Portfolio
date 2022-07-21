@@ -38,3 +38,9 @@ paragraph-header:
   css:
     component:
       css/component/paragraph-header.css: {}
+
+# Paragraphs
+schools:
+  css:
+    component:
+      css/paragraph/schools.css: {}

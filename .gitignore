@@ -25,3 +25,5 @@
 /.env
 
 /web/themes/custom/portfolio/css/
+/web/themes/custom/portfolio/node_modules/
+/web/themes/custom/portfolio/package-lock.json
