@@ -40,22 +40,32 @@
 #}
 {{ attach_library('portfolio/schools') }}
 
-{%
-  set classes = [
-    'paragraph',
-    'paragraph--type--' ~ paragraph.bundle|clean_class,
-    view_mode ? 'paragraph--view-mode--' ~ view_mode|clean_class,
-    not paragraph.isPublished() ? 'paragraph--unpublished'
-  ]
-%}
+{% set classes = [
+  'paragraph',
+  'paragraph--type--' ~ paragraph.bundle|clean_class,
+  view_mode ? 'paragraph--view-mode--' ~ view_mode|clean_class,
+  not paragraph.isPublished() ? 'paragraph--unpublished'
+] %}
 {% block paragraph %}
   <div{{ attributes.addClass(classes) }}>
     {% block content %}
-      <div class="education-block">
-        {{ content }}
-        {{ dd(content) }}
-
-      </div>
+      <p class="date">
+        <time datetime="{{ content.field_date.0['#attributes'].datetime }}"
+              class="datetime">{{ content.field_date.0['#text'] }}</time>
+         -
+        {% if content.field_end_date.0 is not null %}
+          <time
+            datetime="{{ content.field_end_date.0['#attributes'].datetime }}"
+            class="datetime">{{ content.field_end_date.0['#text'] }}</time>
+        {% else %}
+          Aujourd'hui
+        {% endif %}
+      </p>
+      <i class="fas fa-graduation-cap" style="font-size: 40px; color: white; margin-bottom: 5%;"></i>
+      {{ content.field_text_plain }}
+      {{ content.field_degree }}
+      <div class="orange-divider"></div>
+      {{ content.field_comments }}
     {% endblock %}
   </div>
 {% endblock paragraph %}

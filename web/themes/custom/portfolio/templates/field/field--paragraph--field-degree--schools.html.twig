@@ -37,35 +37,20 @@
  * @see template_preprocess_field()
  */
 #}
-{{ attach_library('portfolio/paragraph-header') }}
-{%
-  set classes = [
-    'field',
-    'field--name-' ~ field_name|clean_class,
-    'field--type-' ~ field_type|clean_class,
-    'field--label-' ~ label_display,
-  ]
-%}
-{%
-  set title_classes = [
-    'field__label',
-    label_display == 'visually_hidden' ? 'visually-hidden',
-  ]
-%}
-<div{{ attributes.addClass(classes) }}>
-  <div class="header">
-    <h3{{ title_attributes.addClass(title_classes) }}>{{ label }}</h3>
-    <div class="divider-custom">
-      <div class="divider-custom-line"></div>
-    </div>
-  </div>
-  {% if multiple %}
-    <div class='field__items schools-cards'>
-  {% endif %}
+{% set classes = [
+  'field',
+  'field--name-' ~ field_name|clean_class,
+  'field--type-' ~ field_type|clean_class,
+  'field--label-' ~ label_display,
+] %}
+{% set title_classes = [
+  'field__label',
+  label_display == 'visually_hidden' ? 'visually-hidden',
+] %}
+
+{% if label_hidden %}
   {% for item in items %}
-    <div{{ item.attributes.addClass('field__item') }}>{{ item.content }}</div>
+    <h5{{ attributes.addClass(classes, 'field__item') }}>{{ item.content }}
+    </h5>
   {% endfor %}
-  {% if multiple %}
-    </div>
-  {% endif %}
-</div>
+{% endif %}

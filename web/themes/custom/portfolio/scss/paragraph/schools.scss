@@ -1,5 +1,58 @@
 .field--name-field-schools {
-  .field__items {
-    background-color: blue;
+  .schools-cards {
+    display: flex;
+    justify-content: space-around;
+    .paragraph--type--schools {
+      width: 20.313rem;
+      text-align: center;
+      padding: 30px;
+      background: #2980b9;
+      border-radius: 10px;
+      border: 2px solid #ccc;
+      margin-bottom: 20px;
+      text-overflow: ellipsis;
+      transform: rotatex(75deg) translatey(-200px) translatez(-100px);
+      box-shadow: 0 20px 60px rgba(0,0,0, 0.5);
+      transition:.6s;
+      .date {
+        transform: translateY(15px);
+        color: #e58e26;
+        font-size: 15px;
+        margin-bottom: 15px;
+        font-weight: bold;
+      }
+      h4 {
+        transform: translateY(15px);
+        color: #e58e26;
+        font-size: 24px;
+      }
+      h5 {
+        transform: translateY(15px);
+        margin-bottom: 20px;
+        color: white;
+        font-size: 1rem
+      }
+      .orange-divider {
+        transform: translateY(15px);
+        margin-bottom: 20px;
+      }
+      .field--name-field-comments {
+        transform: translateY(15px);
+        font-weight: bold;
+        color: white;
+        font-size: 1rem;
+      }
+      &:after {
+        content: "";
+        width: 20px;
+        height: 20px;
+      }
+      &:hover {
+        transform: rotatex(0deg);
+        transform: rotatez(0deg);
+        transition: .6s;
+        box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.3);
+      }
+    }
   }
 }

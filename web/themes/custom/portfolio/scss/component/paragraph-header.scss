@@ -1,24 +1,27 @@
 .field--type-entity-reference-revisions {
-  h3 {
-    color: #2980B9;
-    text-transform: uppercase;
-    text-align: center;
-    font-size: 1.75rem;
-    font-weight: 700;
-  }
-  .divider-custom {
-    margin: 1.25rem 0 1.5rem;
-    width: 100%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    .divider-custom-line {
+  .header {
+    margin-bottom: 2.5rem;
+    h3 {
+      color: #2980B9;
+      text-transform: uppercase;
+      text-align: center;
+      font-size: 1.75rem;
+      font-weight: 700;
+    }
+    .divider-custom {
+      margin: 1.25rem 0 1.5rem;
       width: 100%;
-      max-width: 7rem;
-      height: .25rem;
-      background-color: #2980B9;
-      border-radius: 1rem;
-      border-color: #2980B9 !important;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      .divider-custom-line {
+        width: 100%;
+        max-width: 7rem;
+        height: .25rem;
+        background-color: #2980B9;
+        border-radius: 1rem;
+        border-color: #2980B9 !important;
+      }
     }
   }
 }
