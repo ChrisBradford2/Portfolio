@@ -29,7 +29,7 @@ content:
     label: hidden
     settings:
       timezone_override: Europe/Paris
-      format_type: html_month
+      format_type: html_year
     third_party_settings: {  }
     weight: 1
     region: content
@@ -46,7 +46,7 @@ content:
     label: hidden
     settings:
       timezone_override: Europe/Paris
-      format_type: html_month
+      format_type: html_year
     third_party_settings: {  }
     weight: 2
     region: content
