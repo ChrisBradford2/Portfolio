@@ -4,15 +4,15 @@
   a {
     padding: 1rem 1.75rem;
     font-size: 1.25rem;
-    background: #2980b9;
-    color: #f8f9fa;
-    border-color: #2980b9;
+    background: #2980B9;
+    color: #F8F9FA;
+    border-color: #2980B9;
     border-radius: .5rem;
     transition: all .2s linear;
     &:hover {
-      background-color: #e58e26;
-      border-color: #e58e26;
-      color: #f8f9fa;
+      background-color: #E58E26;
+      border-color: #E58E26;
+      color: #F8F9FA;
       box-shadow: 10px 5px 5px gray;
     }
   }
