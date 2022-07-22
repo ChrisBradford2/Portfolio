@@ -10,13 +10,53 @@
     border-radius: .5rem;
     transition: all .2s linear;
     &:hover {
-      background-color: #E58E26;
-      border-color: #E58E26;
-      color: #F8F9FA;
-      box-shadow: 10px 5px 5px gray;
+      color: #f8f9fa;
+      background-color: #e58e26;
+      border-color: #e58e26;
     }
   }
   svg {
     margin-right: .5rem;
+  }
+  @keyframes swing
+  {
+    15%
+    {
+      -webkit-transform: translateX(5px);
+      transform: translateX(5px);
+    }
+    30%
+    {
+      -webkit-transform: translateX(-5px);
+      transform: translateX(-5px);
+    }
+    50%
+    {
+      -webkit-transform: translateX(3px);
+      transform: translateX(3px);
+    }
+    65%
+    {
+      -webkit-transform: translateX(-3px);
+      transform: translateX(-3px);
+    }
+    80%
+    {
+      -webkit-transform: translateX(2px);
+      transform: translateX(2px);
+    }
+    100%
+    {
+      -webkit-transform: translateX(0);
+      transform: translateX(0);
+    }
+  }
+
+  .swing:hover
+  {
+    -webkit-animation: swing 0.5s ease;
+    animation: swing 0.5s ease;
+    -webkit-animation-iteration-count: 1;
+    animation-iteration-count: 1;
   }
 }
