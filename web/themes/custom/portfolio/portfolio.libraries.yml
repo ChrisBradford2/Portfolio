@@ -38,6 +38,10 @@ paragraph-header:
   css:
     component:
       css/component/paragraph-header.css: {}
+node-header:
+  css:
+    component:
+      css/component/node-header.css: {}
 
 # Paragraphs
 schools:

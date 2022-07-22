@@ -1,0 +1,35 @@
+.field--type-text-with-summary {
+  .header {
+    line-height: 2.5rem;
+    color: #2980b9;
+    text-transform: uppercase;
+    text-align: center;
+    h2 {
+      font-size: 3rem;
+    }
+    .divider-custom {
+      margin: 1rem 0 1.5rem;
+      .divider-custom-line {
+        &:first-child {
+          margin-right: 1rem;
+        }
+        &:last-child {
+          margin-left: 1rem;
+        }
+      }
+    }
+  }
+  .field__item {
+    margin: 0 auto 3rem auto;
+    display: flex;
+    flex-wrap: wrap;
+    max-width: 1140px;
+    p {
+      font-size: 1.25rem;
+      font-weight: 300;
+    }
+    & .actency-color {
+      color: #5CB54D
+    }
+  }
+}

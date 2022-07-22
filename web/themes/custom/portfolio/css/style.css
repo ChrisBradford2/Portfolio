@@ -17,3 +17,23 @@ h1, h2, h3, h4, h5, h6 {
   background: #e58e26;
   margin: 0 auto;
 }
+
+.divider-custom {
+  margin: 1.25rem 0 1.5rem;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.divider-custom .divider-custom-line {
+  width: 100%;
+  max-width: 7rem;
+  height: .25rem;
+  background-color: #2980B9;
+  border-radius: 1rem;
+  border-color: #2980B9;
+}
+.divider-custom .divider-custom-icon {
+  color: #2980b9;
+  font-size: 2rem;
+}
