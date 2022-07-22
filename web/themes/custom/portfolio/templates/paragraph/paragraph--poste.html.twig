@@ -64,8 +64,8 @@
         {% endif %}
         {{ content.field_list_text }}
       </div>
-      {{ content.field_text }}
-      {{ content|without('field_text_plain', 'field_date', 'field_end_date', 'field_list_text', 'field_text')  }}
+      {{ content.field_text_formatted_long }}
+      {{ content|without('field_text_plain', 'field_date', 'field_end_date', 'field_list_text', 'field_text_formatted_long')  }}
     {% endblock %}
   </div>
 {% endblock paragraph %}

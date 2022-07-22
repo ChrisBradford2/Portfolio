@@ -6,11 +6,12 @@ dependencies:
     - field.field.paragraph.poste.field_date
     - field.field.paragraph.poste.field_end_date
     - field.field.paragraph.poste.field_list_text
-    - field.field.paragraph.poste.field_text
+    - field.field.paragraph.poste.field_text_formatted_long
     - field.field.paragraph.poste.field_text_plain
     - paragraphs.paragraphs_type.poste
   module:
     - datetime
+    - text
 id: paragraph.poste.default
 targetEntityType: paragraph
 bundle: poste
@@ -34,12 +35,12 @@ content:
     region: content
     settings: {  }
     third_party_settings: {  }
-  field_text:
-    type: string_textfield
-    weight: 5
+  field_text_formatted_long:
+    type: text_textarea
+    weight: 6
     region: content
     settings:
-      size: 60
+      rows: 5
       placeholder: ''
     third_party_settings: {  }
   field_text_plain:

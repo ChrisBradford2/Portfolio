@@ -71,6 +71,10 @@
               color: #6c757d;
               margin-bottom: 1rem;
             }
+            img, video {
+              width: 100%;
+              height: auto;
+            }
           }
         }
         &:after {

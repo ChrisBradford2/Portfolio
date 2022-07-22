@@ -1,12 +1,14 @@
-uuid: ce920e1e-9c22-4c2a-9570-a3182f0cb295
-langcode: fr
+uuid: 84e6e08c-c838-4ea1-9885-a7d6393623af
+langcode: en
 status: true
 dependencies:
   config:
-    - field.storage.paragraph.field_text
+    - field.storage.paragraph.field_text_formatted_long
     - paragraphs.paragraphs_type.poste
-id: paragraph.poste.field_text
-field_name: field_text
+  module:
+    - text
+id: paragraph.poste.field_text_formatted_long
+field_name: field_text_formatted_long
 entity_type: paragraph
 bundle: poste
 label: Commentaires
@@ -16,4 +18,4 @@ translatable: false
 default_value: {  }
 default_value_callback: ''
 settings: {  }
-field_type: string
+field_type: text_long
