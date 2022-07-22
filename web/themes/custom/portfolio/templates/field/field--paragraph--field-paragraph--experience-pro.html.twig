@@ -37,9 +37,6 @@
  * @see template_preprocess_field()
  */
 #}
-{{ attach_library('portfolio/download-button') }}
-{{ attach_library('portfolio/bootstrap_cdn') }}
-
 {%
   set classes = [
     'field',
@@ -56,11 +53,11 @@
 %}
 
 {% if label_hidden %}
-    {% for item in items %}
-      <div{{ attributes.addClass(classes, 'field__item') }}>
-        <a class="btn swing" title="Téléchargez mon CV en format PDF" href="{{ item.content }}" target="_blank" type="application/pdf">
-          <i class="fa-solid fa-download"></i>Téléchargez mon CV
-        </a>
-      </div>
-    {% endfor %}
+  {% if multiple %}
+    <div{{ attributes.addClass(classes, 'field__items') }}>
+      {% for item in items %}
+        <div{{ item.attributes.addClass('field__item', 'margin-job') }}>{{ item.content }}</div>
+      {% endfor %}
+    </div>
+  {% endif %}
 {% endif %}
