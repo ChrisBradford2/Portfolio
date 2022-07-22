@@ -18,33 +18,33 @@ bundle: poste
 mode: default
 content:
   field_date:
-    type: datetime_default
-    label: inline
+    type: datetime_custom
+    label: hidden
     settings:
       timezone_override: Europe/Paris
-      format_type: html_month
+      date_format: 'F Y'
     third_party_settings: {  }
     weight: 1
     region: content
   field_end_date:
-    type: datetime_default
-    label: above
+    type: datetime_custom
+    label: hidden
     settings:
       timezone_override: Europe/Paris
-      format_type: html_month
+      date_format: 'F Y'
     third_party_settings: {  }
     weight: 2
     region: content
   field_list_text:
     type: list_default
-    label: above
+    label: hidden
     settings: {  }
     third_party_settings: {  }
     weight: 3
     region: content
   field_text:
     type: string
-    label: above
+    label: hidden
     settings:
       link_to_entity: false
     third_party_settings: {  }
@@ -52,7 +52,7 @@ content:
     region: content
   field_text_plain:
     type: string
-    label: above
+    label: hidden
     settings:
       link_to_entity: false
     third_party_settings: {  }

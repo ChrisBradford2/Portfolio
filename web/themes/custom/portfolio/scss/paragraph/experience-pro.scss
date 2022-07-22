@@ -1,0 +1,164 @@
+.field--name-field-professionnal-experiences {
+  .timeline {
+    padding: 30px 0;
+    position: relative;
+    &:before {
+      top: 0;
+      bottom: 0;
+      position: absolute;
+      content: " ";
+      width: 5px;
+      background-color: #2980b9;
+      left: 90%;
+      margin-left: -2.5px;
+    }
+    & > .field__item {
+      margin-bottom: 20px;
+      position: relative;
+      &:after {
+        clear: both;
+      }
+      &:before,
+      &:after {
+        content: " ";
+        display: table;
+      }
+    }
+    .timeline-badge {
+      width: 50px;
+      line-height: 50px;
+      font-size: 20px;
+      text-align: center;
+      position: absolute;
+      top: 16px;
+      left: 90%;
+      margin-left: -25px;
+      background-color: #e58e26;
+      border-radius: 50%;
+      .briefcase {
+        color: white;
+        display: inline-block;
+        line-height: 1;
+        -webkit-font-smoothing: antialiased;
+      }
+    }
+    .paragraph--type--experience-pro {
+      width: 90%;
+      .timeline-panel {
+        width: 80%;
+        float: right;
+        margin-right: 40px;
+        border: 1px solid #d4d4d4;
+        border-radius: 7px;
+        padding: 20px 25px;
+        position: relative;
+        background: #fff;
+        transition: .75s;
+        h5 {
+          color: #e58e26;
+          font-size: 1.25rem;
+        }
+        .text-muted {
+          color: #6c757d;
+          margin-bottom: 1rem;
+        }
+        &:after {
+          position:absolute;
+          top: 27px;
+          display:inline-block;
+          border-top: 14px solid transparent;
+          border-bottom: 14px solid transparent;
+          content: " ";
+        }
+        &:hover {
+          transition: .75s;
+          box-shadow: 0 1px 6px rgb(0 0 0 / 18%);
+        }
+      }
+    }
+    .odd {
+      float: left;
+      .timeline-panel {
+        &:after {
+          border-left: 14px solid #fff;
+          border-right: 0 solid #fff;
+          right: -14px;
+        }
+      }
+    }
+    .even {
+      float: left;
+      .timeline-panel {
+        &:after {
+          border-left: 14px solid #fff;
+          border-right: 0 solid #fff;
+          right: -14px;
+        }
+      }
+    }
+  }
+}
+
+@media only screen and (min-width: 768px) {
+  .field--name-field-professionnal-experiences {
+    .timeline {
+      &:before {
+        left: 50%;
+      }
+      .timeline-badge {
+        left: 50%;
+      }
+      .paragraph--type--experience-pro {
+        width: 50%;
+        .timeline-panel {
+          width: 90%;
+          float: right;
+          margin-right: 40px;
+          border: 1px solid #d4d4d4;
+          border-radius: 7px;
+          padding: 20px 25px;
+          position: relative;
+          background: #fff;
+          transition: .75s;
+          &:after {
+            position:absolute;
+            top: 27px;
+            display:inline-block;
+            border-top: 14px solid transparent;
+            border-bottom: 14px solid transparent;
+            content: " ";
+          }
+          &:hover {
+            transition: .75s;
+            box-shadow: 0 1px 6px rgb(0 0 0 / 18%);
+          }
+        }
+      }
+      .odd {
+        float: left;
+        .timeline-panel {
+          &:after {
+            border-left: 14px solid #fff;
+            border-right: 0 solid #fff;
+            right: -14px;
+
+          }
+        }
+      }
+      .even {
+        float: right;
+        .timeline-panel {
+          margin-left: 40px;
+          float: left;
+          &:after {
+            border-left: 0 solid #fff;
+            border-right: 14px solid #fff;
+            left: -14px;
+            right: auto;
+          }
+        }
+      }
+    }
+  }
+}
+

@@ -44,3 +44,7 @@ schools:
   css:
     component:
       css/paragraph/schools.css: {}
+experience-pro:
+  css:
+    component:
+      css/paragraph/experience-pro.css: {}
