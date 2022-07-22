@@ -23,21 +23,29 @@
  * @see template_preprocess_taxonomy_term()
  */
 #}
-{%
-  set classes = [
-    'taxonomy-term',
-    'vocabulary-' ~ term.bundle|clean_class,
-  ]
-%}
+{% set classes = [
+  'taxonomy-term',
+  'vocabulary-' ~ term.bundle|clean_class,
+] %}
 <div{{ attributes.setAttribute('id', 'taxonomy-term-' ~ term.id).addClass(classes) }}>
   {{ title_prefix }}
   {% if not page %}
     {% if content.field_link is not empty %}
-      <a href="{{ content.field_link.0['#title'] }}" title="{{ name.0['#context'].value }}">
-        <img src="{{ content.field_text_plain_long.0['#context'].value }}" width="40" height="40" alt="{{ name.0['#context'].value }}"/>
-      </a>
+      {% if content.field_link.0['#title'] %}
+        <a href="{{ content.field_link.0['#title'] }}"
+        title="{{ name.0['#context'].value }}">
+      {% endif %}
+      <img src="{{ content.field_text_plain_long.0['#context'].value }}"
+           width="40" height="40"
+           alt="{{ name.0['#context'].value }}" {% if content.field_link.0['#title'] is empty %}
+        title="{{ name.0['#context'].value }}" {% endif %}/>
+      {% if content.field_link.0['#title'] %}
+        </a>
+      {% endif %}
     {% else %}
-      <img src="{{ content.field_text_plain_long.0['#context'].value }}" width="40" height="40" title=" {{ name.0['#context'].value }}" alt="{{ name.0['#context'].value }}"/>
+      <img src="{{ content.field_text_plain_long.0['#context'].value }}"
+           width="40" height="40" title=" {{ name.0['#context'].value }}"
+           alt="{{ name.0['#context'].value }}"/>
     {% endif %}
   {% endif %}
   {{ title_suffix }}

@@ -48,3 +48,7 @@ experience-pro:
   css:
     component:
       css/paragraph/experience-pro.css: {}
+competences:
+  css:
+    component:
+      css/paragraph/competences.css: {}

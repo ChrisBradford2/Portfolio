@@ -1,0 +1,55 @@
+.skills-cards {
+  display: grid;
+  gap: 1rem;
+  grid-template-columns: repeat(1, 1fr);
+  margin-bottom: 2.5rem;
+  .paragraph--type--competences {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    min-width: 0;
+    word-wrap: break-word;
+    background-color: #fff;
+    background-clip: border-box;
+    border: 0.125rem solid rgba(0, 0, 0, 0.125);
+    border-radius: 0.5rem;
+    text-align: center;
+    .field--name-field-text-plain {
+      padding: .75rem 1.25rem;
+      margin-bottom: 0;
+      background-color: rgba(0, 0, 0, 0.03);
+      border-bottom: 0.125rem solid rgba(0, 0, 0, 0.125);
+    }
+    .field--name-field-entity-reference {
+      display: flex;
+      flex: 1 1 auto;
+      min-height: 1px;
+      padding: 1.25rem;
+      margin: 0 auto;
+      gap: 1rem;
+      .field__item {
+        img {
+          width: 40px;
+          height: 40px;
+          transition: all .5s;
+          &:hover {
+            width: 80px;
+            height: 80px;
+          }
+        }
+      }
+    }
+  }
+}
+
+@media screen and (min-width: 769px) {
+  .skills-cards {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media screen and (min-width: 1201px) {
+  .skills-cards {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
