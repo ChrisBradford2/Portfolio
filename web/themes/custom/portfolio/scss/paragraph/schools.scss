@@ -2,56 +2,98 @@
   .schools-cards {
     display: flex;
     justify-content: space-around;
+    flex-wrap: wrap;
+    gap: 0.5rem;
     .paragraph--type--schools {
       width: 20.313rem;
       text-align: center;
-      padding: 30px;
+      padding: 1.875rem;
       background: #2980b9;
-      border-radius: 10px;
-      border: 2px solid #ccc;
-      margin-bottom: 20px;
+      border-radius: .625rem;
+      border: .125rem solid #ccc;
+      margin-bottom: 1.25rem;
       text-overflow: ellipsis;
-      transform: rotatex(75deg) translatey(-200px) translatez(-100px);
-      box-shadow: 0 20px 60px rgba(0,0,0, 0.5);
-      transition:.6s;
+      overflow: hidden;
+      position: relative;
+      transition: .75s;
+      .orange-divider {
+        transition: all .75s;
+      }
       .date {
-        transform: translateY(15px);
         color: #e58e26;
-        font-size: 15px;
-        margin-bottom: 15px;
+        font-size: 1rem;
+        margin-bottom: 1rem;
         font-weight: bold;
+        transition: .75s;
       }
       h4 {
-        transform: translateY(15px);
         color: #e58e26;
-        font-size: 24px;
+        font-size: 1.5rem;
+        transition: .75s;
       }
       h5 {
-        transform: translateY(15px);
-        margin-bottom: 20px;
+        margin-bottom: 1.25rem;
+        transition: .75s;
         color: white;
         font-size: 1rem
       }
       .orange-divider {
-        transform: translateY(15px);
-        margin-bottom: 20px;
+        margin-bottom: 1.25rem;
       }
       .field--name-field-comments {
-        transform: translateY(15px);
         font-weight: bold;
         color: white;
         font-size: 1rem;
+        transition: .75s;
       }
       &:after {
         content: "";
-        width: 20px;
-        height: 20px;
+        width: 1.25rem;
+        height: 1.25rem;
+        background-color: #0c0d0e;
+      }
+      .glass {
+        position: absolute;
+        width: 35rem;
+        height: 5rem;
+        /* From https://css.glass */
+        background: rgba(255, 255, 255, 0.14);
+        backdrop-filter: blur(5.6px);
+        -webkit-backdrop-filter: blur(5.6px);
+        transform: rotate(-45deg);
+        right: -7rem;
+        top: -35rem;
+        transition: .75s;
+        overflow: hidden;
       }
       &:hover {
-        transform: rotatex(0deg);
-        transform: rotatez(0deg);
-        transition: .6s;
-        box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.3);
+        .date {
+          font-size: 1.25rem;
+          transition: .75s;
+        }
+        h4 {
+          font-size: 1.75rem;
+          transition: .75s;
+        }
+        h5 {
+          font-size: 1.25rem;
+          transition: .75s;
+        }
+        .field--name-field-comments {
+          font-size: 1.25rem;
+          transition: .75s;
+        }
+        .glass {
+          top: 35rem;
+          transition: .75s;
+        }
+        .orange-divider {
+          width: 12.5rem;
+          transition: all .75s;
+        }
+        box-shadow: 0 0 10px 5px gray;
+        transition: .75s;
+        width: 22.5rem;
       }
     }
   }
