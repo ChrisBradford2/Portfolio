@@ -3,10 +3,18 @@ langcode: en
 status: true
 dependencies:
   config:
+    - field.field.user.user.field_email
+    - field.field.user.user.field_nationality
+    - field.field.user.user.field_reference_taxonomy_term
+    - field.field.user.user.field_residence
+    - field.field.user.user.field_telephone
+    - field.field.user.user.field_timestamp
     - field.field.user.user.user_picture
     - image.style.thumbnail
   module:
     - image
+    - options
+    - telephone
     - user
 _core:
   default_config_hash: E1qmUI2SlozLlJ308jfMMFKT67l1p6PywE2LTRbeYS4
@@ -15,8 +23,54 @@ targetEntityType: user
 bundle: user
 mode: default
 content:
-  member_for:
+  field_email:
+    type: email_mailto
+    label: inline
+    settings: {  }
+    third_party_settings: {  }
+    weight: 2
+    region: content
+  field_nationality:
+    type: list_default
+    label: inline
+    settings: {  }
+    third_party_settings: {  }
     weight: 5
+    region: content
+  field_reference_taxonomy_term:
+    type: entity_reference_entity_view
+    label: inline
+    settings:
+      view_mode: default
+      link: true
+    third_party_settings: {  }
+    weight: 6
+    region: content
+  field_residence:
+    type: string
+    label: inline
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    weight: 4
+    region: content
+  field_telephone:
+    type: telephone_link
+    label: inline
+    settings:
+      title: ''
+    third_party_settings: {  }
+    weight: 3
+    region: content
+  field_timestamp:
+    type: timestamp_ago
+    label: inline
+    settings:
+      future_format: '@interval'
+      past_format: '@interval'
+      granularity: 1
+    third_party_settings: {  }
+    weight: 1
     region: content
   user_picture:
     type: image
@@ -29,3 +83,4 @@ content:
     region: content
 hidden:
   langcode: true
+  member_for: true

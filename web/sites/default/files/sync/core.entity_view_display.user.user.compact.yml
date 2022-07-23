@@ -4,6 +4,12 @@ status: true
 dependencies:
   config:
     - core.entity_view_mode.user.compact
+    - field.field.user.user.field_email
+    - field.field.user.user.field_nationality
+    - field.field.user.user.field_reference_taxonomy_term
+    - field.field.user.user.field_residence
+    - field.field.user.user.field_telephone
+    - field.field.user.user.field_timestamp
     - field.field.user.user.user_picture
     - image.style.thumbnail
   module:
@@ -26,5 +32,11 @@ content:
     weight: 0
     region: content
 hidden:
+  field_email: true
+  field_nationality: true
+  field_reference_taxonomy_term: true
+  field_residence: true
+  field_telephone: true
+  field_timestamp: true
   langcode: true
   member_for: true

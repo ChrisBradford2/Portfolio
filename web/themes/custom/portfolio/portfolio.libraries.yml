@@ -42,6 +42,10 @@ node-header:
   css:
     component:
       css/component/node-header.css: {}
+region-homepage-header:
+  css:
+    component:
+      css/component/region-homepage-header.css: {}
 
 # Paragraphs
 schools:
@@ -56,3 +60,9 @@ competences:
   css:
     component:
       css/paragraph/competences.css: {}
+
+# Navigation
+navbar-brand:
+  css:
+    component:
+      css/paragraph/navbar-brand.css: {}
