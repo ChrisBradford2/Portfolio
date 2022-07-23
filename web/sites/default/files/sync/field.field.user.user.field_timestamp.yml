@@ -1,0 +1,22 @@
+uuid: 70cf4f31-953d-4d9f-9369-93927afc41e1
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.user.field_timestamp
+  module:
+    - user
+id: user.user.field_timestamp
+field_name: field_timestamp
+entity_type: user
+bundle: user
+label: Âge
+description: ''
+required: true
+translatable: false
+default_value:
+  -
+    value: 1658517631
+default_value_callback: ''
+settings: {  }
+field_type: timestamp

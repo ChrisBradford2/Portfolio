@@ -1,0 +1,37 @@
+uuid: 25b0d460-8c36-44f4-97da-13aaec3d51e1
+langcode: en
+status: true
+dependencies:
+  config:
+    - system.menu.homepage-navigation
+  module:
+    - node
+    - system
+  theme:
+    - portfolio
+id: homepagenavigation
+theme: portfolio
+region: primary_menu
+weight: 0
+provider: null
+plugin: 'system_menu_block:homepage-navigation'
+settings:
+  id: 'system_menu_block:homepage-navigation'
+  label: 'Homepage Navigation'
+  label_display: '0'
+  provider: system
+  level: 1
+  depth: 1
+  expand_all_items: false
+visibility:
+  'entity_bundle:node':
+    id: 'entity_bundle:node'
+    negate: false
+    context_mapping:
+      node: '@node.node_route_context:node'
+    bundles:
+      landing_page: landing_page
+  request_path:
+    id: request_path
+    negate: false
+    pages: '<front>'

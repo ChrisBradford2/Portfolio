@@ -1,0 +1,33 @@
+{#
+/**
+ * @file
+ * Theme override to display a region.
+ *
+ * Available variables:
+ * - content: The content for this region, typically blocks.
+ * - attributes: HTML attributes for the region div.
+ * - region: The name of the region variable as defined in the theme's
+ *   .info.yml file.
+ *
+ * @see template_preprocess_region()
+ */
+#}
+{{ attach_library('portfolio/region-homepage-header') }}
+
+{%
+  set classes = [
+    'region',
+    'region-' ~ region|clean_class,
+    'tamère'
+  ]
+%}
+{% set image_uri = elements.headerforthehomepagenode.content.field_media_image[0]['#media'].field_media_image.entity.uri.value %}
+{% set attributes = attributes.setAttribute(
+  'style',
+  'background-image: url(\'https://www.nicolas-barbarisi.com/assets/img/bg.png\')'
+) %}
+{% if content %}
+  <section{{ attributes.addClass(classes).removeClass('row') }}>
+    {{ content }}
+  </section>
+{% endif %}

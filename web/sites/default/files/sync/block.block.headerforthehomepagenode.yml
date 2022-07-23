@@ -1,0 +1,38 @@
+uuid: b193a352-e8c9-4c22-9cd7-376fdc7e2c55
+langcode: en
+status: true
+dependencies:
+  content:
+    - 'block_content:header_homepage:13b2af44-e518-48e4-852b-9dd912000237'
+  module:
+    - block_content
+    - node
+    - system
+  theme:
+    - portfolio
+id: headerforthehomepagenode
+theme: portfolio
+region: homepage_header
+weight: -7
+provider: null
+plugin: 'block_content:13b2af44-e518-48e4-852b-9dd912000237'
+settings:
+  id: 'block_content:13b2af44-e518-48e4-852b-9dd912000237'
+  label: 'Header for the homepage node'
+  label_display: '0'
+  provider: block_content
+  status: true
+  info: ''
+  view_mode: full
+visibility:
+  'entity_bundle:node':
+    id: 'entity_bundle:node'
+    negate: false
+    context_mapping:
+      node: '@node.node_route_context:node'
+    bundles:
+      landing_page: landing_page
+  request_path:
+    id: request_path
+    negate: false
+    pages: '<front>'

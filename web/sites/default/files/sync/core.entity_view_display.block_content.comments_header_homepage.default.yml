@@ -1,0 +1,32 @@
+uuid: 4f442169-a05c-4826-b351-93c87d5ccaf6
+langcode: en
+status: true
+dependencies:
+  config:
+    - block_content.type.comments_header_homepage
+    - field.field.block_content.comments_header_homepage.field_comments
+    - field.field.block_content.comments_header_homepage.field_icons
+  module:
+    - fontawesome
+id: block_content.comments_header_homepage.default
+targetEntityType: block_content
+bundle: comments_header_homepage
+mode: default
+content:
+  field_comments:
+    type: basic_string
+    label: hidden
+    settings: {  }
+    third_party_settings: {  }
+    weight: 1
+    region: content
+  field_icons:
+    type: fontawesome_icon_formatter
+    label: hidden
+    settings:
+      layers: false
+    third_party_settings: {  }
+    weight: 0
+    region: content
+hidden:
+  langcode: true

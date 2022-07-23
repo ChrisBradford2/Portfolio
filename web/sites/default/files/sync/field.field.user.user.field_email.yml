@@ -1,0 +1,22 @@
+uuid: 42cf04f9-85dd-4ea6-9514-6b56095d1c7b
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.user.field_email
+  module:
+    - user
+id: user.user.field_email
+field_name: field_email
+entity_type: user
+bundle: user
+label: Email
+description: ''
+required: true
+translatable: false
+default_value:
+  -
+    value: nicolas.barbarisi@actency.fr
+default_value_callback: ''
+settings: {  }
+field_type: email

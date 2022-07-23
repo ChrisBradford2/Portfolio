@@ -1,0 +1,32 @@
+uuid: 695a8d91-b5ad-403a-abbe-7f3a26eef2fd
+langcode: en
+status: true
+dependencies:
+  module:
+    - node
+    - system
+  theme:
+    - portfolio
+id: pagetitle
+theme: portfolio
+region: homepage_header
+weight: -5
+provider: null
+plugin: page_title_block
+settings:
+  id: page_title_block
+  label: 'Page title'
+  label_display: '0'
+  provider: core
+visibility:
+  'entity_bundle:node':
+    id: 'entity_bundle:node'
+    negate: false
+    context_mapping:
+      node: '@node.node_route_context:node'
+    bundles:
+      landing_page: landing_page
+  request_path:
+    id: request_path
+    negate: false
+    pages: '<front>'

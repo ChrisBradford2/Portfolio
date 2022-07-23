@@ -1,0 +1,22 @@
+uuid: 4af01fe9-a91b-4491-adbb-39b5582a97d4
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.user.field_residence
+  module:
+    - user
+id: user.user.field_residence
+field_name: field_residence
+entity_type: user
+bundle: user
+label: Résidence
+description: 'Mettre ici principalement la ville de résidence : Ville, Région, Pays.'
+required: true
+translatable: false
+default_value:
+  -
+    value: 'Osny, Île-de-france, France'
+default_value_callback: ''
+settings: {  }
+field_type: string

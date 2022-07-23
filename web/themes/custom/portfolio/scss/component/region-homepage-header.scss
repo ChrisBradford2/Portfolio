@@ -1,0 +1,59 @@
+.tamère {
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-size: cover;
+  background-color: #6c757d;
+  text-align: center;
+  color: #e58e26;
+  padding: 6rem 0;
+  .block-page-title-block {
+    .content {
+      h1 {
+        font-size: 4rem;
+        text-transform: uppercase;
+      }
+    }
+  }
+  #block-commentsheaderhomepage {
+    .content {
+      .field--name-field-icons {
+        .divider-custom {
+          margin: 1rem 0 1.5rem;
+          .divider-custom-line {
+            background-color: #e58e26;
+            border-color: #e58e26;
+            &:first-child {
+              margin-right: 1rem;
+            }
+            &:last-child {
+              margin-left: 1rem;
+            }
+          }
+          .divider-custom-icon {
+            color: #e58e26;
+          }
+        }
+      }
+      .field--name-field-comments {
+        font-size: 1.25rem;
+      }
+      @media (min-width: 992px) {
+        .field--name-field-comments {
+          font-size: 1.5rem;
+        }
+      }
+    }
+  }
+  #block-profilepictureforthehomepage {
+    .content {
+      .field--name-field-media-image {
+        margin-bottom: 3rem;
+        img {
+          max-width: 240px;
+          max-height: 240px;
+          border-radius: 50%;
+        }
+      }
+    }
+  }
+}

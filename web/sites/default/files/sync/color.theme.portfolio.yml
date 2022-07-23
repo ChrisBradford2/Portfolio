@@ -1,0 +1,18 @@
+palette:
+  top: '#055a8e'
+  bottom: '#2980b9'
+  bg: '#ffffff'
+  sidebar: '#f6f6f2'
+  sidebarborders: '#f9f9f9'
+  footer: '#2980b9'
+  button: '#2980b9'
+  buttonhover: '#e58e26'
+  titleslogan: '#fffeff'
+  text: '#3b3b3b'
+  link: '#0071b3'
+logo: 'public://color/portfolio-cfd55c17/logo.svg'
+stylesheets:
+  - 'public://color/portfolio-cfd55c17/colors.css'
+files:
+  - 'public://color/portfolio-cfd55c17/logo.svg'
+  - 'public://color/portfolio-cfd55c17/colors.css'

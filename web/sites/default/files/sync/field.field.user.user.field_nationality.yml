@@ -1,0 +1,23 @@
+uuid: 67abaf2c-0564-4f51-bf43-10d920e38357
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.user.field_nationality
+  module:
+    - options
+    - user
+id: user.user.field_nationality
+field_name: field_nationality
+entity_type: user
+bundle: user
+label: Nationalité
+description: ''
+required: true
+translatable: false
+default_value:
+  -
+    value: france
+default_value_callback: ''
+settings: {  }
+field_type: list_string

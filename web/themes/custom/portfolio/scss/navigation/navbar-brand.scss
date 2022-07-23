@@ -1,0 +1,17 @@
+.navbar {
+  margin-bottom: 42rem;
+  .navbar-brand {
+    display: inline-block;
+    font-family: 'Nova Flat', cursive;
+    line-height: inherit;
+  }
+}
+
+@media (min-width: 992px) {
+  .navbar {
+    .navbar-brand {
+      font-size: 1.75em;
+      transition: font-size 0.3s;
+    }
+  }
+}

@@ -1,0 +1,37 @@
+uuid: 67fd0218-6729-4167-9e82-00cdc3b2a907
+langcode: en
+status: true
+dependencies:
+  config:
+    - block_content.type.header_homepage
+    - field.field.block_content.header_homepage.field_media_image
+  module:
+    - media_library
+id: block_content.header_homepage.default
+targetEntityType: block_content
+bundle: header_homepage
+mode: default
+content:
+  field_media_image:
+    type: media_library_widget
+    weight: 0
+    region: content
+    settings:
+      media_types: {  }
+    third_party_settings: {  }
+  info:
+    type: string_textfield
+    weight: 3
+    region: content
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+  langcode:
+    type: language_select
+    weight: 4
+    region: content
+    settings:
+      include_locked: true
+    third_party_settings: {  }
+hidden: {  }

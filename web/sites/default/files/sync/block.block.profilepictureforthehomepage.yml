@@ -1,0 +1,38 @@
+uuid: ff353b9b-f5fa-4496-8316-389f7dffe472
+langcode: en
+status: true
+dependencies:
+  content:
+    - 'block_content:header_homepage:2b694a40-c0bb-4191-b7ea-b6c23f1fe075'
+  module:
+    - block_content
+    - node
+    - system
+  theme:
+    - portfolio
+id: profilepictureforthehomepage
+theme: portfolio
+region: homepage_header
+weight: -6
+provider: null
+plugin: 'block_content:2b694a40-c0bb-4191-b7ea-b6c23f1fe075'
+settings:
+  id: 'block_content:2b694a40-c0bb-4191-b7ea-b6c23f1fe075'
+  label: 'Profile picture for the homepage'
+  label_display: '0'
+  provider: block_content
+  status: true
+  info: ''
+  view_mode: full
+visibility:
+  'entity_bundle:node':
+    id: 'entity_bundle:node'
+    negate: false
+    context_mapping:
+      node: '@node.node_route_context:node'
+    bundles:
+      landing_page: landing_page
+  request_path:
+    id: request_path
+    negate: false
+    pages: '<front>'

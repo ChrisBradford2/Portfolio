@@ -1,0 +1,8 @@
+uuid: 3d4e921d-c942-4c67-b9d7-eb39c51cdc9f
+langcode: en
+status: true
+dependencies: {  }
+id: comments_header_homepage
+label: 'Comments header homepage'
+revision: 0
+description: ''
