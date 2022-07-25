@@ -1,0 +1,11 @@
+uuid: a60ecce9-6172-46df-80dc-45fd6c1872a8
+langcode: en
+status: true
+dependencies:
+  config:
+    - node.type.modal_node
+id: node.modal_node
+target_entity_type_id: node
+target_bundle: modal_node
+default_langcode: site_default
+language_alterable: false

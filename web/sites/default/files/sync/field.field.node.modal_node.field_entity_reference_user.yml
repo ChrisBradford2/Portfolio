@@ -1,20 +1,20 @@
-uuid: 56dd1b21-9537-409d-ad3b-47ad8979d493
+uuid: fe2a67ac-395b-407a-8b1b-cec2587672f4
 langcode: en
 status: true
 dependencies:
   config:
     - field.storage.node.field_entity_reference_user
-    - node.type.landing_page
+    - node.type.modal_node
   content:
     - 'user:user:b304b59d-dcc8-4130-8e53-c249d37c18a7'
-id: node.landing_page.field_entity_reference_user
+id: node.modal_node.field_entity_reference_user
 field_name: field_entity_reference_user
 entity_type: node
-bundle: landing_page
+bundle: modal_node
 label: 'En bref'
 description: ''
 required: true
-translatable: false
+translatable: true
 default_value:
   -
     target_uuid: b304b59d-dcc8-4130-8e53-c249d37c18a7
@@ -29,5 +29,5 @@ settings:
     auto_create: false
     filter:
       type: _none
-    include_anonymous: true
+    include_anonymous: false
 field_type: entity_reference

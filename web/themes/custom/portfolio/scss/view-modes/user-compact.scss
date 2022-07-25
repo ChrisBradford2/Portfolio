@@ -1,26 +1,36 @@
 .user--view-mode-compact {
-  border: 1px solid black;
-  border-radius: 3px;
-  padding: 5px;
   .group-left {
-    border: 1px solid black;
-    border-radius: 3px;
-    padding: 5px;
-    margin: 5px;
-    width: 24rem;
-    background-color: #e58e26;
     color: white;
   }
   .group-right {
+    width: 50%;
     .field--name-field-experience-year,
     .field--name-field-number-int {
-      border: 1px solid black;
+      border: 1px solid white;
       border-radius: 3px;
-      padding: 5px;
-      margin: 5px;
-      width: 9rem;
-      background-color: #e58e26;
+      padding: 10px;
+      margin: 10px;
       color: white;
+      transition: all 0.4s;
+      .field__item {
+        font-size: 1.5rem;
+        color: #e58e26;
+        transition: all 0.4s;
+      }
+      &:after {
+        content: "";
+        width: 1.25rem;
+        height: 1.25rem;
+      }
+      &:hover {
+        background-color: #2980B9;
+        transition: all 0.4s;
+        border: none;
+        padding: 20px;
+        .field__item {
+          font-size: 2rem;
+        }
+      }
     }
   }
 }

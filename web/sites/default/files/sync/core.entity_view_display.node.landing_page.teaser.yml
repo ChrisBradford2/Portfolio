@@ -5,7 +5,6 @@ dependencies:
   config:
     - core.entity_view_mode.node.teaser
     - field.field.node.landing_page.body
-    - field.field.node.landing_page.field_entity_reference_user
     - field.field.node.landing_page.field_file
     - field.field.node.landing_page.field_meta_tags
     - field.field.node.landing_page.field_professionnal_experiences
@@ -34,7 +33,6 @@ content:
     weight: 100
     region: content
 hidden:
-  field_entity_reference_user: true
   field_file: true
   field_meta_tags: true
   field_professionnal_experiences: true

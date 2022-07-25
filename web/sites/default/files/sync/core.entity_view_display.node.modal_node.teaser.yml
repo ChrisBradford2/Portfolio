@@ -1,0 +1,23 @@
+uuid: 3a58d26e-70fa-4232-8319-003d4e09073e
+langcode: en
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.node.teaser
+    - field.field.node.modal_node.field_entity_reference_user
+    - node.type.modal_node
+  module:
+    - user
+id: node.modal_node.teaser
+targetEntityType: node
+bundle: modal_node
+mode: teaser
+content:
+  links:
+    settings: {  }
+    third_party_settings: {  }
+    weight: 100
+    region: content
+hidden:
+  field_entity_reference_user: true
+  langcode: true

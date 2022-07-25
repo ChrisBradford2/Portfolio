@@ -1,0 +1,30 @@
+uuid: 1e042210-0fe0-4d1b-b4a4-c66284034f29
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.node.modal_node.field_entity_reference_user
+    - node.type.modal_node
+  module:
+    - user
+id: node.modal_node.default
+targetEntityType: node
+bundle: modal_node
+mode: default
+content:
+  field_entity_reference_user:
+    type: entity_reference_entity_view
+    label: hidden
+    settings:
+      view_mode: compact
+      link: false
+    third_party_settings: {  }
+    weight: 101
+    region: content
+  links:
+    settings: {  }
+    third_party_settings: {  }
+    weight: 100
+    region: content
+hidden:
+  langcode: true
