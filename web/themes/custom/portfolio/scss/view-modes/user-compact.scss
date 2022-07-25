@@ -1,0 +1,26 @@
+.user--view-mode-compact {
+  border: 1px solid black;
+  border-radius: 3px;
+  padding: 5px;
+  .group-left {
+    border: 1px solid black;
+    border-radius: 3px;
+    padding: 5px;
+    margin: 5px;
+    width: 24rem;
+    background-color: #e58e26;
+    color: white;
+  }
+  .group-right {
+    .field--name-field-experience-year,
+    .field--name-field-number-int {
+      border: 1px solid black;
+      border-radius: 3px;
+      padding: 5px;
+      margin: 5px;
+      width: 9rem;
+      background-color: #e58e26;
+      color: white;
+    }
+  }
+}

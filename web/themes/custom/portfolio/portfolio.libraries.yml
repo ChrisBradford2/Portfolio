@@ -66,3 +66,9 @@ navbar-brand:
   css:
     component:
       css/paragraph/navbar-brand.css: {}
+
+# User
+user-compact:
+  css:
+    component:
+      css/view-modes/user-compact.css: {}

@@ -1,0 +1,24 @@
+uuid: 034ba55e-7c7e-4b51-91ed-c453ed617c3c
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.user.field_number_int
+  module:
+    - user
+id: user.user.field_number_int
+field_name: field_number_int
+entity_type: user
+bundle: user
+label: 'Projets terminés'
+description: ''
+required: true
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  min: 0
+  max: 100
+  prefix: ''
+  suffix: ''
+field_type: integer

@@ -1,0 +1,11 @@
+uuid: 0c1f4405-a965-4347-a736-aec850e54df0
+langcode: en
+status: true
+dependencies:
+  config:
+    - block_content.type.profile_picture_homepage
+id: block_content.profile_picture_homepage
+target_entity_type_id: block_content
+target_bundle: profile_picture_homepage
+default_langcode: site_default
+language_alterable: false

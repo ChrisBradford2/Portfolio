@@ -10,7 +10,7 @@ dependencies:
 id: pagetitle
 theme: portfolio
 region: homepage_header
-weight: -5
+weight: -6
 provider: null
 plugin: page_title_block
 settings:

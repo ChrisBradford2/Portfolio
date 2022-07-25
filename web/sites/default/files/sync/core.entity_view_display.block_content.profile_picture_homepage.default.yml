@@ -1,0 +1,23 @@
+uuid: 55931b55-5d44-47bb-aefb-16ab6c7f8cb3
+langcode: en
+status: true
+dependencies:
+  config:
+    - block_content.type.profile_picture_homepage
+    - field.field.block_content.profile_picture_homepage.field_entity_reference
+id: block_content.profile_picture_homepage.default
+targetEntityType: block_content
+bundle: profile_picture_homepage
+mode: default
+content:
+  field_entity_reference:
+    type: entity_reference_entity_view
+    label: hidden
+    settings:
+      view_mode: block_homepage
+      link: false
+    third_party_settings: {  }
+    weight: 0
+    region: content
+hidden:
+  langcode: true

@@ -13,7 +13,7 @@ dependencies:
 id: commentsheaderhomepage
 theme: portfolio
 region: homepage_header
-weight: -4
+weight: -5
 provider: null
 plugin: 'block_content:f33e7bf7-dcbd-41a2-b54c-c50fa60cdcfc'
 settings:

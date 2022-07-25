@@ -4,7 +4,9 @@ status: true
 dependencies:
   config:
     - field.field.user.user.field_email
+    - field.field.user.user.field_experience_year
     - field.field.user.user.field_nationality
+    - field.field.user.user.field_number_int
     - field.field.user.user.field_reference_taxonomy_term
     - field.field.user.user.field_residence
     - field.field.user.user.field_telephone
@@ -30,12 +32,31 @@ content:
     third_party_settings: {  }
     weight: 2
     region: content
+  field_experience_year:
+    type: timestamp_ago
+    label: above
+    settings:
+      future_format: '@interval'
+      past_format: '@interval'
+      granularity: 2
+    third_party_settings: {  }
+    weight: 7
+    region: content
   field_nationality:
     type: list_default
     label: inline
     settings: {  }
     third_party_settings: {  }
     weight: 5
+    region: content
+  field_number_int:
+    type: number_integer
+    label: above
+    settings:
+      thousand_separator: ' '
+      prefix_suffix: false
+    third_party_settings: {  }
+    weight: 8
     region: content
   field_reference_taxonomy_term:
     type: entity_reference_entity_view
