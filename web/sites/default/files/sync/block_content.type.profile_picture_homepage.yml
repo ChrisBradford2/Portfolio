@@ -1,0 +1,8 @@
+uuid: 4b71e7d1-7395-4e18-8315-1a402e788271
+langcode: en
+status: true
+dependencies: {  }
+id: profile_picture_homepage
+label: 'Profile picture homepage'
+revision: 0
+description: ''

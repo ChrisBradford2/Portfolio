@@ -1,42 +1,128 @@
-uuid: 3ce98af2-b804-4000-844e-7615cf9119ff
+uuid: 386b76c6-ea94-4340-8f8d-2ed71082e74a
 langcode: en
 status: true
 dependencies:
   config:
     - core.entity_view_mode.user.compact
     - field.field.user.user.field_email
+    - field.field.user.user.field_experience_year
     - field.field.user.user.field_nationality
+    - field.field.user.user.field_number_int
     - field.field.user.user.field_reference_taxonomy_term
     - field.field.user.user.field_residence
     - field.field.user.user.field_telephone
     - field.field.user.user.field_timestamp
     - field.field.user.user.user_picture
-    - image.style.thumbnail
   module:
-    - image
+    - ds
+    - options
+    - telephone
     - user
+third_party_settings:
+  ds:
+    layout:
+      id: ds_2col_fluid
+      library: ds/ds_2col_fluid
+      disable_css: false
+      entity_classes: all_classes
+      settings:
+        classes:
+          layout_class: {  }
+        wrappers:
+          left: div
+          right: div
+        outer_wrapper: div
+        attributes: ''
+        link_attribute: ''
+        link_custom: ''
+        label: ''
+    regions:
+      left:
+        - field_timestamp
+        - field_email
+        - field_telephone
+        - field_residence
+        - field_nationality
+        - field_reference_taxonomy_term
+      right:
+        - field_experience_year
+        - field_number_int
 _core:
-  default_config_hash: kD2TjItfNDKFw2CFJQfuv4Ys6qg3uYa4hCJYN2jreec
+  default_config_hash: E1qmUI2SlozLlJ308jfMMFKT67l1p6PywE2LTRbeYS4
 id: user.user.compact
 targetEntityType: user
 bundle: user
 mode: compact
 content:
-  user_picture:
-    type: image
-    label: hidden
+  field_email:
+    type: email_mailto
+    label: inline
+    settings: {  }
+    third_party_settings: {  }
+    weight: 1
+    region: left
+  field_experience_year:
+    type: timestamp_ago
+    label: above
     settings:
-      image_link: content
-      image_style: thumbnail
+      future_format: '@interval'
+      past_format: '@interval'
+      granularity: 2
+    third_party_settings: {  }
+    weight: 6
+    region: right
+  field_nationality:
+    type: list_default
+    label: inline
+    settings: {  }
+    third_party_settings: {  }
+    weight: 4
+    region: left
+  field_number_int:
+    type: number_integer
+    label: above
+    settings:
+      thousand_separator: ' '
+      prefix_suffix: false
+    third_party_settings: {  }
+    weight: 7
+    region: right
+  field_reference_taxonomy_term:
+    type: entity_reference_entity_view
+    label: inline
+    settings:
+      view_mode: default
+      link: true
+    third_party_settings: {  }
+    weight: 5
+    region: left
+  field_residence:
+    type: string
+    label: inline
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    weight: 3
+    region: left
+  field_telephone:
+    type: telephone_link
+    label: inline
+    settings:
+      title: ''
+    third_party_settings: {  }
+    weight: 2
+    region: left
+  field_timestamp:
+    type: timestamp_ago
+    label: inline
+    settings:
+      future_format: '@interval'
+      past_format: '@interval'
+      granularity: 1
     third_party_settings: {  }
     weight: 0
-    region: content
+    region: left
 hidden:
-  field_email: true
-  field_nationality: true
-  field_reference_taxonomy_term: true
-  field_residence: true
-  field_telephone: true
-  field_timestamp: true
   langcode: true
   member_for: true
+  user_picture: true

@@ -1,0 +1,45 @@
+uuid: f98c0d41-f91c-452e-a08b-9bc6320d7217
+langcode: en
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.user.block_homepage
+    - field.field.user.user.field_email
+    - field.field.user.user.field_experience_year
+    - field.field.user.user.field_nationality
+    - field.field.user.user.field_number_int
+    - field.field.user.user.field_reference_taxonomy_term
+    - field.field.user.user.field_residence
+    - field.field.user.user.field_telephone
+    - field.field.user.user.field_timestamp
+    - field.field.user.user.user_picture
+  module:
+    - image
+    - user
+_core:
+  default_config_hash: E1qmUI2SlozLlJ308jfMMFKT67l1p6PywE2LTRbeYS4
+id: user.user.block_homepage
+targetEntityType: user
+bundle: user
+mode: block_homepage
+content:
+  user_picture:
+    type: image
+    label: visually_hidden
+    settings:
+      image_link: ''
+      image_style: ''
+    third_party_settings: {  }
+    weight: 0
+    region: content
+hidden:
+  field_email: true
+  field_experience_year: true
+  field_nationality: true
+  field_number_int: true
+  field_reference_taxonomy_term: true
+  field_residence: true
+  field_telephone: true
+  field_timestamp: true
+  langcode: true
+  member_for: true

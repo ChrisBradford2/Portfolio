@@ -1,0 +1,34 @@
+uuid: a045cdae-eff1-4559-bc60-5cac986be762
+langcode: en
+status: true
+dependencies:
+  config:
+    - block_content.type.profile_picture_homepage
+    - field.field.block_content.profile_picture_homepage.field_entity_reference
+id: block_content.profile_picture_homepage.default
+targetEntityType: block_content
+bundle: profile_picture_homepage
+mode: default
+content:
+  field_entity_reference:
+    type: options_select
+    weight: 26
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+  info:
+    type: string_textfield
+    weight: -5
+    region: content
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+  langcode:
+    type: language_select
+    weight: 2
+    region: content
+    settings:
+      include_locked: true
+    third_party_settings: {  }
+hidden: {  }

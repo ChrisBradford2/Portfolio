@@ -37,8 +37,6 @@ third_party_settings:
         label: ''
     regions:
       ds_content:
-        - field_image
-        - field_sub_title
         - links
         - body
         - field_entity_reference_user
@@ -63,8 +61,8 @@ content:
     type: entity_reference_entity_view
     label: above
     settings:
-      view_mode: default
-      link: true
+      view_mode: compact
+      link: false
     third_party_settings: {  }
     weight: 4
     region: ds_content

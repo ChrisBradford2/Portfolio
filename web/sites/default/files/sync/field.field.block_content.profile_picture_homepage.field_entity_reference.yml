@@ -1,0 +1,33 @@
+uuid: a26fb116-8a32-4fc8-89ba-54b6bc85ae5c
+langcode: en
+status: true
+dependencies:
+  config:
+    - block_content.type.profile_picture_homepage
+    - field.storage.block_content.field_entity_reference
+  content:
+    - 'user:user:b304b59d-dcc8-4130-8e53-c249d37c18a7'
+id: block_content.profile_picture_homepage.field_entity_reference
+field_name: field_entity_reference
+entity_type: block_content
+bundle: profile_picture_homepage
+label: 'User picture'
+description: ''
+required: true
+translatable: false
+default_value:
+  -
+    target_uuid: b304b59d-dcc8-4130-8e53-c249d37c18a7
+default_value_callback: ''
+settings:
+  handler: 'default:user'
+  handler_settings:
+    target_bundles: null
+    sort:
+      field: _none
+      direction: ASC
+    auto_create: false
+    filter:
+      type: _none
+    include_anonymous: true
+field_type: entity_reference

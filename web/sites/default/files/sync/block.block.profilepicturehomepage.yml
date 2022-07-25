@@ -1,24 +1,24 @@
-uuid: ff353b9b-f5fa-4496-8316-389f7dffe472
+uuid: cbb1744c-74d3-4e84-8880-3f0b1d31fb2d
 langcode: en
 status: true
 dependencies:
   content:
-    - 'block_content:header_homepage:2b694a40-c0bb-4191-b7ea-b6c23f1fe075'
+    - 'block_content:profile_picture_homepage:2f37b22e-4c59-4935-beab-ed51bdeb5b7a'
   module:
     - block_content
     - node
     - system
   theme:
     - portfolio
-id: profilepictureforthehomepage
+id: profilepicturehomepage
 theme: portfolio
 region: homepage_header
-weight: -6
+weight: -7
 provider: null
-plugin: 'block_content:2b694a40-c0bb-4191-b7ea-b6c23f1fe075'
+plugin: 'block_content:2f37b22e-4c59-4935-beab-ed51bdeb5b7a'
 settings:
-  id: 'block_content:2b694a40-c0bb-4191-b7ea-b6c23f1fe075'
-  label: 'Profile picture for the homepage'
+  id: 'block_content:2f37b22e-4c59-4935-beab-ed51bdeb5b7a'
+  label: 'Profile picture homepage'
   label_display: '0'
   provider: block_content
   status: true

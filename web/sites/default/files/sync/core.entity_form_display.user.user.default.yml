@@ -4,7 +4,9 @@ status: true
 dependencies:
   config:
     - field.field.user.user.field_email
+    - field.field.user.user.field_experience_year
     - field.field.user.user.field_nationality
+    - field.field.user.user.field_number_int
     - field.field.user.user.field_reference_taxonomy_term
     - field.field.user.user.field_residence
     - field.field.user.user.field_telephone
@@ -29,7 +31,7 @@ content:
     settings: {  }
     third_party_settings: {  }
   contact:
-    weight: 9
+    weight: 11
     region: content
     settings: {  }
     third_party_settings: {  }
@@ -41,11 +43,24 @@ content:
       placeholder: ''
       size: 60
     third_party_settings: {  }
+  field_experience_year:
+    type: datetime_timestamp
+    weight: 8
+    region: content
+    settings: {  }
+    third_party_settings: {  }
   field_nationality:
     type: options_select
     weight: 6
     region: content
     settings: {  }
+    third_party_settings: {  }
+  field_number_int:
+    type: number
+    weight: 9
+    region: content
+    settings:
+      placeholder: ''
     third_party_settings: {  }
   field_reference_taxonomy_term:
     type: options_select
@@ -75,18 +90,18 @@ content:
     settings: {  }
     third_party_settings: {  }
   language:
-    weight: 8
+    weight: 10
     region: content
     settings: {  }
     third_party_settings: {  }
   path:
     type: path
-    weight: 11
+    weight: 13
     region: content
     settings: {  }
     third_party_settings: {  }
   timezone:
-    weight: 10
+    weight: 12
     region: content
     settings: {  }
     third_party_settings: {  }

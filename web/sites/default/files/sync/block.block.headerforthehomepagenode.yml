@@ -13,7 +13,7 @@ dependencies:
 id: headerforthehomepagenode
 theme: portfolio
 region: homepage_header
-weight: -7
+weight: -8
 provider: null
 plugin: 'block_content:13b2af44-e518-48e4-852b-9dd912000237'
 settings:

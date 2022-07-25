@@ -1,0 +1,6 @@
+_core:
+  default_config_hash: W3EZY7rrT2346L3aE6BPEfo_buayBc1-Ho7sEeLjJCE
+verify_load_bootstrap_automatically: true
+load_bootstrap: true
+allowed_tags: 'h1,h2,a,b,big,code,del,em,i,ins,pre,q,small,span,strong,sub,sup,tt,ol,ul,li,p,br,img'
+clear_caches_on_modal_save: false

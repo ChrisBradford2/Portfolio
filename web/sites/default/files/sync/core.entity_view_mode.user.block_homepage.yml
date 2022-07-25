@@ -1,0 +1,10 @@
+uuid: 6fff5ead-0410-45f5-a680-f37e5b2cf785
+langcode: en
+status: true
+dependencies:
+  module:
+    - user
+id: user.block_homepage
+label: 'Block Homepage'
+targetEntityType: user
+cache: true

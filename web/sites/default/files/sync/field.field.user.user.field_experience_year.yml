@@ -1,0 +1,22 @@
+uuid: ce37ba28-ed61-4427-ad1b-ab8302664513
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.user.field_experience_year
+  module:
+    - user
+id: user.user.field_experience_year
+field_name: field_experience_year
+entity_type: user
+bundle: user
+label: 'Années d''expérience'
+description: ''
+required: true
+translatable: false
+default_value:
+  -
+    value: 1614841200
+default_value_callback: ''
+settings: {  }
+field_type: timestamp

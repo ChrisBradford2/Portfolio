@@ -1,0 +1,18 @@
+uuid: 8d638429-e36c-46d1-ab47-ecdc58272a6c
+langcode: en
+status: true
+dependencies:
+  module:
+    - user
+id: user.field_experience_year
+field_name: field_experience_year
+entity_type: user
+type: timestamp
+settings: {  }
+module: core
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false
