@@ -28,6 +28,13 @@ color.preview:
     color/preview.js: {}
   dependencies:
     - color/drupal.color
+keyboard-css:
+  css:
+    component:
+      /libraries/keyboard-css/dist/css/main.min.css: {}
+  dependencies:
+    - core/jquery #Just to be safe
+    - core/drupal.dialog.ajax #Required for dialogs
 
 # Components
 download-button:
@@ -46,6 +53,10 @@ region-homepage-header:
   css:
     component:
       css/component/region-homepage-header.css: {}
+in-short-button:
+  css:
+    component:
+      css/component/in-short-button.css: {}
 
 # Paragraphs
 schools:

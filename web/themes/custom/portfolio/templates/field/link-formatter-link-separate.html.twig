@@ -1,0 +1,24 @@
+{#
+/**
+ * @file
+ * Theme override of a link with separate title and URL elements.
+ *
+ * Available variables:
+ * - link: The link that has already been formatted by l().
+ * - title: (optional) A descriptive or alternate title for the link, which may
+ *   be different than the actual link text.
+ *
+ * @see template_preprocess()
+ * @see template_preprocess_link_formatter_link_separate()
+ */
+#}
+{{ attach_library('portfolio/keyboard-css') }}
+{{ attach_library('portfolio/in-short-button') }}
+
+{% spaceless %}
+  <div class="link-item">
+    <div class="link-url">
+      <a class="use-ajax kbc-button kbc-button-lg" data-dialog-options="{&quot;width&quot;:800}" data-dialog-type="modal" href="{{ url_title }}">{{ title }}</a>
+    </div>
+  </div>
+{% endspaceless %}
