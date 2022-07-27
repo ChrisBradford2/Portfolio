@@ -1,0 +1,27 @@
+uuid: 4bcb7ab9-b28b-471f-a243-1ac3d273e5e5
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_file
+    - node.type.project
+  module:
+    - file
+id: node.project.field_file
+field_name: field_file
+entity_type: node
+bundle: project
+label: 'Documents annexes'
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:file'
+  handler_settings: {  }
+  file_directory: '[date:custom:Y]-[date:custom:m]'
+  file_extensions: 'txt pdf docx xlsx'
+  max_filesize: ''
+  description_field: true
+field_type: file

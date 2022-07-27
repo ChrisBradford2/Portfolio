@@ -1,0 +1,21 @@
+uuid: f46f4447-8a80-49b8-a7f5-981a421f3b50
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.taxonomy_term.field_icons
+    - taxonomy.vocabulary.services
+  module:
+    - fontawesome
+id: taxonomy_term.services.field_icons
+field_name: field_icons
+entity_type: taxonomy_term
+bundle: services
+label: Icône
+description: ''
+required: true
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: fontawesome_icon

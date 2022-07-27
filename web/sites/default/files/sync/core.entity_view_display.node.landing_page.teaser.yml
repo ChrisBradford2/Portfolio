@@ -5,6 +5,7 @@ dependencies:
   config:
     - core.entity_view_mode.node.teaser
     - field.field.node.landing_page.body
+    - field.field.node.landing_page.field_entity_reference_webform
     - field.field.node.landing_page.field_file
     - field.field.node.landing_page.field_link
     - field.field.node.landing_page.field_meta_tags
@@ -34,6 +35,7 @@ content:
     weight: 100
     region: content
 hidden:
+  field_entity_reference_webform: true
   field_file: true
   field_link: true
   field_meta_tags: true

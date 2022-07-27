@@ -1,0 +1,30 @@
+uuid: 0f8f5cbe-61ed-4073-9dad-4cf3f00c2e66
+langcode: en
+status: true
+dependencies:
+  module:
+    - node
+    - options
+id: node.field_category
+field_name: field_category
+entity_type: node
+type: list_string
+settings:
+  allowed_values:
+    -
+      value: schools
+      label: 'Projet d''école'
+    -
+      value: company
+      label: 'Projet d''entreprise'
+    -
+      value: personnal
+      label: 'Projet personnel'
+  allowed_values_function: ''
+module: options
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

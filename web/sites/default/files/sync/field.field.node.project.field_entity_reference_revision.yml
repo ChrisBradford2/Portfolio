@@ -1,0 +1,43 @@
+uuid: 708a8089-e7c4-427a-9848-0aa51de708fa
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_entity_reference_revision
+    - node.type.project
+    - paragraphs.paragraphs_type.link
+  module:
+    - entity_reference_revisions
+id: node.project.field_entity_reference_revision
+field_name: field_entity_reference_revision
+entity_type: node
+bundle: project
+label: Liens
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:paragraph'
+  handler_settings:
+    target_bundles:
+      link: link
+    negate: 0
+    target_bundles_drag_drop:
+      competences:
+        weight: 6
+        enabled: false
+      experience_pro:
+        weight: 7
+        enabled: false
+      link:
+        weight: 8
+        enabled: true
+      poste:
+        weight: 9
+        enabled: false
+      schools:
+        weight: 10
+        enabled: false
+field_type: entity_reference_revisions

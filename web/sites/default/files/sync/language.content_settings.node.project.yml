@@ -1,0 +1,16 @@
+uuid: 65e5b90d-8104-454d-967e-45ee1ed2a6a7
+langcode: en
+status: true
+dependencies:
+  config:
+    - node.type.project
+  module:
+    - content_translation
+third_party_settings:
+  content_translation:
+    enabled: true
+id: node.project
+target_entity_type_id: node
+target_bundle: project
+default_langcode: fr
+language_alterable: true

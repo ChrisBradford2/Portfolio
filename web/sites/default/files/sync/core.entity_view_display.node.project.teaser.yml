@@ -1,0 +1,61 @@
+uuid: b6016cb8-03f3-41f3-8733-faa18d0064e5
+langcode: en
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.node.teaser
+    - field.field.node.project.body
+    - field.field.node.project.comment
+    - field.field.node.project.field_category
+    - field.field.node.project.field_date
+    - field.field.node.project.field_entity_reference_revision
+    - field.field.node.project.field_entity_reference_services
+    - field.field.node.project.field_entity_reference_skills
+    - field.field.node.project.field_file
+    - field.field.node.project.field_list_text
+    - field.field.node.project.field_media
+    - field.field.node.project.field_media_image
+    - field.field.node.project.field_meta_tags
+    - field.field.node.project.field_text_plain
+    - node.type.project
+  module:
+    - options
+    - user
+id: node.project.teaser
+targetEntityType: node
+bundle: project
+mode: teaser
+content:
+  field_category:
+    type: list_default
+    label: hidden
+    settings: {  }
+    third_party_settings: {  }
+    weight: 2
+    region: content
+  field_media_image:
+    type: entity_reference_label
+    label: hidden
+    settings:
+      link: true
+    third_party_settings: {  }
+    weight: 1
+    region: content
+  links:
+    settings: {  }
+    third_party_settings: {  }
+    weight: 0
+    region: content
+hidden:
+  body: true
+  comment: true
+  field_date: true
+  field_entity_reference_revision: true
+  field_entity_reference_services: true
+  field_entity_reference_skills: true
+  field_file: true
+  field_list_text: true
+  field_media: true
+  field_meta_tags: true
+  field_text_plain: true
+  langcode: true

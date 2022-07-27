@@ -1,0 +1,21 @@
+uuid: b18304ac-5227-4db2-b0ef-c18271ab2c57
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_list_text
+    - node.type.project
+  module:
+    - options
+id: node.project.field_list_text
+field_name: field_list_text
+entity_type: node
+bundle: project
+label: 'Type de projet'
+description: "intranet|Intranet\r\nsite_statique|Site Statique\r\napplication_web|Application Web\r\napplication_mobile|Application Mobile"
+required: true
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: list_string

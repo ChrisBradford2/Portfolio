@@ -1,25 +1,33 @@
+.field--name-field-entity-reference-webform,
 .field--type-text-with-summary {
   margin-top: 6rem;
+
   .header {
     line-height: 2.5rem;
     color: #2980b9;
     text-transform: uppercase;
     text-align: center;
+
     h2 {
       font-size: 3rem;
     }
+
     .divider-custom {
       margin: 1rem 0 1.5rem;
+
       .divider-custom-line {
         &:first-child {
           margin-right: 1rem;
         }
+
         &:last-child {
           margin-left: 1rem;
         }
       }
     }
   }
+}
+.field--type-text-with-summary {
   .field__item {
     display: flex;
     flex-wrap: wrap;

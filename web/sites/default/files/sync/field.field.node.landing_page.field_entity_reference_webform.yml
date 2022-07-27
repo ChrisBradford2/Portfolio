@@ -1,0 +1,32 @@
+uuid: d514dfc9-a688-4723-9baa-f986938311bd
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_entity_reference_webform
+    - node.type.landing_page
+    - webform.webform.contact
+  module:
+    - webform
+id: node.landing_page.field_entity_reference_webform
+field_name: field_entity_reference_webform
+entity_type: node
+bundle: landing_page
+label: Contact
+description: ''
+required: true
+translatable: false
+default_value:
+  -
+    target_uuid: b94d2d39-5402-4087-b02b-aaffeb3078d5
+    default_data: ''
+    status: open
+    open: ''
+    close: ''
+default_value_callback: ''
+settings:
+  handler: 'default:webform'
+  handler_settings:
+    target_bundles: null
+    auto_create: false
+field_type: webform

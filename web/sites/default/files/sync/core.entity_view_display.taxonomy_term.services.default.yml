@@ -1,0 +1,32 @@
+uuid: 450a6681-9d89-459d-863f-bc19308a7b90
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.taxonomy_term.services.field_icons
+    - taxonomy.vocabulary.services
+  module:
+    - fontawesome
+    - text
+id: taxonomy_term.services.default
+targetEntityType: taxonomy_term
+bundle: services
+mode: default
+content:
+  description:
+    type: text_default
+    label: hidden
+    settings: {  }
+    third_party_settings: {  }
+    weight: 1
+    region: content
+  field_icons:
+    type: fontawesome_icon_formatter
+    label: inline
+    settings:
+      layers: false
+    third_party_settings: {  }
+    weight: 0
+    region: content
+hidden:
+  langcode: true

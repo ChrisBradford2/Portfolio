@@ -1,0 +1,21 @@
+uuid: 32ab4a4e-d0fc-4654-82d8-9c16a0df6cd1
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_category
+    - node.type.project
+  module:
+    - options
+id: node.project.field_category
+field_name: field_category
+entity_type: node
+bundle: project
+label: Categorie
+description: ''
+required: true
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: list_string
