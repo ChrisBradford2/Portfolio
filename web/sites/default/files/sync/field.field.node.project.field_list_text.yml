@@ -12,7 +12,7 @@ field_name: field_list_text
 entity_type: node
 bundle: project
 label: 'Type de projet'
-description: "intranet|Intranet\r\nsite_statique|Site Statique\r\napplication_web|Application Web\r\napplication_mobile|Application Mobile"
+description: ''
 required: true
 translatable: false
 default_value: {  }

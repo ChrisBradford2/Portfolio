@@ -10,7 +10,19 @@ field_name: field_list_text
 entity_type: node
 type: list_string
 settings:
-  allowed_values: {  }
+  allowed_values:
+    -
+      value: intranet
+      label: Intranet
+    -
+      value: site_statique
+      label: 'Site Statique'
+    -
+      value: application_web
+      label: 'Application Web'
+    -
+      value: application_mobile
+      label: 'Application Mobile'
   allowed_values_function: ''
 module: options
 locked: false

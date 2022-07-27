@@ -4,6 +4,7 @@ status: true
 dependencies:
   config:
     - field.field.node.landing_page.body
+    - field.field.node.landing_page.field_entity_reference_views
     - field.field.node.landing_page.field_entity_reference_webform
     - field.field.node.landing_page.field_file
     - field.field.node.landing_page.field_link
@@ -13,6 +14,7 @@ dependencies:
     - field.field.node.landing_page.field_skills
     - node.type.landing_page
   module:
+    - field_group
     - file
     - link
     - metatag
@@ -20,6 +22,58 @@ dependencies:
     - path
     - text
     - webform
+third_party_settings:
+  field_group:
+    group_about:
+      children:
+        - body
+        - field_link
+        - field_file
+        - field_skills
+        - field_schools
+        - field_professionnal_experiences
+      label: 'Qui Suis-Je ?'
+      region: content
+      parent_name: ''
+      weight: 1
+      format_type: details
+      format_settings:
+        classes: ''
+        show_empty_fields: false
+        id: ''
+        open: false
+        description: ''
+        required_fields: false
+    group_projects:
+      children:
+        - field_entity_reference_views
+      label: 'Mes projets'
+      region: content
+      parent_name: ''
+      weight: 2
+      format_type: details
+      format_settings:
+        classes: ''
+        show_empty_fields: false
+        id: ''
+        open: false
+        description: ''
+        required_fields: true
+    group_contact:
+      children:
+        - field_entity_reference_webform
+      label: Contact
+      region: content
+      parent_name: ''
+      weight: 3
+      format_type: details
+      format_settings:
+        classes: ''
+        show_empty_fields: false
+        id: ''
+        open: false
+        description: ''
+        required_fields: true
 id: node.landing_page.default
 targetEntityType: node
 bundle: landing_page
@@ -27,7 +81,7 @@ mode: default
 content:
   body:
     type: text_textarea_with_summary
-    weight: 1
+    weight: 2
     region: content
     settings:
       rows: 9
@@ -37,13 +91,23 @@ content:
     third_party_settings: {  }
   created:
     type: datetime_timestamp
-    weight: 10
+    weight: 7
     region: content
     settings: {  }
     third_party_settings: {  }
+  field_entity_reference_views:
+    type: entity_reference_autocomplete
+    weight: 3
+    region: content
+    settings:
+      match_operator: CONTAINS
+      match_limit: 10
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
   field_entity_reference_webform:
     type: webform_entity_reference_select
-    weight: 7
+    weight: 4
     region: content
     settings:
       default_data: true
@@ -52,14 +116,14 @@ content:
     third_party_settings: {  }
   field_file:
     type: file_generic
-    weight: 3
+    weight: 4
     region: content
     settings:
       progress_indicator: bar
     third_party_settings: {  }
   field_link:
     type: link_default
-    weight: 2
+    weight: 3
     region: content
     settings:
       placeholder_url: ''
@@ -67,7 +131,7 @@ content:
     third_party_settings: {  }
   field_meta_tags:
     type: metatag_firehose
-    weight: 16
+    weight: 13
     region: content
     settings:
       sidebar: true
@@ -75,7 +139,7 @@ content:
     third_party_settings: {  }
   field_professionnal_experiences:
     type: paragraphs
-    weight: 6
+    weight: 7
     region: content
     settings:
       title: Paragraph
@@ -93,7 +157,7 @@ content:
     third_party_settings: {  }
   field_schools:
     type: paragraphs
-    weight: 5
+    weight: 6
     region: content
     settings:
       title: Paragraph
@@ -111,7 +175,7 @@ content:
     third_party_settings: {  }
   field_skills:
     type: paragraphs
-    weight: 4
+    weight: 5
     region: content
     settings:
       title: Paragraphe
@@ -130,34 +194,34 @@ content:
     third_party_settings: {  }
   langcode:
     type: language_select
-    weight: 8
+    weight: 5
     region: content
     settings:
       include_locked: true
     third_party_settings: {  }
   path:
     type: path
-    weight: 14
+    weight: 11
     region: content
     settings: {  }
     third_party_settings: {  }
   promote:
     type: boolean_checkbox
-    weight: 12
+    weight: 9
     region: content
     settings:
       display_label: true
     third_party_settings: {  }
   status:
     type: boolean_checkbox
-    weight: 15
+    weight: 12
     region: content
     settings:
       display_label: true
     third_party_settings: {  }
   sticky:
     type: boolean_checkbox
-    weight: 13
+    weight: 10
     region: content
     settings:
       display_label: true
@@ -171,13 +235,13 @@ content:
       placeholder: ''
     third_party_settings: {  }
   translation:
-    weight: 11
+    weight: 8
     region: content
     settings: {  }
     third_party_settings: {  }
   uid:
     type: entity_reference_autocomplete
-    weight: 9
+    weight: 6
     region: content
     settings:
       match_operator: CONTAINS

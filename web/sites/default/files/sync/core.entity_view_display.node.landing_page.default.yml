@@ -4,6 +4,7 @@ status: true
 dependencies:
   config:
     - field.field.node.landing_page.body
+    - field.field.node.landing_page.field_entity_reference_views
     - field.field.node.landing_page.field_entity_reference_webform
     - field.field.node.landing_page.field_file
     - field.field.node.landing_page.field_link
@@ -47,8 +48,9 @@ third_party_settings:
         - field_skills
         - field_schools
         - field_professionnal_experiences
-        - field_meta_tags
+        - field_entity_reference_views
         - field_entity_reference_webform
+        - field_meta_tags
 id: node.landing_page.default
 targetEntityType: node
 bundle: landing_page
@@ -60,6 +62,14 @@ content:
     settings: {  }
     third_party_settings: {  }
     weight: 1
+    region: ds_content
+  field_entity_reference_views:
+    type: entity_reference_label
+    label: above
+    settings:
+      link: true
+    third_party_settings: {  }
+    weight: 7
     region: ds_content
   field_entity_reference_webform:
     type: webform_entity_reference_entity_view
@@ -90,10 +100,10 @@ content:
     region: ds_content
   field_meta_tags:
     type: metatag_empty_formatter
-    label: above
+    label: hidden
     settings: {  }
     third_party_settings: {  }
-    weight: 7
+    weight: 9
     region: ds_content
   field_professionnal_experiences:
     type: entity_reference_revisions_entity_view
