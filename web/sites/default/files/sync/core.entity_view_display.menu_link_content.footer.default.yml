@@ -1,0 +1,29 @@
+uuid: 58960d6f-dbfc-4d6c-913b-889266f0acfa
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.menu_link_content.footer.field_icon
+    - system.menu.footer
+  module:
+    - fontawesome
+id: menu_link_content.footer.default
+targetEntityType: menu_link_content
+bundle: footer
+mode: default
+content:
+  children:
+    settings: {  }
+    third_party_settings: {  }
+    weight: 1
+    region: content
+  field_icon:
+    type: fontawesome_icon_formatter
+    label: hidden
+    settings:
+      layers: false
+    third_party_settings: {  }
+    weight: 2
+    region: content
+hidden:
+  langcode: true

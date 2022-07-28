@@ -1,5 +1,4 @@
 {% extends "@bootstrap_barrio/layout/page.html.twig" %}
-
 {#
 /**
  * @file
@@ -148,6 +147,7 @@
 {% endblock %}
 
 {% block footer %}
+  {{ attach_library('portfolio/footer') }}
   <div class="{{ container }}">
     {% if page.footer_first or page.footer_second or page.footer_third %}
       <div class="site-footer__top clearfix">

@@ -1,0 +1,139 @@
+@mixin lead_text {
+  font-size: 1.25rem;
+  font-weight: 300;
+  color: white;
+}
+
+@mixin lead_link {
+  @include lead_text;
+  text-decoration: none;
+  &:hover {
+    color: #e58e26;
+    text-decoration: underline;
+  }
+}
+
+footer {
+  .container {
+    .site-footer__top {
+      display: grid;
+      grid-template-columns: repeat(1, 1fr);
+      gap: 1rem;
+      text-align: center;
+      margin: 20px 0;
+    }
+
+    .region-footer-first,
+    .region-footer-second,
+    .region-footer-third {
+      width: 100%;
+      margin: 0;
+      .block {
+        h2 {
+          color: white;
+          margin-bottom: 1.5rem;
+          border: none;
+          font-size: 1.5em;
+        }
+      }
+    }
+
+    .region-footer-first {
+      .block {
+        margin: 0;
+        border: none;
+        padding: 0;
+        .field--name-field-footer-block {
+          .user-block-contact {
+            display: flex;
+            justify-content: center;
+            gap: 1rem;
+            align-items: center;
+            @include lead_text;
+            a {
+              @include lead_link;
+            }
+          }
+        }
+      }
+    }
+    .region-footer-second {
+      #block-portfolio-footer {
+        ul {
+          padding-left: 0;
+          list-style: none;
+          display: flex;
+          gap: .5rem;
+          justify-content: center;
+          li {
+            a {
+              border-radius: 100%;
+              display: inline-flex;
+              width: 3.25rem;
+              height: 3.25rem;
+              font-size: 1.25rem;
+              justify-content: center;
+              align-items: center;
+              color: #f8f9fa;
+              border: 0.125rem solid #e58e26;
+              transition: color 0.15s ease-in-out, background-color 0.15s ease-in-out, border-color 0.15s ease-in-out;
+              margin: 0 .25rem;
+              &:hover {
+                color: #f8f9fa;
+                background-color: #e58e26;
+                border-color: #2980b9;
+              }
+            }
+          }
+        }
+      }
+    }
+
+    .region-footer-third {
+      #block-footerwebsitehelp {
+        ul {
+          padding-left: 0;
+          list-style: none;
+          justify-content: center;
+          li {
+            a {
+              padding: 0;
+              font-size: 1.25rem;
+              font-weight: bold;
+              color: #e58e26;
+              text-decoration: none;
+              &:hover {
+                text-decoration: underline;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+  @media screen and (min-width: 769px) {
+    .container {
+      .site-footer__top {
+        grid-template-columns: repeat(2, 1fr);
+      }
+    }
+  }
+
+  @media screen and (min-width: 1201px) {
+    .container {
+      .site-footer__top {
+        grid-template-columns: repeat(3, 1fr);
+      }
+    }
+  }
+}
+
+.site-footer__bottom {
+  display: flex;
+  margin: 0;
+  border: none;
+
+  .row {
+    margin: 0 auto;
+  }
+}

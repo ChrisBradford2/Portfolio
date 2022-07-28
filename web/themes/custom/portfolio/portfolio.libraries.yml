@@ -76,7 +76,11 @@ competences:
 navbar-brand:
   css:
     component:
-      css/paragraph/navbar-brand.css: {}
+      css/navigation/navbar-brand.css: {}
+footer:
+  css:
+    component:
+      css/navigation/footer.css: {}
 
 # User
 user-compact:
