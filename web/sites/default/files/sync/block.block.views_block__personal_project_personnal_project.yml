@@ -1,0 +1,37 @@
+uuid: 2fc34b34-a770-448c-b345-3209ecca62ad
+langcode: en
+status: true
+dependencies:
+  config:
+    - views.view.personal_project
+  module:
+    - node
+    - system
+    - views
+  theme:
+    - portfolio
+id: views_block__personal_project_personnal_project
+theme: portfolio
+region: content
+weight: -3
+provider: null
+plugin: 'views_block:personal_project-personnal_project'
+settings:
+  id: 'views_block:personal_project-personnal_project'
+  label: 'Projet personnels'
+  label_display: visible
+  provider: views
+  views_label: 'Projet personnels'
+  items_per_page: none
+visibility:
+  'entity_bundle:node':
+    id: 'entity_bundle:node'
+    negate: false
+    context_mapping:
+      node: '@node.node_route_context:node'
+    bundles:
+      landing_page: landing_page
+  request_path:
+    id: request_path
+    negate: false
+    pages: '<front>'

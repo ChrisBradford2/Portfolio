@@ -1,23 +1,29 @@
-uuid: 695a8d91-b5ad-403a-abbe-7f3a26eef2fd
+uuid: 7fd1fcf4-97d4-4b01-8f4d-0010f408da14
 langcode: en
 status: true
 dependencies:
+  config:
+    - webform.webform.contact
   module:
     - node
     - system
+    - webform
   theme:
     - portfolio
-id: pagetitle
+id: webform
 theme: portfolio
-region: homepage_header
-weight: -5
+region: content
+weight: -2
 provider: null
-plugin: page_title_block
+plugin: webform_block
 settings:
-  id: page_title_block
-  label: 'Page title'
-  label_display: '0'
-  provider: core
+  id: webform_block
+  label: Contact
+  label_display: visible
+  provider: webform
+  webform_id: contact
+  default_data: ''
+  redirect: false
 visibility:
   'entity_bundle:node':
     id: 'entity_bundle:node'

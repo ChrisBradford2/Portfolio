@@ -13,7 +13,7 @@ dependencies:
 id: profilepicturehomepage
 theme: portfolio
 region: homepage_header
-weight: -7
+weight: -6
 provider: null
 plugin: 'block_content:2f37b22e-4c59-4935-beab-ed51bdeb5b7a'
 settings:

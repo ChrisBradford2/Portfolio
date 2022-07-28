@@ -1,0 +1,25 @@
+uuid: 39c0702d-1ada-41cf-93cb-c1438fa8ac61
+langcode: en
+status: true
+dependencies:
+  content:
+    - 'block_content:profile_picture_homepage:08be3e83-e615-40b9-a24b-628250e9e638'
+  module:
+    - block_content
+  theme:
+    - portfolio
+id: contacts
+theme: portfolio
+region: footer_first
+weight: 0
+provider: null
+plugin: 'block_content:08be3e83-e615-40b9-a24b-628250e9e638'
+settings:
+  id: 'block_content:08be3e83-e615-40b9-a24b-628250e9e638'
+  label: Contacts
+  label_display: visible
+  provider: block_content
+  status: true
+  info: ''
+  view_mode: full
+visibility: {  }

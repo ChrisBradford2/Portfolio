@@ -1,23 +1,28 @@
-uuid: 695a8d91-b5ad-403a-abbe-7f3a26eef2fd
+uuid: be95fd3a-02d1-4ebe-b79b-47f818cc67f8
 langcode: en
 status: true
 dependencies:
+  config:
+    - views.view.school_projects
   module:
     - node
     - system
+    - views
   theme:
     - portfolio
-id: pagetitle
+id: views_block__school_projects_block_1
 theme: portfolio
-region: homepage_header
-weight: -5
+region: content
+weight: -4
 provider: null
-plugin: page_title_block
+plugin: 'views_block:school_projects-block_1'
 settings:
-  id: page_title_block
-  label: 'Page title'
-  label_display: '0'
-  provider: core
+  id: 'views_block:school_projects-block_1'
+  label: 'Projets d''école'
+  label_display: visible
+  provider: views
+  views_label: 'Projets d''école'
+  items_per_page: none
 visibility:
   'entity_bundle:node':
     id: 'entity_bundle:node'

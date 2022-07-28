@@ -1,0 +1,57 @@
+uuid: b394b953-0f9a-48a4-bbaa-883d13f11f9c
+langcode: en
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.user.block_footer
+    - field.field.user.user.field_email
+    - field.field.user.user.field_experience_year
+    - field.field.user.user.field_nationality
+    - field.field.user.user.field_number_int
+    - field.field.user.user.field_reference_taxonomy_term
+    - field.field.user.user.field_residence
+    - field.field.user.user.field_telephone
+    - field.field.user.user.field_timestamp
+    - field.field.user.user.user_picture
+  module:
+    - telephone
+    - user
+_core:
+  default_config_hash: E1qmUI2SlozLlJ308jfMMFKT67l1p6PywE2LTRbeYS4
+id: user.user.block_footer
+targetEntityType: user
+bundle: user
+mode: block_footer
+content:
+  field_email:
+    type: email_mailto
+    label: visually_hidden
+    settings: {  }
+    third_party_settings: {  }
+    weight: 1
+    region: content
+  field_residence:
+    type: string
+    label: visually_hidden
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    weight: 0
+    region: content
+  field_telephone:
+    type: telephone_link
+    label: visually_hidden
+    settings:
+      title: ''
+    third_party_settings: {  }
+    weight: 2
+    region: content
+hidden:
+  field_experience_year: true
+  field_nationality: true
+  field_number_int: true
+  field_reference_taxonomy_term: true
+  field_timestamp: true
+  langcode: true
+  member_for: true
+  user_picture: true

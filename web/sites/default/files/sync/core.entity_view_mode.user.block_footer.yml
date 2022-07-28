@@ -1,0 +1,10 @@
+uuid: cc15708c-0ac3-4fdc-bd0b-1f9daf6e4aa1
+langcode: en
+status: true
+dependencies:
+  module:
+    - user
+id: user.block_footer
+label: 'Block Footer'
+targetEntityType: user
+cache: true

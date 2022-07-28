@@ -31,8 +31,7 @@ regions:
   footer_first: 'Footer first'
   footer_second: 'Footer second'
   footer_third: 'Footer third'
-  footer_fourth: 'Footer fourth'
-  footer_fifth: 'Footer fifth'
+  footer_fifth: 'Footer bottom'
 
 # Information added by Drupal.org packaging script on 2021-10-11
 version: '5.5.4'

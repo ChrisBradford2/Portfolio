@@ -1,15 +1,15 @@
-uuid: a26fb116-8a32-4fc8-89ba-54b6bc85ae5c
+uuid: 701efaf2-0cd4-4245-b402-5aea72447cb2
 langcode: en
 status: true
 dependencies:
   config:
     - block_content.type.profile_picture_homepage
-    - field.storage.block_content.field_entity_reference
-id: block_content.profile_picture_homepage.field_entity_reference
-field_name: field_entity_reference
+    - field.storage.block_content.field_footer_block
+id: block_content.profile_picture_homepage.field_footer_block
+field_name: field_footer_block
 entity_type: block_content
 bundle: profile_picture_homepage
-label: 'User picture'
+label: 'Footer block'
 description: ''
 required: false
 translatable: false
@@ -25,5 +25,5 @@ settings:
     auto_create: false
     filter:
       type: _none
-    include_anonymous: true
+    include_anonymous: false
 field_type: entity_reference

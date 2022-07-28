@@ -1,23 +1,28 @@
-uuid: 695a8d91-b5ad-403a-abbe-7f3a26eef2fd
+uuid: 438a2df8-e77b-4de0-ae81-c688aebe46df
 langcode: en
 status: true
 dependencies:
+  config:
+    - views.view.company_project
   module:
     - node
     - system
+    - views
   theme:
     - portfolio
-id: pagetitle
+id: views_block__company_project_block_1
 theme: portfolio
-region: homepage_header
+region: content
 weight: -5
 provider: null
-plugin: page_title_block
+plugin: 'views_block:company_project-block_1'
 settings:
-  id: page_title_block
-  label: 'Page title'
-  label_display: '0'
-  provider: core
+  id: 'views_block:company_project-block_1'
+  label: ''
+  label_display: visible
+  provider: views
+  views_label: ''
+  items_per_page: none
 visibility:
   'entity_bundle:node':
     id: 'entity_bundle:node'

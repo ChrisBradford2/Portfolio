@@ -10,8 +10,8 @@ _core:
   default_config_hash: KC12e0aosUnBBs5bd374JVcQjJaFNOSIHzu0dUGf22o
 id: portfolio_messages
 theme: portfolio
-region: highlighted
-weight: 0
+region: homepage_header
+weight: -8
 provider: null
 plugin: system_messages_block
 settings:
