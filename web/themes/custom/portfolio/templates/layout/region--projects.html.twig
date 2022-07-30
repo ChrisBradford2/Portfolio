@@ -1,0 +1,35 @@
+{#
+/**
+ * @file
+ * Theme override to display a region.
+ *
+ * Available variables:
+ * - content: The content for this region, typically blocks.
+ * - attributes: HTML attributes for the region div.
+ * - region: The name of the region variable as defined in the theme's
+ *   .info.yml file.
+ *
+ * @see template_preprocess_region()
+ */
+#}
+{{ attach_library('portfolio/node-header') }}
+
+{%
+  set classes = [
+    'region',
+    'region-' ~ region|clean_class,
+  ]
+%}
+{% if content %}
+  <section{{ attributes.addClass(classes) }}>
+    <div class="header">
+      <h2>{{ 'Mes projets'|t }}</h2>
+      <div class="divider-custom">
+        <div class="divider-custom-line"></div>
+        <div class="divider-custom-icon"><i class="fas fa-book"></i></div>
+        <div class="divider-custom-line"></div>
+      </div>
+    </div>
+    {{ content }}
+  </section>
+{% endif %}

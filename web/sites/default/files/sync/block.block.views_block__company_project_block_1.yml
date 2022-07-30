@@ -12,8 +12,8 @@ dependencies:
     - portfolio
 id: views_block__company_project_block_1
 theme: portfolio
-region: content
-weight: -5
+region: projects
+weight: -11
 provider: null
 plugin: 'views_block:company_project-block_1'
 settings:

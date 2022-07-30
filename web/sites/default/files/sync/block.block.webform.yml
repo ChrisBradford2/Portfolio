@@ -12,14 +12,14 @@ dependencies:
     - portfolio
 id: webform
 theme: portfolio
-region: content
-weight: -2
+region: contact
+weight: -11
 provider: null
 plugin: webform_block
 settings:
   id: webform_block
   label: Contact
-  label_display: visible
+  label_display: '0'
   provider: webform
   webform_id: contact
   default_data: ''

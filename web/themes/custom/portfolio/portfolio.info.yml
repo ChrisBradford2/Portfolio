@@ -23,6 +23,8 @@ regions:
   breadcrumb: Breadcrumb
   homepage_header: Homepage header
   content: Content
+  projects: My projects
+  contact: Contact
   sidebar_first: 'Sidebar first'
   sidebar_second: 'Sidebar second'
   featured_bottom_first: 'Featured bottom first'

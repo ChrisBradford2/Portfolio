@@ -4,8 +4,6 @@ status: true
 dependencies:
   config:
     - field.field.node.landing_page.body
-    - field.field.node.landing_page.field_entity_reference_views
-    - field.field.node.landing_page.field_entity_reference_webform
     - field.field.node.landing_page.field_file
     - field.field.node.landing_page.field_link
     - field.field.node.landing_page.field_meta_tags
@@ -21,7 +19,6 @@ dependencies:
     - paragraphs
     - path
     - text
-    - webform
 third_party_settings:
   field_group:
     group_about:
@@ -94,25 +91,6 @@ content:
     weight: 7
     region: content
     settings: {  }
-    third_party_settings: {  }
-  field_entity_reference_views:
-    type: entity_reference_autocomplete
-    weight: 3
-    region: content
-    settings:
-      match_operator: CONTAINS
-      match_limit: 10
-      size: 60
-      placeholder: ''
-    third_party_settings: {  }
-  field_entity_reference_webform:
-    type: webform_entity_reference_select
-    weight: 4
-    region: content
-    settings:
-      default_data: true
-      webforms:
-        - contact
     third_party_settings: {  }
   field_file:
     type: file_generic

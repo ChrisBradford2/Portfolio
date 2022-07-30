@@ -25,6 +25,7 @@ permissions:
   - 'access fontawesome additional settings'
   - 'access shortcuts'
   - 'access site-wide contact form'
+  - 'access user profiles'
   - 'post comments'
   - 'search content'
   - 'skip comment approval'

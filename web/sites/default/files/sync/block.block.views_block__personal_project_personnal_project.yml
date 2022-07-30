@@ -12,8 +12,8 @@ dependencies:
     - portfolio
 id: views_block__personal_project_personnal_project
 theme: portfolio
-region: content
-weight: -3
+region: projects
+weight: -9
 provider: null
 plugin: 'views_block:personal_project-personnal_project'
 settings:
