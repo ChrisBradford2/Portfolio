@@ -3,6 +3,7 @@ langcode: en
 status: true
 dependencies:
   config:
+    - core.entity_view_mode.node.cards
     - field.storage.node.field_media_image
     - node.type.project
   module:
@@ -242,19 +243,19 @@ display:
             group_items: {  }
           reduce_duplicates: false
       style:
-        type: default
+        type: html_list
         options:
-          grouping: {  }
           row_class: ''
-          default_row_class: true
+          default_row_class: false
           uses_fields: false
+          type: ul
+          wrapper_class: item-list
+          class: ''
       row:
-        type: fields
+        type: 'entity:node'
         options:
-          default_field_elements: true
-          inline: {  }
-          separator: ''
-          hide_empty: false
+          relationship: none
+          view_mode: cards
       query:
         type: views_query
         options:
@@ -266,6 +267,22 @@ display:
       relationships: {  }
       header: {  }
       footer: {  }
+      display_extenders: {  }
+    cache_metadata:
+      max-age: -1
+      contexts:
+        - 'languages:language_content'
+        - 'languages:language_interface'
+        - 'user.node_grants:view'
+        - user.permissions
+      tags:
+        - 'config:field.storage.node.field_media_image'
+  attachment_1:
+    id: attachment_1
+    display_title: Attachment
+    display_plugin: attachment
+    position: 3
+    display_options:
       display_extenders: {  }
     cache_metadata:
       max-age: -1

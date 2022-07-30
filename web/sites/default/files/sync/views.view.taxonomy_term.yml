@@ -3,7 +3,7 @@ langcode: en
 status: true
 dependencies:
   config:
-    - core.entity_view_mode.node.teaser
+    - core.entity_view_mode.node.cards
   module:
     - node
     - taxonomy
@@ -24,6 +24,7 @@ display:
     display_plugin: default
     position: 0
     display_options:
+      title: 'Les projets suivants ont été réalisés avec {{ arguments.tid }}'
       fields: {  }
       pager:
         type: mini
@@ -213,16 +214,19 @@ display:
             default_group_multiple: {  }
             group_items: {  }
       style:
-        type: default
+        type: html_list
         options:
-          grouping: {  }
           row_class: ''
-          default_row_class: true
+          default_row_class: false
           uses_fields: false
+          type: ul
+          wrapper_class: item-list
+          class: ''
       row:
         type: 'entity:node'
         options:
-          view_mode: teaser
+          relationship: none
+          view_mode: cards
       query:
         type: views_query
         options:

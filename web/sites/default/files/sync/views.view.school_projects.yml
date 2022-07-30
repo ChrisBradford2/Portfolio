@@ -3,6 +3,7 @@ langcode: en
 status: true
 dependencies:
   config:
+    - core.entity_view_mode.node.cards
     - field.storage.node.field_media_image
     - node.type.project
   module:
@@ -256,19 +257,19 @@ display:
             group_items: {  }
           reduce_duplicates: false
       style:
-        type: default
+        type: html_list
         options:
           grouping: {  }
           row_class: ''
-          default_row_class: true
-          uses_fields: false
+          default_row_class: false
+          type: ul
+          wrapper_class: item-list
+          class: ''
       row:
-        type: fields
+        type: 'entity:node'
         options:
-          default_field_elements: true
-          inline: {  }
-          separator: ''
-          hide_empty: false
+          relationship: none
+          view_mode: cards
       query:
         type: views_query
         options:

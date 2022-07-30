@@ -1,9 +1,9 @@
-uuid: b6016cb8-03f3-41f3-8733-faa18d0064e5
+uuid: f548a09b-52b6-44e6-a2f2-147b42d827f3
 langcode: en
 status: true
 dependencies:
   config:
-    - core.entity_view_mode.node.teaser
+    - core.entity_view_mode.node.cards
     - field.field.node.project.body
     - field.field.node.project.comment
     - field.field.node.project.field_category
@@ -21,10 +21,10 @@ dependencies:
   module:
     - options
     - user
-id: node.project.teaser
+id: node.project.cards
 targetEntityType: node
 bundle: project
-mode: teaser
+mode: cards
 content:
   field_category:
     type: list_default

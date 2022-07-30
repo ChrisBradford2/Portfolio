@@ -82,8 +82,14 @@ footer:
     component:
       css/navigation/footer.css: {}
 
-# User
+# View-modes
 user-compact:
   css:
     component:
       css/view-modes/user-compact.css: {}
+
+# View-modes
+project-cards:
+  css:
+    component:
+      css/view-modes/project-cards.css: {}

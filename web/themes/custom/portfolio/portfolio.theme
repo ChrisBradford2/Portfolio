@@ -33,6 +33,44 @@ function portfolio_form_system_theme_settings_alter(&$form, FormStateInterface $
   ];
 }
 
+/**
+ * Implements hook_theme_suggestions_HOOK_alter().
+ */
+function portfolio_theme_suggestions_views_view_alter(array &$suggestions, array $variables) {
+  // Suggestions for custom views_view bundles.
+  if (!empty($variables['view'])) {
+    $view = $variables['view'];
+    if (!empty($view->id()) && !empty($view->getDisplay()->getPluginId())) {
+      $id = $view->id();
+      $display = $view->getDisplay()->getPluginId();
+      $hook = 'views_view';
+      $suggestion = $hook . '__' . $id . '__' . $display;
+      if (!in_array($suggestion, $suggestions)) {
+        array_splice($suggestions, 1, 0, $suggestion);
+      }
+    }
+  }
+}
+
+/**
+ * Implements hook_theme_suggestions_HOOK_alter().
+ */
+function portfolio_theme_suggestions_views_view_unformatted_alter(array &$suggestions, array $variables) {
+  // Suggestions for custom views_view_unformatted bundles.
+  if (!empty($variables['view'])) {
+    $view = $variables['view'];
+    if (!empty($view->id()) && !empty($view->getDisplay()->getPluginId())) {
+      $id = $view->id();
+      $display = $view->getDisplay()->getPluginId();
+      $hook = 'views_view_unformatted';
+      $suggestion = $hook . '__' . $id . '__' . $display;
+      if (!in_array($suggestion, $suggestions)) {
+        array_splice($suggestions, 1, 0, $suggestion);
+      }
+    }
+  }
+}
+
 function portfolio_theme_suggestions_file_link_alter(&$suggestions, $vars, $hook) {
 
   // Get the node type.
