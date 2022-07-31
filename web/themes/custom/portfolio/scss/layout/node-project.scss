@@ -1,0 +1,144 @@
+$blue: #2980B9;
+$orange: #e58e26;
+$padding: .25rem;
+
+@mixin grid {
+  display: grid;
+  gap: .5rem;
+
+  .field--name-field-text-plain,
+  .field--name-field-list-text,
+  .field--name-field-date {
+    padding-top: $padding;
+  }
+  .field--name-field-date {
+    text-align: right;
+  }
+  padding-top: $padding;
+}
+
+.node-header {
+  .col-sm-9 {
+    .slick {
+      img,
+      video {
+        max-width: 100%;
+      }
+    }
+    .divider-project {
+      height: 0.25rem;
+      background-color: #2980B9;
+      border-radius: 1rem;
+      border-color: #2980B9;
+      margin-top: 0.25rem;
+    }
+    .under-media-full {
+      @include grid;
+      grid-template-columns: repeat(3, 1fr);
+      .field--name-field-list-text {
+        text-align: center;
+      }
+    }
+    .under-media {
+      @include grid;
+      grid-template-columns: repeat(2, 1fr);
+    }
+    .under-media-full,
+    .under-media {
+      .field__label {
+        font-weight: bold;
+        color: $orange;
+        &:after {
+          content: " :";
+        }
+      }
+    }
+    .field--type-text-with-summary,
+    .field--name-field-entity-reference-revision {
+      margin-top: 1rem;
+    }
+    .field--name-field-entity-reference-revision,
+    .field--name-field-file {
+      .field__label {
+        color: $blue;
+        font-size: 1.5em;
+        margin-bottom: .75rem;
+      }
+    }
+    .field--name-field-entity-reference-revision {
+      .field__items {
+        .field__item {
+          .paragraph--type--link {
+            p {
+              span {
+                font-weight: bold;
+                color: $orange;
+                &:after {
+                  content: " :";
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+  .sidebar-project {
+    border-radius: 1rem;
+    border: 0.125rem solid #ccc;
+    background: $blue;
+    padding: 1rem;
+    max-height: 35rem;
+    .field--name-field-entity-reference-skills {
+      .field__items {
+        display: flex;
+        flex: 1 1 auto;
+        gap: 1rem;
+        flex-wrap: wrap;
+        background: white;
+        padding: 0.5rem;
+        border-radius: 0.5rem;
+        justify-content: space-around;
+        .field__item {
+          img {
+            width: 2.5rem;
+            height: auto;
+            transition: all .5s;
+            &:hover {
+              width: 4rem;
+              height: auto;
+            }
+          }
+        }
+      }
+    }
+    .field--name-field-entity-reference-services,
+    .field--name-field-entity-reference-skills {
+      .field__label {
+        color: $orange;
+        margin-bottom: .5rem;
+        font-weight: bold;
+        font-size: 1.5rem;
+      }
+    }
+    .field--name-field-entity-reference-services {
+      .field__items {
+        a {
+          color: #fff;
+          text-decoration: none;
+          svg {
+            margin-right: .5rem;
+            max-width: 1rem;
+          }
+          &:hover {
+            color: $orange;
+            text-decoration: underline;
+          }
+        }
+      }
+    }
+  }
+  .field--name-comment {
+    margin-top: 1rem;
+  }
+}

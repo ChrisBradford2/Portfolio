@@ -22,7 +22,7 @@ content:
     region: content
   field_icons:
     type: fontawesome_icon_formatter
-    label: inline
+    label: hidden
     settings:
       layers: false
     third_party_settings: {  }

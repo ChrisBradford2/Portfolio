@@ -12,6 +12,7 @@ dependencies:
     - field.field.node.project.field_entity_reference_services
     - field.field.node.project.field_entity_reference_skills
     - field.field.node.project.field_file
+    - field.field.node.project.field_icon
     - field.field.node.project.field_list_text
     - field.field.node.project.field_media
     - field.field.node.project.field_media_image
@@ -55,6 +56,7 @@ hidden:
   field_entity_reference_services: true
   field_entity_reference_skills: true
   field_file: true
+  field_icon: true
   field_list_text: true
   field_media: true
   field_meta_tags: true

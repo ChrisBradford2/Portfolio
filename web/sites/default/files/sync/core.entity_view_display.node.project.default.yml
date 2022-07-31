@@ -12,6 +12,7 @@ dependencies:
     - field.field.node.project.field_entity_reference_services
     - field.field.node.project.field_entity_reference_skills
     - field.field.node.project.field_file
+    - field.field.node.project.field_icon
     - field.field.node.project.field_list_text
     - field.field.node.project.field_media
     - field.field.node.project.field_media_image
@@ -21,12 +22,54 @@ dependencies:
   module:
     - comment
     - datetime
+    - ds
     - entity_reference_revisions
     - file
+    - fontawesome
     - metatag
     - options
+    - slick
     - text
     - user
+third_party_settings:
+  ds:
+    layout:
+      id: barrio_col2-9-3
+      library: null
+      disable_css: false
+      entity_classes: all_classes
+      settings:
+        label: ''
+    regions:
+      top:
+        - links
+        - node_title
+        - field_icon
+        - field_meta_tags
+      first:
+        - field_media
+        - field_text_plain
+        - field_list_text
+        - field_date
+        - body
+        - field_file
+        - field_entity_reference_revision
+      second:
+        - field_entity_reference_skills
+        - field_entity_reference_services
+      bottom:
+        - comment
+    fields:
+      node_title:
+        plugin_id: node_title
+        weight: 1
+        label: hidden
+        formatter: default
+        settings:
+          link: false
+          'link class': ''
+          wrapper: h1
+          class: ''
 id: node.project.default
 targetEntityType: node
 bundle: project
@@ -37,8 +80,8 @@ content:
     label: hidden
     settings: {  }
     third_party_settings: {  }
-    weight: 2
-    region: content
+    weight: 8
+    region: first
   comment:
     type: comment_default
     label: above
@@ -46,8 +89,8 @@ content:
       view_mode: default
       pager_id: 0
     third_party_settings: {  }
-    weight: 10
-    region: content
+    weight: 13
+    region: bottom
   field_date:
     type: datetime_default
     label: inline
@@ -56,7 +99,7 @@ content:
       format_type: html_year
     third_party_settings: {  }
     weight: 7
-    region: content
+    region: first
   field_entity_reference_revision:
     type: entity_reference_revisions_entity_view
     label: above
@@ -64,54 +107,118 @@ content:
       view_mode: default
       link: ''
     third_party_settings: {  }
-    weight: 9
-    region: content
+    weight: 10
+    region: first
   field_entity_reference_services:
-    type: entity_reference_label
+    type: entity_reference_entity_view
     label: above
     settings:
+      view_mode: default
       link: true
     third_party_settings: {  }
-    weight: 4
-    region: content
+    weight: 12
+    region: second
   field_entity_reference_skills:
-    type: entity_reference_label
+    type: entity_reference_entity_view
     label: above
     settings:
+      view_mode: default
       link: true
     third_party_settings: {  }
-    weight: 3
-    region: content
+    weight: 11
+    region: second
   field_file:
-    type: file_url_plain
+    type: file_default
     label: above
-    settings: {  }
+    settings:
+      use_description_as_link_text: true
     third_party_settings: {  }
-    weight: 8
-    region: content
+    weight: 9
+    region: first
+  field_icon:
+    type: fontawesome_icon_formatter
+    label: hidden
+    settings:
+      layers: false
+    third_party_settings: {  }
+    weight: 2
+    region: top
   field_list_text:
     type: list_default
     label: inline
     settings: {  }
     third_party_settings: {  }
     weight: 6
-    region: content
+    region: first
   field_media:
-    type: entity_reference_entity_view
-    label: above
+    type: slick_media
+    label: hidden
     settings:
+      caption:
+        title: '0'
+        alt: '0'
+      optionset: default
+      class: ''
+      id: ''
+      image: ''
+      link: ''
+      overlay: ''
+      title: ''
+      vanilla: false
+      layout: ''
       view_mode: default
-      link: false
-    third_party_settings: {  }
-    weight: 1
-    region: content
+      cache: 0
+      skin: ''
+      lazy: ''
+      style: ''
+      background: false
+      box_caption: ''
+      box_caption_custom: ''
+      box_media_style: ''
+      loading: ''
+      preload: true
+      responsive_image_style: ''
+      box_style: ''
+      image_style: ''
+      media_switch: ''
+      ratio: ''
+      thumbnail_style: ''
+      grid: ''
+      grid_medium: ''
+      grid_small: ''
+      overridables:
+        arrows: arrows
+        autoplay: autoplay
+        dots: '0'
+        draggable: '0'
+        infinite: '0'
+        mouseWheel: '0'
+        randomize: '0'
+        variableWidth: '0'
+      thumbnail: ''
+      optionset_thumbnail: ''
+      skin_thumbnail: ''
+      thumbnail_caption: ''
+      thumbnail_effect: ''
+      thumbnail_position: ''
+      override: true
+      skin_arrows: ''
+      skin_dots: ''
+      use_theme_field: false
+      preserve_keys: false
+      visible_items: null
+    third_party_settings:
+      ds:
+        ds_limit: '1'
+    weight: 4
+    region: first
   field_meta_tags:
     type: metatag_empty_formatter
     label: hidden
     settings: {  }
     third_party_settings: {  }
-    weight: 11
-    region: content
+    weight: 3
+    region: top
   field_text_plain:
     type: string
     label: inline
@@ -119,12 +226,12 @@ content:
       link_to_entity: false
     third_party_settings: {  }
     weight: 5
-    region: content
+    region: first
   links:
     settings: {  }
     third_party_settings: {  }
     weight: 0
-    region: content
+    region: top
 hidden:
   field_category: true
   field_media_image: true

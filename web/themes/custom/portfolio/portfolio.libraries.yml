@@ -32,6 +32,11 @@ keyboard-css:
   css:
     component:
       /libraries/keyboard-css/dist/css/main.min.css: {}
+slick:
+  css:
+    component:
+      /libraries/slick/slick/slick.css: {}
+      /libraries/slick/slick/slick-theme.css: {}
   dependencies:
     - core/jquery #Just to be safe
     - core/drupal.dialog.ajax #Required for dialogs
@@ -57,6 +62,12 @@ in-short-button:
   css:
     component:
       css/component/in-short-button.css: {}
+
+# Layout
+node-project:
+  css:
+    component:
+      css/layout/node-project.css: {}
 
 # Paragraphs
 schools:
@@ -87,8 +98,6 @@ user-compact:
   css:
     component:
       css/view-modes/user-compact.css: {}
-
-# View-modes
 project-cards:
   css:
     component:

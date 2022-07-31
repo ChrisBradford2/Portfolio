@@ -29,27 +29,12 @@
 ] %}
 <div{{ attributes.setAttribute('id', 'taxonomy-term-' ~ term.id).addClass(classes) }}>
   {{ title_prefix }}
-  {% if not page %}
-  {% if content.field_link is not empty %}
-  {% if content.field_link.0['#title'] %}
-  <a href="{{ content.field_link.0['#title'] }}"
-     title="{{ name.0['#context'].value }}">
-    {% else %}
-    <a href="{{ url }}"
-       title="{{ name.0['#context'].value }}">
-      {% endif %}
-      <img src="{{ content.field_text_plain_long.0['#context'].value }}"
-           alt="{{ name.0['#context'].value }}" {% if content.field_link.0['#title'] is empty %}
-        title="{{ name.0['#context'].value }}" {% endif %}/>
+  {{ title_suffix }}
+  <div class="content">
+    <a href="{{ url }}"> <i
+        class="{{ content.field_icons.0['#icons'].0['#style'] }} {{ content.field_icons.0['#icons'].0['#name'] }}"></i>{{ name.0['#context'].value }}
     </a>
-    {% else %}
-      <a href="{{ url }}"
-         title="{{ name.0['#context'].value }}">
-        <img src="{{ content.field_text_plain_long.0['#context'].value }}"
-             width="40" height="40" title=" {{ name.0['#context'].value }}"
-             alt="{{ name.0['#context'].value }}"/>
-      </a>
-    {% endif %}
-    {% endif %}
-    {{ title_suffix }}
+    {{ content|without('field_icons') }}
+  </div>
 </div>
+

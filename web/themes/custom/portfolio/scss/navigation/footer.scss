@@ -114,14 +114,6 @@ footer {
   @media screen and (min-width: 769px) {
     .container {
       .site-footer__top {
-        grid-template-columns: repeat(2, 1fr);
-      }
-    }
-  }
-
-  @media screen and (min-width: 1201px) {
-    .container {
-      .site-footer__top {
         grid-template-columns: repeat(3, 1fr);
       }
     }
