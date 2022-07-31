@@ -7,7 +7,7 @@
     position: relative;
     display: flex;
     flex-direction: column;
-    min-width: 0;
+    max-width: 22.5rem;
     word-wrap: break-word;
     background-color: #fff;
     background-clip: border-box;
@@ -22,11 +22,13 @@
     }
     .field--name-field-entity-reference {
       display: flex;
+      flex-wrap: wrap;
       flex: 1 1 auto;
       min-height: 1px;
       padding: 1.25rem;
       margin: 0 auto;
       gap: 1rem;
+      justify-content: center;
       .field__item {
         img {
           width: 40px;
