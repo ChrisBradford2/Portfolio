@@ -14,7 +14,7 @@ bundle: modal_node
 label: 'En bref'
 description: ''
 required: true
-translatable: true
+translatable: false
 default_value:
   -
     target_uuid: b304b59d-dcc8-4130-8e53-c249d37c18a7

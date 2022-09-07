@@ -1,0 +1,22 @@
+uuid: f2e9fb72-a33d-487f-866c-c67b09cb8ebd
+langcode: en
+status: true
+dependencies:
+  config:
+    - block_content.type.comments_header_homepage
+id: block_content.comments_header_homepage.status
+field_name: status
+entity_type: block_content
+bundle: comments_header_homepage
+label: Published
+description: ''
+required: false
+translatable: false
+default_value:
+  -
+    value: 1
+default_value_callback: ''
+settings:
+  on_label: 'On'
+  off_label: 'Off'
+field_type: boolean

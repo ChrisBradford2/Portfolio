@@ -1,0 +1,22 @@
+uuid: 18fdf5ca-52f4-4fb9-a1d0-311cdf634446
+langcode: en
+status: true
+dependencies:
+  config:
+    - block_content.type.profile_picture_homepage
+id: block_content.profile_picture_homepage.status
+field_name: status
+entity_type: block_content
+bundle: profile_picture_homepage
+label: Published
+description: ''
+required: false
+translatable: false
+default_value:
+  -
+    value: 1
+default_value_callback: ''
+settings:
+  on_label: 'On'
+  off_label: 'Off'
+field_type: boolean

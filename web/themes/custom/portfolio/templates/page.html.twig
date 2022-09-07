@@ -86,7 +86,7 @@
       {% endif %}
     </nav>
   {% endif %}
-  <nav{{ navbar_attributes }}>
+  <nav{{ navbar_attributes }} {% if logged_in %} style="top: 53px;z-index: 98;"{% endif %} >
     {% if container_navbar %}
     <div class="container">
       {% endif %}

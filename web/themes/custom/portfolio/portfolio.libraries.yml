@@ -68,6 +68,10 @@ node-project:
   css:
     component:
       css/layout/node-project.css: {}
+node-homepage-project:
+  css:
+    component:
+      css/layout/node-homepage-project.css: {}
 
 # Paragraphs
 schools:

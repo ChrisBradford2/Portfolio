@@ -1,0 +1,22 @@
+uuid: 65c50480-5a4e-40ee-837f-28e8add18e54
+langcode: en
+status: true
+dependencies:
+  config:
+    - node.type.modal_node
+id: node.modal_node.sticky
+field_name: sticky
+entity_type: node
+bundle: modal_node
+label: 'Sticky at top of lists'
+description: ''
+required: false
+translatable: false
+default_value:
+  -
+    value: 0
+default_value_callback: ''
+settings:
+  on_label: 'On'
+  off_label: 'Off'
+field_type: boolean

@@ -3,7 +3,20 @@
     display: inline-block;
     font-family: 'Nova Flat', cursive;
     line-height: inherit;
+    color: #fff;
   }
+  .nav-link {
+    font-weight: 700;
+    text-transform: uppercase;
+    color: #fff;
+    &:hover {
+      color: #e58e26;
+    }
+  }
+}
+
+.navbar-toggler-icon {
+
 }
 
 @media (min-width: 992px) {

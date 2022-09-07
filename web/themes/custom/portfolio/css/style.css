@@ -3,6 +3,10 @@
  * Subtheme specific CSS.
  */
 
+#page-wrapper {
+  margin-top: 4.25rem;
+}
+
 * {
   font-family: ubuntu, sans-serif;
 }
@@ -45,4 +49,19 @@ header .header {
 .divider-custom .divider-custom-icon {
   color: #2980b9;
   font-size: 2rem;
+}
+
+.background-image {
+  background-image: url('https://www.nicolas-barbarisi.com/assets/img/bg.png');
+  object-fit: cover;
+  width: 100%;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-size: cover;
+  background-color: #6c757d;
+  color: #e58e26;
+}
+
+.background-image__project {
+  padding: 6rem 0;
 }

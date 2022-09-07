@@ -1,0 +1,18 @@
+uuid: 27dfbcd0-17bd-4bbe-a432-c43f45045c76
+langcode: en
+status: true
+dependencies:
+  config:
+    - node.type.modal_node
+id: node.modal_node.title
+field_name: title
+entity_type: node
+bundle: modal_node
+label: Title
+description: ''
+required: true
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

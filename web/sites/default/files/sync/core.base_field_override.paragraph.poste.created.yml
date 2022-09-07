@@ -1,0 +1,18 @@
+uuid: f630a502-0eca-4072-9431-1848cc1eb4ca
+langcode: en
+status: true
+dependencies:
+  config:
+    - paragraphs.paragraphs_type.poste
+id: paragraph.poste.created
+field_name: created
+entity_type: paragraph
+bundle: poste
+label: 'Authored on'
+description: 'The time that the Paragraph was created.'
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: created

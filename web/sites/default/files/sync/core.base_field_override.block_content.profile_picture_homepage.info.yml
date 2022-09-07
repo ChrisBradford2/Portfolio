@@ -1,0 +1,18 @@
+uuid: 2aedb7b2-5385-400a-8f54-74002961f2cc
+langcode: en
+status: true
+dependencies:
+  config:
+    - block_content.type.profile_picture_homepage
+id: block_content.profile_picture_homepage.info
+field_name: info
+entity_type: block_content
+bundle: profile_picture_homepage
+label: 'Block description'
+description: 'A brief description of your block.'
+required: true
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

@@ -1,0 +1,22 @@
+uuid: 8aa5d6a4-ee3c-4433-a324-b25ecd96e33a
+langcode: en
+status: true
+dependencies:
+  config:
+    - node.type.modal_node
+id: node.modal_node.status
+field_name: status
+entity_type: node
+bundle: modal_node
+label: Published
+description: ''
+required: false
+translatable: false
+default_value:
+  -
+    value: 1
+default_value_callback: ''
+settings:
+  on_label: 'On'
+  off_label: 'Off'
+field_type: boolean

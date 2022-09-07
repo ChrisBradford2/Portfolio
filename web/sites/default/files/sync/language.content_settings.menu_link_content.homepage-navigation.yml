@@ -1,0 +1,18 @@
+uuid: 43ea8729-f336-44c6-947a-451f1e1270fe
+langcode: en
+status: true
+dependencies:
+  config:
+    - system.menu.homepage-navigation
+  module:
+    - content_translation
+third_party_settings:
+  content_translation:
+    enabled: false
+    bundle_settings:
+      untranslatable_fields_hide: '0'
+id: menu_link_content.homepage-navigation
+target_entity_type_id: menu_link_content
+target_bundle: homepage-navigation
+default_langcode: site_default
+language_alterable: false

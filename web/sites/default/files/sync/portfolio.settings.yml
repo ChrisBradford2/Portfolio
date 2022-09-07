@@ -74,8 +74,8 @@ bootstrap_barrio_navbar_top_navbar: 0
 bootstrap_barrio_navbar_top_position: ''
 bootstrap_barrio_navbar_top_color: ''
 bootstrap_barrio_navbar_top_background: ''
-bootstrap_barrio_navbar_position: ''
-bootstrap_barrio_navbar_color: navbar-dark
+bootstrap_barrio_navbar_position: fixed-top
+bootstrap_barrio_navbar_color: ''
 bootstrap_barrio_navbar_background: ''
 bootstrap_barrio_navbar_top_class: ''
 bootstrap_barrio_navbar_class: ''
@@ -83,7 +83,7 @@ bootstrap_barrio_navbar_offcanvas: ''
 bootstrap_barrio_navbar_flyout: 0
 bootstrap_barrio_navbar_slide: 0
 bootstrap_barrio_tabs_style: ''
-bootstrap_barrio_messages_widget: default
+bootstrap_barrio_messages_widget: toasts
 bootstrap_barrio_navbar_top_affix: 0
 bootstrap_barrio_navbar_affix: 0
 bootstrap_barrio_sidebar_first_affix: 0
@@ -96,3 +96,7 @@ bootstrap_barrio_system_messages: ''
 bootstrap_barrio_table_style: ''
 bootstrap_barrio_table_hover: 0
 bootstrap_barrio_table_head: ''
+bootstrap_barrio_region_clean_projects: 0
+bootstrap_barrio_region_class_projects: row
+bootstrap_barrio_region_clean_contact: 0
+bootstrap_barrio_region_class_contact: row

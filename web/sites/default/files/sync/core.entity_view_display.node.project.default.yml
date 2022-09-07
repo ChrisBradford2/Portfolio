@@ -3,9 +3,7 @@ langcode: en
 status: true
 dependencies:
   config:
-    - core.entity_view_display.comment.comment.default
     - field.field.node.project.body
-    - field.field.node.project.comment
     - field.field.node.project.field_category
     - field.field.node.project.field_date
     - field.field.node.project.field_entity_reference_revision
@@ -20,7 +18,6 @@ dependencies:
     - field.field.node.project.field_text_plain
     - node.type.project
   module:
-    - comment
     - datetime
     - ds
     - entity_reference_revisions
@@ -82,15 +79,6 @@ content:
     third_party_settings: {  }
     weight: 8
     region: first
-  comment:
-    type: comment_default
-    label: above
-    settings:
-      view_mode: default
-      pager_id: 0
-    third_party_settings: {  }
-    weight: 13
-    region: bottom
   field_date:
     type: datetime_default
     label: inline

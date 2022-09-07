@@ -10,9 +10,9 @@ palette:
   titleslogan: '#fffeff'
   text: '#3b3b3b'
   link: '#0071b3'
-logo: 'public://color/portfolio-cfd55c17/logo.svg'
+logo: 'public://color/portfolio-b7415d21/logo.svg'
 stylesheets:
-  - 'public://color/portfolio-cfd55c17/colors.css'
+  - 'public://color/portfolio-b7415d21/colors.css'
 files:
-  - 'public://color/portfolio-cfd55c17/logo.svg'
-  - 'public://color/portfolio-cfd55c17/colors.css'
+  - 'public://color/portfolio-b7415d21/logo.svg'
+  - 'public://color/portfolio-b7415d21/colors.css'

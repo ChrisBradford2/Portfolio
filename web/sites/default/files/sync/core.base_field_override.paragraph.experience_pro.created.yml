@@ -1,0 +1,18 @@
+uuid: 411566a7-a7b8-42f2-879f-23c7f2822b74
+langcode: en
+status: true
+dependencies:
+  config:
+    - paragraphs.paragraphs_type.experience_pro
+id: paragraph.experience_pro.created
+field_name: created
+entity_type: paragraph
+bundle: experience_pro
+label: 'Authored on'
+description: 'The time that the Paragraph was created.'
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: created

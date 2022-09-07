@@ -1,0 +1,18 @@
+uuid: 87824e89-81b7-4557-aa6b-1940ce1461da
+langcode: en
+status: true
+dependencies:
+  config:
+    - block_content.type.comments_header_homepage
+id: block_content.comments_header_homepage.changed
+field_name: changed
+entity_type: block_content
+bundle: comments_header_homepage
+label: Changed
+description: 'The time that the custom block was last edited.'
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: changed

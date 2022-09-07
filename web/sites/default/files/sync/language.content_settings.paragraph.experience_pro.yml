@@ -1,0 +1,18 @@
+uuid: e4742be2-aa29-4b83-be5c-c0beea190c4c
+langcode: en
+status: true
+dependencies:
+  config:
+    - paragraphs.paragraphs_type.experience_pro
+  module:
+    - content_translation
+third_party_settings:
+  content_translation:
+    enabled: false
+    bundle_settings:
+      untranslatable_fields_hide: '0'
+id: paragraph.experience_pro
+target_entity_type_id: paragraph
+target_bundle: experience_pro
+default_langcode: site_default
+language_alterable: false

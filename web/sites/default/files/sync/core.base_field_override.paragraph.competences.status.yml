@@ -1,0 +1,22 @@
+uuid: c7468d22-fd4e-47a0-822e-413b850e47ed
+langcode: en
+status: true
+dependencies:
+  config:
+    - paragraphs.paragraphs_type.competences
+id: paragraph.competences.status
+field_name: status
+entity_type: paragraph
+bundle: competences
+label: Published
+description: ''
+required: false
+translatable: false
+default_value:
+  -
+    value: 1
+default_value_callback: ''
+settings:
+  on_label: 'On'
+  off_label: 'Off'
+field_type: boolean

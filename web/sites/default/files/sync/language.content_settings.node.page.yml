@@ -1,0 +1,18 @@
+uuid: aea3fb7c-8e06-42bf-b58f-dd42a2539592
+langcode: en
+status: true
+dependencies:
+  config:
+    - node.type.page
+  module:
+    - content_translation
+third_party_settings:
+  content_translation:
+    enabled: true
+    bundle_settings:
+      untranslatable_fields_hide: '0'
+id: node.page
+target_entity_type_id: node
+target_bundle: page
+default_langcode: fr
+language_alterable: true

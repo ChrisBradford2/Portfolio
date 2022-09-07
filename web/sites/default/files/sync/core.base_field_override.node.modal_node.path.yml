@@ -1,0 +1,20 @@
+uuid: 67a1d561-1840-4b4d-b695-26e0865baa11
+langcode: en
+status: true
+dependencies:
+  config:
+    - node.type.modal_node
+  module:
+    - path
+id: node.modal_node.path
+field_name: path
+entity_type: node
+bundle: modal_node
+label: 'URL alias'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: path

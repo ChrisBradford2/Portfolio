@@ -1,0 +1,18 @@
+uuid: a3173cf3-4cfe-41c8-b94f-11e17c4c064d
+langcode: en
+status: true
+dependencies:
+  config:
+    - paragraphs.paragraphs_type.poste
+  module:
+    - content_translation
+third_party_settings:
+  content_translation:
+    enabled: false
+    bundle_settings:
+      untranslatable_fields_hide: '0'
+id: paragraph.poste
+target_entity_type_id: paragraph
+target_bundle: poste
+default_langcode: site_default
+language_alterable: false

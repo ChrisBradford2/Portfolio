@@ -1,0 +1,18 @@
+uuid: e5435cf2-3317-4d91-9106-36f08f8098dc
+langcode: en
+status: true
+dependencies:
+  config:
+    - block_content.type.profile_picture_homepage
+id: block_content.profile_picture_homepage.changed
+field_name: changed
+entity_type: block_content
+bundle: profile_picture_homepage
+label: Changed
+description: 'The time that the custom block was last edited.'
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: changed

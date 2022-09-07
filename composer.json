@@ -38,6 +38,7 @@
         "drupal/modal_page": "^4.1",
         "drupal/paragraphs": "^1.14",
         "drupal/pathauto": "^1.10",
+        "drupal/simple_sitemap": "^4.1",
         "drupal/slick": "^2.6",
         "drupal/token": "^1.10",
         "drupal/twig_tweak": "^3.1",

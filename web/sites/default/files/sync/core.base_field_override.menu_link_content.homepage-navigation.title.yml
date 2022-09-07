@@ -1,0 +1,18 @@
+uuid: 56ea9cdf-8214-4a36-bc64-387c00ad0ca1
+langcode: en
+status: true
+dependencies:
+  config:
+    - system.menu.homepage-navigation
+id: menu_link_content.homepage-navigation.title
+field_name: title
+entity_type: menu_link_content
+bundle: homepage-navigation
+label: 'Menu link title'
+description: 'The text to be used for this link in the menu.'
+required: true
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

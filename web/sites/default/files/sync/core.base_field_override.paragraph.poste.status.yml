@@ -1,0 +1,22 @@
+uuid: 32ac8527-383c-4887-a075-969f7a4fd943
+langcode: en
+status: true
+dependencies:
+  config:
+    - paragraphs.paragraphs_type.poste
+id: paragraph.poste.status
+field_name: status
+entity_type: paragraph
+bundle: poste
+label: Published
+description: ''
+required: false
+translatable: false
+default_value:
+  -
+    value: 1
+default_value_callback: ''
+settings:
+  on_label: 'On'
+  off_label: 'Off'
+field_type: boolean

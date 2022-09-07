@@ -1,0 +1,18 @@
+uuid: 666bd6d5-3475-4252-94d1-3e0959e3ad34
+langcode: en
+status: true
+dependencies:
+  config:
+    - block_content.type.comments_header_homepage
+id: block_content.comments_header_homepage.info
+field_name: info
+entity_type: block_content
+bundle: comments_header_homepage
+label: 'Block description'
+description: 'A brief description of your block.'
+required: true
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

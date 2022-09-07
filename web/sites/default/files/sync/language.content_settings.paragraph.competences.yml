@@ -1,0 +1,18 @@
+uuid: a2fcb04c-85a5-40c5-847b-c0782726a70c
+langcode: en
+status: true
+dependencies:
+  config:
+    - paragraphs.paragraphs_type.competences
+  module:
+    - content_translation
+third_party_settings:
+  content_translation:
+    enabled: false
+    bundle_settings:
+      untranslatable_fields_hide: '0'
+id: paragraph.competences
+target_entity_type_id: paragraph
+target_bundle: competences
+default_langcode: site_default
+language_alterable: false

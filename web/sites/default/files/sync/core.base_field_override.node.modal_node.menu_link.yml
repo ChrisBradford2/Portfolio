@@ -1,0 +1,20 @@
+uuid: 0154143e-49a1-4f1d-a344-33931401245e
+langcode: en
+status: true
+dependencies:
+  config:
+    - node.type.modal_node
+id: node.modal_node.menu_link
+field_name: menu_link
+entity_type: node
+bundle: modal_node
+label: 'Menu link'
+description: 'Computed menu link for the node (only available during node saving).'
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: default
+  handler_settings: {  }
+field_type: entity_reference
