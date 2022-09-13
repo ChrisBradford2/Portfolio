@@ -32,14 +32,14 @@ keyboard-css:
   css:
     component:
       /libraries/keyboard-css/dist/css/main.min.css: {}
+  dependencies:
+    - core/jquery #Just to be safe
+    - core/drupal.dialog.ajax #Required for dialogs
 slick:
   css:
     component:
       /libraries/slick/slick/slick.css: {}
       /libraries/slick/slick/slick-theme.css: {}
-  dependencies:
-    - core/jquery #Just to be safe
-    - core/drupal.dialog.ajax #Required for dialogs
 
 # Components
 download-button:
@@ -92,6 +92,8 @@ navbar-brand:
   css:
     component:
       css/navigation/navbar-brand.css: {}
+  js:
+    js/navbar.js: {}
 footer:
   css:
     component:

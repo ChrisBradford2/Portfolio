@@ -28,6 +28,7 @@ footer {
     .region-footer-third {
       width: 100%;
       margin: 0;
+
       .block {
         h2 {
           color: white;
@@ -43,6 +44,7 @@ footer {
         margin: 0;
         border: none;
         padding: 0;
+
         .field--name-field-footer-block {
           .user-block-contact {
             display: flex;
@@ -50,6 +52,7 @@ footer {
             gap: 1rem;
             align-items: center;
             @include lead_text;
+
             a {
               @include lead_link;
             }
@@ -57,6 +60,7 @@ footer {
         }
       }
     }
+
     .region-footer-second {
       #block-portfolio-footer {
         ul {
@@ -65,6 +69,7 @@ footer {
           display: flex;
           gap: .5rem;
           justify-content: center;
+
           li {
             a {
               border-radius: 100%;
@@ -78,6 +83,7 @@ footer {
               border: 0.125rem solid #e58e26;
               transition: color 0.15s ease-in-out, background-color 0.15s ease-in-out, border-color 0.15s ease-in-out;
               margin: 0 .25rem;
+
               &:hover {
                 color: #f8f9fa;
                 background-color: #e58e26;
@@ -95,6 +101,7 @@ footer {
           padding-left: 0;
           list-style: none;
           justify-content: center;
+
           li {
             a {
               padding: 0;
@@ -102,6 +109,7 @@ footer {
               font-weight: bold;
               color: #e58e26;
               text-decoration: none;
+
               &:hover {
                 text-decoration: underline;
               }
@@ -111,6 +119,7 @@ footer {
       }
     }
   }
+
   @media screen and (min-width: 769px) {
     .container {
       .site-footer__top {
@@ -127,5 +136,27 @@ footer {
 
   .row {
     margin: 0 auto;
+
+    .navigation {
+      .nav-item {
+        flex: 1 1 auto;
+        position: relative;
+        text-align: center;
+        span {
+          color: #fff;
+        }
+
+        a {
+          color: #e58e26;
+          &:hover {
+            text-decoration: underline;
+          }
+        }
+      }
+
+      .nav-item + .nav-item {
+        border-left: solid 1px white;
+      }
+    }
   }
 }

@@ -7,7 +7,7 @@
 
   'use strict';
 
-  Drupal.behaviors.bootstrap_barrio_subtheme = {
+  Drupal.behaviors.portoflio = {
     attach: function (context, settings) {
       let job_card = document.querySelectorAll('.paragraph--type--experience-pro');
       job_card.forEach((item, index) => {
