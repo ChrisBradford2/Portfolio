@@ -4,7 +4,6 @@ status: true
 dependencies:
   config:
     - core.entity_view_mode.node.teaser
-    - field.field.node.modal_node.field_entity_reference_user
     - node.type.modal_node
   module:
     - user
@@ -19,5 +18,4 @@ content:
     weight: 100
     region: content
 hidden:
-  field_entity_reference_user: true
   langcode: true

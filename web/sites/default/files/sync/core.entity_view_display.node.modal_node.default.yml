@@ -3,7 +3,6 @@ langcode: en
 status: true
 dependencies:
   config:
-    - field.field.node.modal_node.field_entity_reference_user
     - node.type.modal_node
   module:
     - user
@@ -12,15 +11,6 @@ targetEntityType: node
 bundle: modal_node
 mode: default
 content:
-  field_entity_reference_user:
-    type: entity_reference_entity_view
-    label: hidden
-    settings:
-      view_mode: compact
-      link: false
-    third_party_settings: {  }
-    weight: 101
-    region: content
   links:
     settings: {  }
     third_party_settings: {  }

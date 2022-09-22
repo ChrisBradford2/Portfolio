@@ -5,15 +5,38 @@
     font-family: 'Nova Flat', cursive;
     line-height: inherit;
     color: #fff;
+    font-size: 1.25rem;
+  }
+
+  #block-homepagenavigation {
+    flex-direction: column;
   }
 
   .nav-link {
     font-weight: 700;
     text-transform: uppercase;
     color: #fff;
+    @media screen and (max-width: 1200px) {
+      padding: 1rem 0;
+    }
 
     &:hover {
       color: #e58e26;
+    }
+  }
+
+  .navbar-toggler {
+    &:focus {
+      box-shadow: none;
+      background-color: #e58e26;
+    }
+    .navbar-toggler-icon {
+      background-image: url('../../icons/bars-solid.svg');
+      color: #fff;
+      @media screen and (max-width: 991px) {
+        width: 1.5rem;
+        height: 1.5rem;
+      }
     }
   }
 }
@@ -21,9 +44,6 @@
 @media (min-width: 992px) {
   .navbar-expensed {
     padding: 1.5rem 0;
-    .navbar-brand {
-      font-size: 1.75rem !important;
-    }
   }
   .navbar {
     transition: all 0.3s;
@@ -31,6 +51,17 @@
       font-size: 1.5em;
       transition: font-size 0.3s;
       text-transform: uppercase;
+    }
+  }
+}
+
+@media (min-width: 1200px) {
+  .navbar {
+    .navbar-brand {
+      font-size: 1.5em;
+    }
+    #block-homepagenavigation {
+      flex-direction: row;
     }
   }
 }

@@ -4,8 +4,8 @@ status: true
 dependencies:
   config:
     - field.field.node.landing_page.body
+    - field.field.node.landing_page.field_entity_reference_user
     - field.field.node.landing_page.field_file
-    - field.field.node.landing_page.field_link
     - field.field.node.landing_page.field_meta_tags
     - field.field.node.landing_page.field_professionnal_experiences
     - field.field.node.landing_page.field_schools
@@ -14,7 +14,6 @@ dependencies:
   module:
     - field_group
     - file
-    - link
     - metatag
     - paragraphs
     - path
@@ -24,8 +23,8 @@ third_party_settings:
     group_about:
       children:
         - body
-        - field_link
         - field_file
+        - field_entity_reference_user
         - field_skills
         - field_schools
         - field_professionnal_experiences
@@ -42,8 +41,7 @@ third_party_settings:
         description: ''
         required_fields: false
     group_projects:
-      children:
-        - field_entity_reference_views
+      children: {  }
       label: 'Mes projets'
       region: content
       parent_name: ''
@@ -57,8 +55,7 @@ third_party_settings:
         description: ''
         required_fields: true
     group_contact:
-      children:
-        - field_entity_reference_webform
+      children: {  }
       label: Contact
       region: content
       parent_name: ''
@@ -92,20 +89,18 @@ content:
     region: content
     settings: {  }
     third_party_settings: {  }
-  field_file:
-    type: file_generic
+  field_entity_reference_user:
+    type: options_select
     weight: 4
     region: content
-    settings:
-      progress_indicator: bar
+    settings: {  }
     third_party_settings: {  }
-  field_link:
-    type: link_default
+  field_file:
+    type: file_generic
     weight: 3
     region: content
     settings:
-      placeholder_url: ''
-      placeholder_title: ''
+      progress_indicator: bar
     third_party_settings: {  }
   field_meta_tags:
     type: metatag_firehose
@@ -189,6 +184,11 @@ content:
     region: content
     settings:
       display_label: true
+    third_party_settings: {  }
+  simple_sitemap:
+    weight: 10
+    region: content
+    settings: {  }
     third_party_settings: {  }
   status:
     type: boolean_checkbox

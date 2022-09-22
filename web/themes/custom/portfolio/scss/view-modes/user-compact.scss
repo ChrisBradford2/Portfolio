@@ -1,20 +1,30 @@
 .user--view-mode-compact {
   .group-left {
-    color: white;
+    @media (max-width: 767px) {
+      width: 100%;
+    }
+    .field__label {
+      color: #e58e26;
+      font-weight: bold;
+      &:after {
+        content: ' : '
+      }
+    }
   }
   .group-right {
-    width: 50%;
     .field--name-field-experience-year,
     .field--name-field-number-int {
-      border: 1px solid white;
+      border: .125rem solid rgba(0, 0, 0, 0.125);
       border-radius: 3px;
       padding: 10px;
-      margin: 10px;
-      color: white;
+      margin: 0 10px;
       transition: all 0.4s;
+      .field__label {
+        color: #e58e26;
+        font-weight: bold;
+      }
       .field__item {
         font-size: 1.5rem;
-        color: #e58e26;
         transition: all 0.4s;
       }
       &:after {
@@ -28,8 +38,22 @@
         border: none;
         padding: 20px;
         .field__item {
-          font-size: 2rem;
+          color: #fff;
         }
+      }
+    }
+    .field--name-field-experience-year {
+      margin: 0 10px 10px;
+    }
+    @media (max-width: 767px) {
+      float: left;
+      width: 100%;
+      .field--name-field-experience-year,
+      .field--name-field-number-int {
+        margin: 0;
+      }
+      .field--name-field-experience-year {
+        margin: 0 0 10px;
       }
     }
   }

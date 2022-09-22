@@ -38,34 +38,45 @@
  */
 #}
 {{ attach_library('portfolio/paragraph-header') }}
-{%
-  set classes = [
+{{ attach_library('portfolio/keyboard-css') }}
+{{ attach_library('portfolio/in-short-button') }}
+{% set classes = [
   'field',
   'field--name-' ~ field_name|clean_class,
   'field--type-' ~ field_type|clean_class,
   'field--label-' ~ label_display,
-]
-%}
-{%
-  set title_classes = [
+] %}
+{% set title_classes = [
   'field__label',
   label_display == 'visually_hidden' ? 'visually-hidden',
-]
-%}
-<div{{ attributes.addClass(classes) }} id="brief">
-  <div class="header">
-    <h3{{ title_attributes.addClass(title_classes) }}>{{ label }}</h3>
-    <div class="divider-custom">
-      <div class="divider-custom-line"></div>
+] %}
+<div{{ attributes.addClass(classes) }}>
+
+  <!-- Trigger/Open The Modal -->
+  <button id="modalBtn" class="kbc-button kbc-button-lg">{{ 'In short'|t }}</button>
+
+  <!-- The Modal -->
+  <div id="myModal" class=" modal">
+
+    <!-- Modal content -->
+    <div class="modal-content">
+      <span class="close">&times;</span>
+      <div class="header">
+        <h3{{ title_attributes.addClass(title_classes) }}>{{ label }}</h3>
+        <div class="divider-custom">
+          <div class="divider-custom-line"></div>
+        </div>
+      </div>
+      {% if multiple %}
+      <div class='field__items skills-cards'>
+        {% endif %}
+        {% for item in items %}
+          <div{{ item.attributes.addClass('field__item') }}>{{ item.content }}</div>
+        {% endfor %}
+        {% if multiple %}
+      </div>
+      {% endif %}
     </div>
+
   </div>
-  {% if multiple %}
-  <div class='field__items skills-cards'>
-    {% endif %}
-    {% for item in items %}
-      <div{{ item.attributes.addClass('field__item') }}>{{ item.content }}</div>
-    {% endfor %}
-    {% if multiple %}
-  </div>
-  {% endif %}
 </div>

@@ -4,7 +4,13 @@
  */
 
 #page-wrapper {
-  padding-top: 5.89rem;
+  padding-top: 3.5rem;
+}
+
+@media screen and (min-width: 992px) {
+  #page-wrapper {
+    padding-top: 5.89rem;
+  }
 }
 
 * {
@@ -64,4 +70,11 @@ header .header {
 
 .background-image__project {
   padding: 6rem 0;
+}
+
+.stroke {
+  stroke: currentColor;
+}
+.fill {
+  fill: currentColor;
 }

@@ -4,8 +4,8 @@ status: true
 dependencies:
   config:
     - field.field.node.landing_page.body
+    - field.field.node.landing_page.field_entity_reference_user
     - field.field.node.landing_page.field_file
-    - field.field.node.landing_page.field_link
     - field.field.node.landing_page.field_meta_tags
     - field.field.node.landing_page.field_professionnal_experiences
     - field.field.node.landing_page.field_schools
@@ -15,7 +15,6 @@ dependencies:
     - ds
     - entity_reference_revisions
     - file
-    - link
     - metatag
     - text
     - user
@@ -40,13 +39,11 @@ third_party_settings:
       ds_content:
         - links
         - body
-        - field_link
         - field_file
+        - field_entity_reference_user
         - field_skills
         - field_schools
         - field_professionnal_experiences
-        - field_entity_reference_views
-        - field_entity_reference_webform
         - field_meta_tags
 id: node.landing_page.default
 targetEntityType: node
@@ -60,22 +57,19 @@ content:
     third_party_settings: {  }
     weight: 1
     region: ds_content
+  field_entity_reference_user:
+    type: entity_reference_entity_view
+    label: above
+    settings:
+      view_mode: compact
+      link: false
+    third_party_settings: {  }
+    weight: 3
+    region: ds_content
   field_file:
     type: file_url_plain
     label: hidden
     settings: {  }
-    third_party_settings: {  }
-    weight: 3
-    region: ds_content
-  field_link:
-    type: link_separate
-    label: hidden
-    settings:
-      trim_length: 80
-      url_only: false
-      url_plain: false
-      rel: ''
-      target: ''
     third_party_settings: {  }
     weight: 2
     region: ds_content
@@ -84,7 +78,7 @@ content:
     label: hidden
     settings: {  }
     third_party_settings: {  }
-    weight: 9
+    weight: 7
     region: ds_content
   field_professionnal_experiences:
     type: entity_reference_revisions_entity_view
