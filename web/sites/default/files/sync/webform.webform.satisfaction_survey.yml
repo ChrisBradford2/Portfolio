@@ -1,0 +1,359 @@
+uuid: bada550b-50da-4133-8e9c-eb9fca20f958
+langcode: en
+status: open
+dependencies: {  }
+weight: 0
+open: null
+close: null
+uid: 1
+template: false
+archive: false
+id: satisfaction_survey
+title: 'Satisfaction survey'
+description: ''
+category: ''
+elements: |-
+  part_1:
+    '#type': webform_wizard_page
+    '#title': 'Raison de la visite'
+    '#open': true
+    comment_avez_vous_decouvert_mon_site_web:
+      '#type': webform_radios_other
+      '#title': 'Comment avez-vous découvert mon site web *'
+      '#options':
+        1: 'Bouche à oreille'
+        2: 'Moteur de recherche'
+        3: 'Réseaux sociaux'
+        4: 'Lien depuis un autre site'
+      '#required': true
+    pouvez_vous_preciser_le_reseau_social_en_question_:
+      '#type': webform_select_other
+      '#title': 'Pouvez-vous préciser le réseau social en question ? *'
+      '#options':
+        1: LinkedIn
+        2: Instagram
+        3: Twitter
+      '#required': true
+      '#states':
+        visible-slide:
+          ':input[name="comment_avez_vous_decouvert_mon_site_web[radios]"]':
+            value: '3'
+    pouvez_vous_preciser_le_site_web_en_question_:
+      '#type': url
+      '#title': 'Pouvez-vous préciser le site web en question ? *'
+      '#required': true
+      '#states':
+        visible-slide:
+          ':input[name="comment_avez_vous_decouvert_mon_site_web[radios]"]':
+            value: '4'
+  experience_utilisateur:
+    '#type': webform_wizard_page
+    '#title': 'Expérience utilisateur'
+    trouvez_vous_mon_site_web_facile_de_navigation:
+      '#type': webform_rating
+      '#title': 'Trouvez-vous mon site web facile de navigation ? *'
+      '#help': |-
+        1 &eacute;toile = Pas du tout facile<br />
+        2 &eacute;toiles = Peu facile<br />
+        3 &eacute;toiles = Assez facile<br />
+        4 &eacute;toiles = Tr&egrave;s facile<br />
+        5 &eacute;toiles = Extr&ecirc;mement facile
+      '#required': true
+      '#step': 0.5
+      '#reset': true
+    trouvez_vous_le_contenu_du_site_web_clair_et_comprehensible_:
+      '#type': webform_rating
+      '#title': 'Trouvez-vous le contenu du site web clair et compréhensible ? *'
+      '#description': |-
+        1 &eacute;toile = Pas du tout clair<br />
+        2 &eacute;toiles = Peu clair<br />
+        3 &eacute;toiles = Assez clair<br />
+        4 &eacute;toiles = Tr&egrave;s clair<br />
+        5 &eacute;toiles = Extr&ecirc;mement clair
+      '#required': true
+      '#step': 0.5
+      '#reset': true
+    avez_vous_reussi_a_trouver_sur_mon_site_web_ce_que_vous_aviez_ch:
+      '#type': radios
+      '#title': 'Avez-vous réussi à trouver sur mon site web ce que vous aviez cherché ? *'
+      '#options': yes_no
+      '#required': true
+    aimez_vous_le_design_de_notre_site_web_:
+      '#type': webform_rating
+      '#title': 'Aimez-vous le design de notre site web ? *'
+      '#help': |-
+        1 &eacute;toile = Non, pas du tout<br />
+        2 &eacute;toiles = Non, pas vraiment<br />
+        3 &eacute;toiles = Mitig&eacute;<br />
+        4 &eacute;toiles = Oui, un peu<br />
+        5 &eacute;toiles = Oui, absolument
+      '#required': true
+      '#step': 0.5
+      '#reset': true
+    est_ce_que_la_taille_et_le_style_de_police_sur_notre_site_web_vo:
+      '#type': webform_rating
+      '#title': 'Est-ce que la taille et le style de police sur notre site web vous conviennent ? *'
+      '#help': |-
+        1 &eacute;toile = Non, pas du tout<br />
+        2 &eacute;toiles = Non, pas vraiment<br />
+        3 &eacute;toiles = Mitig&eacute;<br />
+        4 &eacute;toiles = Oui, un peu<br />
+        5 &eacute;toiles = Oui, absolument
+      '#required': true
+      '#step': 0.5
+    le_site_web_vous_inspire_t_il_confiance_en_mon_expertise_:
+      '#type': radios
+      '#title': 'Le site web vous inspire-t-il confiance en mon expertise ? *'
+      '#options': yes_no
+      '#required': true
+    pourquoi_:
+      '#type': textfield
+      '#title': 'Pourquoi ?'
+      '#states':
+        visible:
+          ':input[name="le_site_web_vous_inspire_t_il_confiance_en_mon_expertise_"]':
+            value: 'No'
+  informations_utilisateur:
+    '#type': webform_wizard_page
+    '#title': 'Informations utilisateur'
+    '#open': true
+    vous_etes_:
+      '#type': select
+      '#title': 'Vous êtes...'
+      '#options': gender
+    function:
+      '#type': webform_radios_other
+      '#title': 'Vous êtes un.e ... *'
+      '#options':
+        1: Commercial.e
+        2: Développeur.se
+        3: 'Simple visiteur.se'
+      '#required': true
+    quel_est_votre_secteur_d_activite_:
+      '#type': select
+      '#title': 'Quel est votre secteur d''activité ?'
+      '#options': industry
+    souhaitez_vous_etre_recontacte_a_la_suite_d_une_prochaine_mise_a:
+      '#type': radios
+      '#title': 'Souhaitez-vous être recontacté à la suite d''une prochaine mise à jour du site ? *'
+      '#options':
+        1: 'Non merci'
+        2: 'Oui avec plaisir !'
+      '#required': true
+    prenom:
+      '#type': textfield
+      '#title': 'Prénom *'
+      '#required': true
+      '#states':
+        visible-slide:
+          ':input[name="souhaitez_vous_etre_recontacte_a_la_suite_d_une_prochaine_mise_a"]':
+            value: '2'
+    nom:
+      '#type': textfield
+      '#title': 'Nom *'
+      '#states':
+        visible-slide:
+          ':input[name="souhaitez_vous_etre_recontacte_a_la_suite_d_une_prochaine_mise_a"]':
+            value: '2'
+    email_:
+      '#type': email
+      '#title': 'Email *'
+      '#required': true
+      '#states':
+        visible-slide:
+          ':input[name="souhaitez_vous_etre_recontacte_a_la_suite_d_une_prochaine_mise_a"]':
+            value: '2'
+    n_cochant_cette_case_je_reconnais_avoir_pris_connaissance_de_la_:
+      '#type': checkbox
+      '#title': 'En cochant cette case, je reconnais avoir pris connaissance de la politique de confidentialité du site et j''accepte de recevoir un mail lors de chaque mise à jour du site.'
+      '#required': true
+      '#states':
+        visible-slide:
+          ':input[name="souhaitez_vous_etre_recontacte_a_la_suite_d_une_prochaine_mise_a"]':
+            value: '2'
+    captcha:
+      '#type': captcha
+      '#captcha_type': image_captcha/Image
+css: ''
+javascript: ''
+settings:
+  ajax: false
+  ajax_scroll_top: form
+  ajax_progress_type: ''
+  ajax_effect: ''
+  ajax_speed: null
+  page: true
+  page_submit_path: ''
+  page_confirm_path: ''
+  page_theme_name: ''
+  form_title: both
+  form_submit_once: false
+  form_open_message: ''
+  form_close_message: ''
+  form_exception_message: ''
+  form_previous_submissions: true
+  form_confidential: false
+  form_confidential_message: ''
+  form_disable_remote_addr: false
+  form_convert_anonymous: false
+  form_prepopulate: false
+  form_prepopulate_source_entity: false
+  form_prepopulate_source_entity_required: false
+  form_prepopulate_source_entity_type: ''
+  form_unsaved: false
+  form_disable_back: false
+  form_submit_back: false
+  form_disable_autocomplete: false
+  form_novalidate: false
+  form_disable_inline_errors: false
+  form_required: false
+  form_autofocus: false
+  form_details_toggle: false
+  form_reset: false
+  form_access_denied: default
+  form_access_denied_title: ''
+  form_access_denied_message: ''
+  form_access_denied_attributes: {  }
+  form_file_limit: ''
+  form_attributes: {  }
+  form_method: ''
+  form_action: ''
+  share: false
+  share_node: false
+  share_theme_name: ''
+  share_title: true
+  share_page_body_attributes: {  }
+  submission_label: ''
+  submission_exception_message: ''
+  submission_locked_message: ''
+  submission_log: false
+  submission_excluded_elements: {  }
+  submission_exclude_empty: false
+  submission_exclude_empty_checkbox: false
+  submission_views: {  }
+  submission_views_replace: {  }
+  submission_user_columns: {  }
+  submission_user_duplicate: false
+  submission_access_denied: default
+  submission_access_denied_title: ''
+  submission_access_denied_message: ''
+  submission_access_denied_attributes: {  }
+  previous_submission_message: ''
+  previous_submissions_message: ''
+  autofill: false
+  autofill_message: ''
+  autofill_excluded_elements: {  }
+  wizard_progress_bar: true
+  wizard_progress_pages: false
+  wizard_progress_percentage: false
+  wizard_progress_link: false
+  wizard_progress_states: false
+  wizard_start_label: ''
+  wizard_preview_link: false
+  wizard_confirmation: true
+  wizard_confirmation_label: ''
+  wizard_auto_forward: true
+  wizard_auto_forward_hide_next_button: false
+  wizard_keyboard: true
+  wizard_track: ''
+  wizard_prev_button_label: ''
+  wizard_next_button_label: ''
+  wizard_toggle: false
+  wizard_toggle_show_label: ''
+  wizard_toggle_hide_label: ''
+  preview: 0
+  preview_label: ''
+  preview_title: ''
+  preview_message: ''
+  preview_attributes: {  }
+  preview_excluded_elements: {  }
+  preview_exclude_empty: true
+  preview_exclude_empty_checkbox: false
+  draft: none
+  draft_multiple: false
+  draft_auto_save: false
+  draft_saved_message: ''
+  draft_loaded_message: ''
+  draft_pending_single_message: ''
+  draft_pending_multiple_message: ''
+  confirmation_type: url_message
+  confirmation_url: /node
+  confirmation_title: ''
+  confirmation_message: 'Merci, votre r&eacute;ponse &agrave; &eacute;t&eacute; envoy&eacute;e !'
+  confirmation_attributes: {  }
+  confirmation_back: true
+  confirmation_back_label: ''
+  confirmation_back_attributes: {  }
+  confirmation_exclude_query: false
+  confirmation_exclude_token: false
+  confirmation_update: false
+  limit_total: null
+  limit_total_interval: null
+  limit_total_message: ''
+  limit_total_unique: false
+  limit_user: null
+  limit_user_interval: null
+  limit_user_message: ''
+  limit_user_unique: false
+  entity_limit_total: null
+  entity_limit_total_interval: null
+  entity_limit_user: null
+  entity_limit_user_interval: null
+  purge: none
+  purge_days: null
+  results_disabled: false
+  results_disabled_ignore: false
+  results_customize: false
+  token_view: false
+  token_update: false
+  token_delete: false
+  serial_disabled: false
+access:
+  create:
+    roles:
+      - anonymous
+      - authenticated
+    users: {  }
+    permissions: {  }
+  view_any:
+    roles: {  }
+    users: {  }
+    permissions: {  }
+  update_any:
+    roles: {  }
+    users: {  }
+    permissions: {  }
+  delete_any:
+    roles: {  }
+    users: {  }
+    permissions: {  }
+  purge_any:
+    roles: {  }
+    users: {  }
+    permissions: {  }
+  view_own:
+    roles: {  }
+    users: {  }
+    permissions: {  }
+  update_own:
+    roles: {  }
+    users: {  }
+    permissions: {  }
+  delete_own:
+    roles: {  }
+    users: {  }
+    permissions: {  }
+  administer:
+    roles: {  }
+    users: {  }
+    permissions: {  }
+  test:
+    roles: {  }
+    users: {  }
+    permissions: {  }
+  configuration:
+    roles: {  }
+    users: {  }
+    permissions: {  }
+handlers: {  }
+variants: {  }

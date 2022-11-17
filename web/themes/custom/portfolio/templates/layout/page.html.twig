@@ -69,7 +69,7 @@
 #}
 {{ attach_library('portfolio/navbar') }}
 {{ attach_library('portfolio/footer') }}
-<div id="page-wrapper" class="homepage-wrapper">
+<div id="page-wrapper">
   <div id="page">
     <header id="header" class="header" role="banner"
             aria-label="{{ 'Site header'|t }}">
@@ -153,9 +153,8 @@
         </div>
       {% endblock %}
     {% endif %}
-    <div id="main-wrapper" class="layout-main-wrapper clearfix">
+    <div id="main-wrapper" class="layout-main-wrapper clearfix" {% if logged_in %} style="padding-top: 10rem;" {% else %} style="padding-top: 7rem;" {% endif %}>
       {% block content %}
-        {{ page.homepage_header }}
         <div id="main" class="{{ container }}">
           {{ page.breadcrumb }}
           <div class="row row-offcanvas row-offcanvas-left clearfix">
@@ -196,7 +195,7 @@
         </aside>
       </div>
     {% endif %}
-    <footer class="site-footer">
+    <footer class="site-footer" style="margin-top: 3rem;">
       {% block footer %}
         <div class="{{ container }}">
           {% if page.footer_first or page.footer_second or page.footer_third %}

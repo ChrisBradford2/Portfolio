@@ -3,18 +3,25 @@
  * Subtheme specific CSS.
  */
 
-#page-wrapper {
+.homepage-wrapper {
   padding-top: 3.5rem;
+  background-image: url('/sites/default/files/2022-09/bg.png');
 }
 
 @media screen and (min-width: 992px) {
-  #page-wrapper {
+  .homepage-wrapper {
     padding-top: 5.89rem;
   }
 }
 
+@font-face {
+  font-family: "Ubuntu";
+  src: url("../../font/Ubuntu-Regular");
+  font-display: fallback;
+}
+
 * {
-  font-family: ubuntu, sans-serif;
+  font-family: 'Ubuntu', sans-serif;
 }
 
 .node--type-landing-page,
@@ -58,7 +65,7 @@ header .header {
 }
 
 .background-image {
-  background-image: url('https://www.nicolas-barbarisi.com/assets/img/bg.png');
+  background-image: url('/sites/default/files/2022-09/bg.png');
   object-fit: cover;
   width: 100%;
   background-repeat: no-repeat;

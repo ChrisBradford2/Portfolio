@@ -33,7 +33,7 @@
       {{ content.top|without('node_title', 'field_icon') }}
     {% endif %}
 
-    <div{{ region_attributes.first.addClass('col-sm-9') }}>
+    <div{{ region_attributes.first.addClass('col-md-9') }}>
       {{ content.first.field_media }}
       <div class="divider-project"></div>
       {% if content.first.field_text_plain.0 %}
@@ -54,7 +54,7 @@
       {{ content.first|without('field_media', 'field_text_plain','field_list_text','field_date','body','field_file','field_entity_reference_revision',) }}
     </div>
 
-    <div{{ region_attributes.second.addClass('col-sm-3', 'sidebar-project') }}>
+    <div{{ region_attributes.second.addClass('col-md-3', 'sidebar-project') }}>
       {{ content.second }}
     </div>
 

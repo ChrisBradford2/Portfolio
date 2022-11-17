@@ -17,13 +17,14 @@
 
 {%
   set classes = [
+    'container',
     'region',
     'region-' ~ region|clean_class,
   ]
 %}
 {% if content %}
   <div class="background-image background-image__project" id="projects">
-    <section{{ attributes.addClass(classes) }}>
+    <section{{ attributes.addClass(classes) }} style="margin: 0 auto">
       <div class="header">
         <h2>{{ 'Mes projets'|t }}</h2>
         <div class="divider-custom">

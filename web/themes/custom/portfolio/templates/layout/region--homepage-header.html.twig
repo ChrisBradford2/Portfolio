@@ -24,7 +24,7 @@
 {% set image_uri = elements.headerforthehomepagenode.content.field_media_image[0]['#media'].field_media_image.entity.uri.value %}
 {% set attributes = attributes.setAttribute(
   'style',
-  'background-image: url(\'https://www.nicolas-barbarisi.com/assets/img/bg.png\')'
+  'background-image: url(\'/sites/default/files/2022-09/bg.png\')'
 ) %}
 {% if content %}
   <section{{ attributes.addClass(classes).removeClass('row') }}>

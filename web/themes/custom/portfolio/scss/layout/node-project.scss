@@ -4,7 +4,9 @@ $padding: .25rem;
 
 @mixin grid {
   display: grid;
-  gap: .5rem;
+  @media screen and (min-width: 768px) {
+    gap: .5rem;
+  }
 
   .field--name-field-text-plain,
   .field--name-field-list-text,
@@ -12,13 +14,15 @@ $padding: .25rem;
     padding-top: $padding;
   }
   .field--name-field-date {
-    text-align: right;
+    @media screen and (min-width: 768px) {
+      text-align: right;
+    }
   }
   padding-top: $padding;
 }
 
 .node-header {
-  .col-sm-9 {
+  .col-md-9 {
     .slick {
       img,
       video {
@@ -34,9 +38,14 @@ $padding: .25rem;
     }
     .under-media-full {
       @include grid;
-      grid-template-columns: repeat(3, 1fr);
+      grid-template-columns: repeat(1, 1fr);
+      @media screen and (min-width: 768px) {
+        grid-template-columns: repeat(3, 1fr);
+      }
       .field--name-field-list-text {
-        text-align: center;
+        @media screen and (min-width: 768px) {
+          text-align: center;
+        }
       }
     }
     .under-media {
@@ -48,6 +57,7 @@ $padding: .25rem;
       .field__label {
         font-weight: bold;
         color: $orange;
+        margin: .5rem 0;
         &:after {
           content: " :";
         }

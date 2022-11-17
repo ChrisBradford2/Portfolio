@@ -41,13 +41,19 @@
               }
             }
             .field--name-field-media-image {
+              @media screen and (max-width: 769px){
+                margin: 0;
+              }
               .field__item {
                 img {
-                  max-width: 25rem;
+                  max-width: 100%;
                   max-height: 15.5rem;
                   object-fit: cover;
                   border-radius: .5rem;
                   margin: 0;
+                  @media screen and (min-width: 768px) {
+                    max-width: 25rem;
+                  }
                 }
               }
             }
